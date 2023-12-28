@@ -10,7 +10,7 @@
       function createSquare() {
         const commits = document.querySelector('.commits');
         commits.innerHTML = '';
-        const size = 13;
+        const size = 20;
 
         const numSquaresX = Math.floor(window.innerWidth / size);
         const numSquaresY = Math.floor(window.innerHeight / size);
