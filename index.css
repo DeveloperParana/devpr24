@@ -1,5 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar {
@@ -20,7 +21,7 @@ body {
   background: #16a34a;
 }
 
-.commits {
+#myCanvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +29,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #171717;
+  background: #0a0a0a;
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
