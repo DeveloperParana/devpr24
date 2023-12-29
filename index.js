@@ -1,6 +1,6 @@
       document.addEventListener('DOMContentLoaded', function () {
         createSquare();
-        // setInterval(createSquare, 1000);
+        setInterval(createSquare, 3000);
       });
 
       window.addEventListener('resize', function () {
