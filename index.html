@@ -1,263 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevParaná Conference 2024</title>
-    <link rel="stylesheet" href="index.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <div class="commits"></div>
 
-    <!-- hero -->
-    <div
-      class="hero flex flex-col justify-between items-stretch gap-10 px-10 py-14 w-full min-h-auto md:min-h-screen h-full px-4"
-    >
-      <div
-        class="w-full max-w-7xl mx-auto flex flex-col md:flex-row gap-8 justify-between items-center"
-      >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <title>DevParaná Conference 2024</title>
+  <link rel="stylesheet"
+        href="index.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <canvas class="bg-neutral-950"
+          id="myCanvas"></canvas>
+
+  <!-- hero -->
+  <div class="hero w-full ">
+    <div class="w-full max-w-7xl mx-auto min-h-auto md:min-h-screen h-full flex flex-col justify-around items-stretch gap-10 py-10">
+      <div class="w-full mx-auto flex flex-col md:flex-row gap-8 justify-between items-center">
         <div class="">
-          <img src="logo.svg" class="-mt-10 max-w-96 w-full" alt="" />
+          <img src="logo.svg"
+               class="-mt-10 max-w-96 w-full"
+               alt="" />
         </div>
-
+  
         <div class="flex gap-6">
-          <img src="instagram.svg" width="30" alt="" />
-          <img src="twitter.svg" width="30" alt="" />
+          <img src="instagram.svg"
+               width="30"
+               alt="" />
+          <img src="twitter.svg"
+               width="30"
+               alt="" />
         </div>
-
+  
         <div class="flex gap-2">
-          <div
-            class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-          >
-            <span
-              class="text-lg md:text-xl lg:text-2xl font-bold text-green-600"
-              >12</span
-            >
+          <div class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center">
+            <span class="text-lg md:text-xl lg:text-2xl font-bold text-green-600">12</span>
             <span class="text-xs md:text-sm font-bold">DIAS</span>
           </div>
-          <div
-            class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-          >
-            <span
-              class="text-lg md:text-xl lg:text-2xl font-bold text-green-600"
-              >04</span
-            >
+          <div class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center">
+            <span class="text-lg md:text-xl lg:text-2xl font-bold text-green-600">04</span>
             <span class="text-xs md:text-sm font-bold">HORAS</span>
           </div>
-          <div
-            class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-          >
-            <span
-              class="text-lg md:text-xl lg:text-2xl font-bold text-green-600"
-              >43</span
-            >
+          <div class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center">
+            <span class="text-lg md:text-xl lg:text-2xl font-bold text-green-600">43</span>
             <span class="text-xs md:text-sm font-bold">MIN</span>
           </div>
-          <div
-            class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-          >
-            <span
-              class="text-lg md:text-xl lg:text-2xl font-bold text-green-600"
-              >55</span
-            >
+          <div class="w-14 h-14 lg:w-20 lg:h-20 rounded-xl bg-green-800/10 text-white flex flex-col justify-center items-center text-center">
+            <span class="text-lg md:text-xl lg:text-2xl font-bold text-green-600">55</span>
             <span class="text-xs md:text-sm font-bold">SEG</span>
           </div>
         </div>
       </div>
-
-      <div
-        class="h-full w-full max-w-7xl mx-auto flex items-center justify-center"
-      >
+  
+      <div class="w-full mx-auto flex items-center justify-center">
         <div class="mr-auto md:-mr-40 z-50 flex flex-col gap-8 w-full">
-          <span
-            class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center md:text-left"
-            >A DevParaná Conf é organizada<br />
+          <span class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center md:text-left">A DevParaná Conf é organizada<br />
             <span class="text-green-600">por pessoas da comunidade</span><br />
-            para comunidade.</span
-          >
+            para comunidade.</span>
           <div class="flex justify-center md:justify-start">
-            <button
-              class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-white text-base px-8 py-4 uppercase"
-            >
+            <button class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-white text-base px-8 py-4 uppercase">
               Conhecer palestrantes
             </button>
           </div>
         </div>
-        <div
-          class="hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10 hidden md:block"
-        >
-          <img src="hero.jpg" class="max-w-xl w-full -z-10 rounded-xl" alt="" />
+        <div class="hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10 hidden md:block">
+          <img src="hero.jpg"
+               class="max-w-xl w-full -z-10 rounded-xl"
+               width="100%"
+               alt="" />
         </div>
       </div>
-
-      <div class="w-full max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3">
+  
+      <div class="w-full mx-auto grid grid-cols-2 md:grid-cols-3">
         <div class="text-left w-full">
-          <span class="text-base md:text-2xl font-black text-white"
-            >07 <span class="text-green-600">de</span> Junho
-            <span class="font-normal">|</span>
-          </span>
-
-          <span class="text-base md:text-2xl font-black text-white"
-            ><span class="text-green-600">Início</span> 16:20</span
-          >
+          <div class="text-base md:text-2xl font-black text-white">
+            <span>07 de Junho</span>
+            <span class="font-normal text-green-600">|</span>
+            <span>16:20</span>
+          </div>
         </div>
-
+  
         <div class="hidden md:flex justify-center items-center">
-          <div
-            class="w-12 h-12 bg-green-600 rounded-full flex justify-center items-center text-center"
-          >
-            <img src="arrow-down.svg" width="24" class="" alt="" />
+          <div class="w-12 h-12 bg-green-600 rounded-full flex justify-center items-center text-center">
+            <img src="arrow-down.svg"
+                 width="24"
+                 class=""
+                 alt="" />
           </div>
         </div>
-
+  
         <div class="text-right w-full">
-          <span class="text-base md:text-2xl font-black text-white"
-            >Maringá,<span class="text-green-600">PR</span></span
-          >
+          <span class="text-base md:text-2xl font-black text-white">Maringá <span class="text-green-600">PR</span></span>
         </div>
       </div>
     </div>
-    <!-- hero -->
+  </div>
+  <!-- hero -->
 
-    <div class="hero2">
-      <div class="w-full max-w-7xl mx-auto px-4 flex flex-col gap-20 py-20">
-        <div class="flex flex-col justify-center items-center">
-          <div
-            class="p-20 w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8 border-2 border-green-600"
-          >
-            <h1 class="text-2xl md:text-4xl font-black text-white">
-              A DevPR Conf é organizada por pessoas da comunidade e para
-              comunidade.
-            </h1>
-            <p class="text-base md:text-xl text-neutral-400">
-              As novidades incluem novos palestrantes convidados confirmados,
-              palestras recebidas pelo call for papers selecionadas, mentorias
-              com profissionais, empresas com oportunidades e desafios, brindes
-              para sorteios...
-            </p>
-            <div class="">
-              <button
-                class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-white text-base px-8 py-4 uppercase"
-              >
-                Comprar ingresso
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <span
-            class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center md:text-left"
-            >Conheça os <span class="text-green-600">palestrantes</span></span
-          >
-          <p class="text-base md:text-xl text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ex
-            eius provident.
+  <div class="hero2">
+    <div class="w-full max-w-7xl mx-auto flex flex-col gap-20 py-20">
+      <div class="flex flex-col justify-center items-center">
+        <div class="p-20 w-full rounded-lg bg-green-600 flex flex-col gap-8 border-2 border-green-600">
+          <h1 class="text-2xl md:text-4xl font-black text-neutral-900">
+            A DevPR Conf é organizada por pessoas da comunidade e para
+            comunidade.
+          </h1>
+          <p class="text-base md:text-xl text-neutral-800">
+            As novidades incluem novos palestrantes convidados confirmados,
+            palestras recebidas pelo call for papers selecionadas, mentorias
+            com profissionais, empresas com oportunidades e desafios, brindes
+            para sorteios...
           </p>
-        </div>
-
-        <div
-          class="flex flex-col lg:flex-row gap-8 justify-center items-stretch"
-        >
-          <div
-            class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8"
-          >
-            <img
-              src="https://www.fakepersongenerator.com/Face/female/female1023203105042.jpg"
-              class="rounded-full w-52"
-              alt=""
-            />
-            <span class="text-2xl md:text-4xl font-black text-white">
-              Lydia R Brinegar
-            </span>
-            <p class="text-base text-neutral-400">
-              Amateur introvert. Alcohol practitioner. Proud web fan. Organizer.
-              Travel trailblazer. Professional analyst. Gamer.
-            </p>
-          </div>
-
-          <div
-            class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8"
-          >
-            <img
-              src="https://www.fakepersongenerator.com/Face/female/female20171026306892028.jpg"
-              class="rounded-full w-52"
-              alt=""
-            />
-            <span class="text-2xl md:text-4xl font-black text-white">
-              Donna J Strait
-            </span>
-            <p class="text-base text-neutral-400">
-              Entrepreneur. Alcohol fanatic. Thinker. Web evangelist. Bacon
-              aficionado. Communicator.
-            </p>
-          </div>
-
-          <div
-            class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8"
-          >
-            <img
-              src="https://www.fakepersongenerator.com/Face/male/male1084721621979.jpg"
-              class="rounded-full w-52"
-              alt=""
-            />
-            <span class="text-2xl md:text-4xl font-black text-white">
-              John R Abraham
-            </span>
-            <p class="text-base text-neutral-400">
-              Zombie maven. Wannabe creator. Travel evangelist. Hipster-friendly
-              organizer. Internet trailblazer. Incurable alcohol aficionado.
-              Typical pop culture buff.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <span
-            class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center md:text-left"
-            ><span class="text-green-600">Cronograma</span> do evento</span
-          >
-          <p class="text-base md:text-xl text-neutral-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ex
-            eius provident.
-          </p>
-        </div>
-
-        <div
-          class="flex flex-col lg:flex-row gap-8 justify-center items-stretch"
-        >
-          <div
-            class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-green-600 flex flex-col gap-8"
-          >
-            <span class="text-2xl md:text-4xl font-black text-neutral-950">
-              Donna J Strait
-            </span>
-            <p class="text-base text-neutral-950">
-              Entrepreneur. Alcohol fanatic. Thinker. Web evangelist. Bacon
-              aficionado. Communicator.
-            </p>
-          </div>
-
-          <div
-            class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-green-600 flex flex-col gap-8"
-          >
-            <span class="text-2xl md:text-4xl font-black text-neutral-950">
-              John R Abraham
-            </span>
-            <p class="text-base text-neutral-950">
-              Zombie maven. Wannabe creator. Travel evangelist. Hipster-friendly
-              organizer. Internet trailblazer. Incurable alcohol aficionado.
-              Typical pop culture buff.
-            </p>
+          <div class="">
+            <button class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-neutral-900 hover:bg-green-600 text-white text-base px-8 py-4 uppercase">
+              Comprar ingresso
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <footer>
-      <div class="bg-neutral-950 w-full p-20 min-h-96 border-t-4 border-green-600"></div>
-    </footer>
-  </body>
+      <div class="flex flex-col justify-center items-center">
+        <div class="p-20 w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8 border-2 border-green-600">
+          <h1 class="text-2xl md:text-4xl font-black text-white">
+            A DevPR Conf é organizada por pessoas da comunidade e para
+            comunidade.
+          </h1>
+          <p class="text-base md:text-xl text-neutral-400">
+            As novidades incluem novos palestrantes convidados confirmados,
+            palestras recebidas pelo call for papers selecionadas, mentorias
+            com profissionais, empresas com oportunidades e desafios, brindes
+            para sorteios...
+          </p>
+          <div class="">
+            <button class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-white text-base px-8 py-4 uppercase">
+              Comprar ingresso
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <span class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center md:text-left">Conheça os <span class="text-green-600">palestrantes</span></span>
+        <p class="text-base md:text-xl text-neutral-400">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ex
+          eius provident.
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
+        <div class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8">
+          <img src="https://www.fakepersongenerator.com/Face/female/female1023203105042.jpg"
+               class="rounded-full w-52"
+               alt="" />
+          <span class="text-2xl md:text-4xl font-black text-white">
+            Lydia R Brinegar
+          </span>
+          <p class="text-base text-neutral-400">
+            Amateur introvert. Alcohol practitioner. Proud web fan. Organizer.
+            Travel trailblazer. Professional analyst. Gamer.
+          </p>
+        </div>
+
+        <div class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8">
+          <img src="https://www.fakepersongenerator.com/Face/female/female20171026306892028.jpg"
+               class="rounded-full w-52"
+               alt="" />
+          <span class="text-2xl md:text-4xl font-black text-white">
+            Donna J Strait
+          </span>
+          <p class="text-base text-neutral-400">
+            Entrepreneur. Alcohol fanatic. Thinker. Web evangelist. Bacon
+            aficionado. Communicator.
+          </p>
+        </div>
+
+        <div class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-neutral-950/90 flex flex-col gap-8">
+          <img src="https://www.fakepersongenerator.com/Face/male/male1084721621979.jpg"
+               class="rounded-full w-52"
+               alt="" />
+          <span class="text-2xl md:text-4xl font-black text-white">
+            John R Abraham
+          </span>
+          <p class="text-base text-neutral-400">
+            Zombie maven. Wannabe creator. Travel evangelist. Hipster-friendly
+            organizer. Internet trailblazer. Incurable alcohol aficionado.
+            Typical pop culture buff.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <span class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center md:text-left"><span class="text-green-600">Cronograma</span> do evento</span>
+        <p class="text-base md:text-xl text-neutral-400">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ex
+          eius provident.
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-8 justify-center items-stretch">
+        <div class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-green-600 flex flex-col gap-8">
+          <span class="text-2xl md:text-4xl font-black text-neutral-950">
+            Donna J Strait
+          </span>
+          <p class="text-base text-neutral-950">
+            Entrepreneur. Alcohol fanatic. Thinker. Web evangelist. Bacon
+            aficionado. Communicator.
+          </p>
+        </div>
+
+        <div class="border-2 border-green-600 p-8 md:p-10 flex flex-col justify-start items-center text-center w-full rounded-lg bg-green-600 flex flex-col gap-8">
+          <span class="text-2xl md:text-4xl font-black text-neutral-950">
+            John R Abraham
+          </span>
+          <p class="text-base text-neutral-950">
+            Zombie maven. Wannabe creator. Travel evangelist. Hipster-friendly
+            organizer. Internet trailblazer. Incurable alcohol aficionado.
+            Typical pop culture buff.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="bg-neutral-950 w-full p-20 min-h-96 border-t-4 border-green-600"></div>
+  </footer>
+</body>
+
 </html>
