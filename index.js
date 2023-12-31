@@ -4,15 +4,12 @@ const squareRadius = 5;
 let squaresList = []
 
 document.addEventListener('DOMContentLoaded', function () {
-  const canvas = document.getElementById("myCanvas");
+  const canvas = document.getElementById("commits");
   createSquares();
   setInterval(updateSquaresColors, 1000);
 
   window.addEventListener('resize', function () {
     createSquares();
-  });
-  window.addEventListener('click', function () {
-    updateSquaresColors();
   });
 
   function createSquares() {
@@ -36,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   }
+
+  function changeGradient() { }
 
   function drawRoundedSquare(ctx, x, y, size, radius) {
     ctx.beginPath();
