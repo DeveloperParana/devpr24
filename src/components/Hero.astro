@@ -1,38 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import heroImage from "../../public/hero.jpg"; // 1600x900
+import heroImage from "../../public/hero.jpg";
 import logoImage from "../../public/logo.svg";
 import instagramImage from "../../public/instagram.svg";
 import twitterImage from "../../public/twitter.svg";
 import arrowDownImage from "../../public/arrow-down.svg";
 ---
 
-<script>
-  import { gsap } from "gsap";
-
-  gsap.from(".animate-top", {
-    scrollTrigger: ".animate-top", // start the animation when ".box" enters the viewport (once)
-    y: 300,
-  });
-
-  gsap.from(".animate-bottom", {
-    scrollTrigger: ".animate-bottom", // start the animation when ".box" enters the viewport (once)
-    y: -300,
-  });
-
-  gsap.from(".animate-left", {
-    scrollTrigger: ".animate-left", // start the animation when ".box" enters the viewport (once)
-    x: -300,
-  });
-
-  gsap.from(".animate-right", {
-    scrollTrigger: ".animate-left", // start the animation when ".box" enters the viewport (once)
-    x: 300,
-  });
-
-</script>
-
-<div class="hero w-full">
+<div class="hero w-full overflow-hidden">
   <div
     class="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 min-h-auto md:min-h-screen h-full flex flex-col justify-between items-stretch gap-10 py-10"
   >
@@ -93,13 +68,16 @@ import arrowDownImage from "../../public/arrow-down.svg";
     <div
       class="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0"
     >
-      <div class="animate-left mr-auto lg:-mr-40 z-50 flex flex-col gap-8 w-full">
-        <span
-          class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center lg:text-left"
-          >A DevParaná Conf é organizada<br />
-          <span class="text-green-600">por pessoas da comunidade</span><br />
-          para comunidade.</span
+      <div class="mr-auto lg:-mr-40 z-50 flex flex-col gap-8 w-full">
+        <div
+          class="flex flex-col text-hero text-2xl md:text-4xl lg:text-6xl font-black text-white text-center lg:text-left"
         >
+          <span class="whitespace-nowrap">A DevParaná Conf é organizada</span>
+          <span class="text-green-600 whitespace-nowrap"
+            >por pessoas da comunidade</span
+          >
+          <span class="whitespace-nowrap">para comunidade.</span>
+        </div>
         <div class="flex justify-center lg:justify-start">
           <a
             href="#"
@@ -111,7 +89,7 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div
-        class="animate-right hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
+        class="animate-top hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
       >
         <Image
           src={heroImage}
@@ -121,9 +99,9 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
     </div>
 
-    <div class="animate-top w-full grid grid-cols-1 md:grid-cols-3">
+    <div class="animate-bottom w-full grid grid-cols-1 md:grid-cols-3">
       <div class="text-center md:text-left w-full">
-        <div class="text-base md:text-xl font-black text-white">
+        <div class="text-base md:text-xl font-medium text-white">
           <span>07 de Junho</span>
           <span class="text-green-600">16:20</span>
         </div>
@@ -139,7 +117,7 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div class="text-center md:text-right w-full">
-        <span class="text-base md:text-xl font-black text-white"
+        <span class="text-base md:text-xl font-medium text-white"
           >Maringá <span class="text-green-600">PR</span></span
         >
       </div>
@@ -148,9 +126,9 @@ import arrowDownImage from "../../public/arrow-down.svg";
 </div>
 
 <style>
-  .hero-img {
+  /* .hero-img {
     box-shadow: 20px 20px 0px #15a04b;
-  }
+  } */
 
   .hero-img img {
     mask-image: linear-gradient(

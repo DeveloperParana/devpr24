@@ -15,7 +15,11 @@
     "astro": "^4.0.9",
     "gsap": "^3.12.4",
     "imagesloaded": "^5.0.0",
+    "split-type": "^0.3.4",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/imagesloaded": "^4.1.6"
   }
 }

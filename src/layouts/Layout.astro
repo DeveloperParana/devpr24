@@ -14,12 +14,118 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src="https://unpkg.com/split-type"></script>
     <title>{title}</title>
   </head>
   <body>
+    <div
+      class="loader flex items-center justify-center text-center w-screen h-screen bg-neutral-950 z-50 gap-4 text-green-600"
+    >
+      <span id="loading" class="">0%</span>
+    </div>
     <slot />
   </body>
 </html>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+  import imagesLoaded from "imagesloaded";
+  import SplitType from "split-type";
+  // import TextPlugin from "gsap/TextPlugin";
+
+  document.body.style.overflow = "hidden";
+
+  gsap.registerPlugin(ScrollTrigger, SplitType);
+
+  const images: HTMLImageElement[] = gsap.utils.toArray("img");
+
+  console.log("images", images);
+
+  const loader = document.querySelector("#loading")!;
+  const updateProgress = (instance: any) =>
+    (loader.textContent = `${Math.round(
+      (instance.progressedCount * 100) / images.length,
+    )}%`);
+
+  const showDemo = () => {
+    document.body.style.overflow = "auto";
+    document?.scrollingElement?.scrollTo(0, 0);
+    gsap.to(document.querySelector(".loader"), { autoAlpha: 0 });
+
+    gsap.utils.toArray("section").forEach((section: any, index: number) => {
+      const w = section.querySelector(".wrapper");
+      const [x, xEnd] =
+        index % 2
+          ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+          : [w.scrollWidth * -1, 0];
+      gsap.fromTo(
+        w,
+        { x },
+        {
+          x: xEnd,
+          scrollTrigger: {
+            trigger: section,
+            scrub: 0.5,
+          },
+        },
+      );
+    });
+  };
+
+  const fades = () => {
+    gsap.from(".animate-top", {
+      scrollTrigger: ".animate-top",
+      y: 100,
+      opacity: 0,
+    });
+
+    gsap.from(".animate-bottom", {
+      scrollTrigger: ".animate-bottom",
+      y: -100,
+      opacity: 0,
+    });
+
+    gsap.from(".animate-left", {
+      scrollTrigger: ".animate-left",
+      x: -100,
+      opacity: 0,
+    });
+
+    gsap.from(".animate-right", {
+      scrollTrigger: ".animate-left",
+      x: 100,
+      opacity: 0,
+    });
+  };
+
+  const teste = () => {
+    const ourText = new SplitType(".text-hero", { types: "words" });
+    const words = ourText.words;
+
+    gsap.fromTo(
+      words,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 2,
+        ease: "power4.out",
+      },
+    );
+  };
+
+  (imagesLoaded(images) as any)
+    .on("progress", updateProgress)
+    .on("always", showDemo)
+    .on("always", fades)
+    .on("always", teste);
+</script>
+
 <style is:global>
   html {
     font-family: "Inter", sans-serif;
@@ -46,5 +152,15 @@ const { title } = Astro.props;
 
   ::-webkit-scrollbar-thumb:hover {
     background: #16a34a;
+  }
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    z-index: 10000;
   }
 </style>
