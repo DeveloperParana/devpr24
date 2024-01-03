@@ -1,0 +1,147 @@
+<canvas id="commits" class="commits bg-neutral-950"></canvas>
+
+<div id="gradient " class="gradient h-screen w-screen"></div>
+
+<script>
+  const squareSize = 20;
+  const squareUpdate = 200;
+  const squareRadius = 5;
+  let squaresList: any[] = [];
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.getElementById("commits") as HTMLCanvasElement;
+    createSquares();
+    setInterval(updateSquaresColors, 1000);
+
+    window.addEventListener("resize", function () {
+      createSquares();
+    });
+
+    function createSquares() {
+      squaresList = [];
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+        const numSquaresX = Math.floor(canvas.width / squareSize) + 1;
+        const numSquaresY = Math.floor(canvas.height / squareSize) + 1;
+
+        for (let x = 0; x < numSquaresX; x++) {
+          for (let y = 0; y < numSquaresY; y++) {
+            drawRoundedSquare(ctx, x * squareSize, y * squareSize);
+          }
+        }
+      }
+    }
+
+    function changeGradient() {}
+
+    function drawRoundedSquare(
+      ctx: CanvasRenderingContext2D,
+      x: number,
+      y: number,
+    ) {
+      ctx.beginPath();
+      ctx.moveTo(x + squareRadius, y);
+      ctx.lineTo(x + squareSize - squareRadius, y);
+      ctx.quadraticCurveTo(x + squareSize, y, x + squareSize, y + squareRadius);
+      ctx.lineTo(x + squareSize, y + squareSize - squareRadius);
+      ctx.quadraticCurveTo(
+        x + squareSize,
+        y + squareSize,
+        x + squareSize - squareRadius,
+        y + squareSize,
+      );
+      ctx.lineTo(x + squareRadius, y + squareSize);
+      ctx.quadraticCurveTo(x, y + squareSize, x, y + squareSize - squareRadius);
+      ctx.lineTo(x, y + squareRadius);
+      ctx.quadraticCurveTo(x, y, x + squareRadius, y);
+      ctx.closePath();
+
+      ctx.fillStyle = getColor();
+      ctx.strokeStyle = "#171717";
+      ctx.lineWidth = 4;
+
+      ctx.fill();
+      ctx.stroke();
+
+      squaresList.push({
+        x: x,
+        y: y,
+      });
+    }
+
+    function getColor() {
+      switch (Math.floor(Math.random() * 4)) {
+        case 1:
+          return "#0e4429";
+        case 2:
+          return "#006d32";
+        case 3:
+          return "#26a641";
+        case 4:
+          return "#39d353";
+        default:
+          return "#171717";
+      }
+    }
+
+    function updateSquaresColors() {
+      const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+      const generatedNumbersList: any[] = generateNumbers();
+      for (let item of generatedNumbersList) {
+        drawRoundedSquare(ctx, squaresList[item].x, squaresList[item].y);
+      }
+    }
+
+    function generateNumbers() {
+      const min = 1;
+      const max = squaresList.length - 1;
+      const numbersList = new Set();
+
+      while (numbersList.size < squareUpdate) {
+        const value = Math.floor(Math.random() * (max - min + 1)) + min;
+        numbersList.add(value);
+      }
+
+      return Array.from(numbersList);
+    }
+  });
+</script>
+
+<style>
+  .gradient,
+  .commits {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .gradient {
+    z-index: -1;
+  }
+
+  .gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: radial-gradient(
+      circle at 10% 10%,
+      rgba(10, 10, 10, 0.5),
+      rgba(10, 10, 10, 0.9),
+      rgba(10, 10, 10, 1),
+      rgba(10, 10, 10, 1),
+      rgba(10, 10, 10, 0.9),
+      rgba(10, 10, 10, 0.5)
+    );
+  }
+</style>

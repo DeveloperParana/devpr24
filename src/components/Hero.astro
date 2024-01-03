@@ -1,0 +1,163 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../../public/hero.jpg"; // 1600x900
+import logoImage from "../../public/logo.svg";
+import instagramImage from "../../public/instagram.svg";
+import twitterImage from "../../public/twitter.svg";
+import arrowDownImage from "../../public/arrow-down.svg";
+---
+
+<script>
+  import { gsap } from "gsap";
+
+  gsap.from(".animate-top", {
+    scrollTrigger: ".animate-top", // start the animation when ".box" enters the viewport (once)
+    y: 300,
+  });
+
+  gsap.from(".animate-bottom", {
+    scrollTrigger: ".animate-bottom", // start the animation when ".box" enters the viewport (once)
+    y: -300,
+  });
+
+  gsap.from(".animate-left", {
+    scrollTrigger: ".animate-left", // start the animation when ".box" enters the viewport (once)
+    x: -300,
+  });
+
+  gsap.from(".animate-right", {
+    scrollTrigger: ".animate-left", // start the animation when ".box" enters the viewport (once)
+    x: 300,
+  });
+
+</script>
+
+<div class="hero w-full">
+  <div
+    class="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 min-h-auto md:min-h-screen h-full flex flex-col justify-between items-stretch gap-10 py-10"
+  >
+    <div
+      class="animate-bottom w-full mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center md:justify-between items-center"
+    >
+      <div
+        class="col-span-2 md:col-span-1 flex justify-center md:justify-start items-center gap-1 md:gap-2"
+      >
+        <Image src={logoImage} class="max-w-80 md:max-w-96 w-full" alt="Logo" />
+      </div>
+
+      <div
+        class="col-span-1 justify-end md:justify-center items-center gap-6 hidden md:flex"
+      >
+        <Image src={instagramImage} width={24} alt="Instagram" />
+        <Image src={twitterImage} width={24} alt="Twitter" />
+      </div>
+
+      <div
+        class="col-span-2 md:col-span-1 flex justify-center md:justify-end items-center gap-1 md:gap-2"
+      >
+        <div
+          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+        >
+          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
+            >12</span
+          >
+          <span class="text-xs font-normal">Dias</span>
+        </div>
+        <div
+          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+        >
+          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
+            >04</span
+          >
+          <span class="text-xs font-normal">Horas</span>
+        </div>
+        <div
+          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+        >
+          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
+            >43</span
+          >
+          <span class="text-xs font-normal">Min</span>
+        </div>
+        <div
+          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+        >
+          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
+            >55</span
+          >
+          <span class="text-xs font-normal">Seg</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0"
+    >
+      <div class="animate-left mr-auto lg:-mr-40 z-50 flex flex-col gap-8 w-full">
+        <span
+          class="text-2xl md:text-4xl lg:text-6xl font-black text-white text-center lg:text-left"
+          >A DevParaná Conf é organizada<br />
+          <span class="text-green-600">por pessoas da comunidade</span><br />
+          para comunidade.</span
+        >
+        <div class="flex justify-center lg:justify-start">
+          <a
+            href="#"
+            class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-white text-base px-8 py-4"
+          >
+            Conhecer palestrantes
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="animate-right hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
+      >
+        <Image
+          src={heroImage}
+          class="lg:max-w-xl w-full -z-10 rounded-xl"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="animate-top w-full grid grid-cols-1 md:grid-cols-3">
+      <div class="text-center md:text-left w-full">
+        <div class="text-base md:text-xl font-black text-white">
+          <span>07 de Junho</span>
+          <span class="text-green-600">16:20</span>
+        </div>
+      </div>
+
+      <div class="hidden md:flex justify-center items-center">
+        <a
+          href="#"
+          class="w-10 h-10 bg-green-700 hover:bg-green-600 rounded-full flex justify-center items-center text-center"
+        >
+          <Image src={arrowDownImage} width={20} alt="Arrow down" />
+        </a>
+      </div>
+
+      <div class="text-center md:text-right w-full">
+        <span class="text-base md:text-xl font-black text-white"
+          >Maringá <span class="text-green-600">PR</span></span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-img {
+    box-shadow: 20px 20px 0px #15a04b;
+  }
+
+  .hero-img img {
+    mask-image: linear-gradient(
+      -45deg,
+      rgb(10, 10, 10),
+      rgb(10, 10, 10, 0.5),
+      transparent
+    );
+  }
+</style>

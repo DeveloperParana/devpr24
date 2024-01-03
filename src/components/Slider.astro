@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets";
+import Image1 from "../../public/1.jpg";
+import Image2 from "../../public/2.jpg";
+import Image3 from "../../public/3.jpg";
+import Image4 from "../../public/4.jpg";
+import Image5 from "../../public/5.jpg";
+import Image6 from "../../public/6.jpg";
+---
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const images = gsap.utils.toArray("img");
+
+  console.log("images", images);
+
+  const loader = document.querySelector(".loader--text")!;
+  const updateProgress = (instance: any) =>
+    (loader.textContent = `${Math.round(
+      (instance.progressedCount * 100) / images.length,
+    )}%`);
+
+  const showDemo = () => {
+    document.body.style.overflow = "auto";
+    document?.scrollingElement?.scrollTo(0, 0);
+    gsap.to(document.querySelector(".loader"), { autoAlpha: 0 });
+
+    gsap.utils.toArray("section").forEach((section: any, index: number) => {
+      const w = section.querySelector(".wrapper");
+      const [x, xEnd] =
+        index % 2
+          ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+          : [w.scrollWidth * -1, 0];
+      gsap.fromTo(
+        w,
+        { x },
+        {
+          x: xEnd,
+          scrollTrigger: {
+            trigger: section,
+            scrub: 0.5,
+          },
+        },
+      );
+    });
+  };
+
+  showDemo();
+
+  // imagesLoaded(images).on("progress", updateProgress).on("always", showDemo);
+</script>
+
+<div class="loader flex items-center justify-center">
+  <div>
+    <h1>Loading</h1>
+    <h2 class="loader--text">0%</h2>
+  </div>
+</div>
+
+<section class="demo-gallery overflow-hidden">
+  <ul class="wrapper flex gap-4">
+    <li>
+      <Image src={Image1} class="imgs max-w-96 rounded-xl border-2 border-green-600 image1" alt="" />
+    </li>
+    <li>
+      <Image src={Image2} class="imgs max-w-96 rounded-xl border-2 border-green-600 image2" alt="" />
+    </li>
+    <li>
+      <Image src={Image3} class="imgs max-w-96 rounded-xl border-2 border-green-600 image3" alt="" />
+    </li>
+    <li>
+      <Image src={Image4} class="imgs max-w-96 rounded-xl border-2 border-green-600 image4" alt="" />
+    </li>
+    <li>
+      <Image src={Image5} class="imgs max-w-96 rounded-xl border-2 border-green-600 image5" alt="" />
+    </li>
+    <li>
+      <Image src={Image6} class="imgs max-w-96 rounded-xl border-2 border-green-600 image6" alt="" />
+    </li>
+  </ul>
+</section>
+
+<section class="demo-gallery overflow-hidden mt-4">
+  <ul class="wrapper flex gap-4">
+    <li>
+      <Image src={Image1} class="imgs max-w-96 rounded-xl border-2 border-green-600 image1" alt="" />
+    </li>
+    <li>
+      <Image src={Image2} class="imgs max-w-96 rounded-xl border-2 border-green-600 image2" alt="" />
+    </li>
+    <li>
+      <Image src={Image3} class="imgs max-w-96 rounded-xl border-2 border-green-600 image3" alt="" />
+    </li>
+    <li>
+      <Image src={Image4} class="imgs max-w-96 rounded-xl border-2 border-green-600 image4" alt="" />
+    </li>
+    <li>
+      <Image src={Image5} class="imgs max-w-96 rounded-xl border-2 border-green-600 image5" alt="" />
+    </li>
+    <li>
+      <Image src={Image6} class="imgs max-w-96 rounded-xl border-2 border-green-600 image6" alt="" />
+    </li>
+  </ul>
+</section>
+
+<style>
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    z-index: 10000;
+  }
+
+</style>
