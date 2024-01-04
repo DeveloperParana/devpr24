@@ -43,7 +43,6 @@ const { title } = Astro.props;
   gsap.registerPlugin(ScrollTrigger, SplitType);
 
   ScrollTrigger.defaults({
-    // toggleActions: "restart pause reverse pause",
     toggleActions: "restart",
     scroller: "body",
   });
@@ -110,23 +109,41 @@ const { title } = Astro.props;
   };
 
   const textHero = () => {
-    const ourText = new SplitType(".text-hero", { types: "words" });
-    const words = ourText.words;
+    gsap.from(".text-hero span", {
+      scrollTrigger: ".text-hero",
+      stagger: 0.1,
+      duration: 0.5,
+      y: 200,
+      ease: "power1.out",
+      scrub: true,
+    });
+  };
 
-    gsap.fromTo(
-      words,
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        stagger: 0.1,
-        duration: 0.5,
-        ease: "power1.out",
-      },
-    );
+  const textSpeakers = () => {
+    gsap.from(".text-speakers span", {
+      scrollTrigger: {
+      trigger: ".text-speakers",
+      start: 'center 90%',
+      end: 'center 40%',
+      scrub: true,
+    },
+      stagger: 0.1,
+      duration: 0.5,
+      y: 200,
+      ease: "power1.out",
+      scrub: true
+    });
+  };
+
+  const textTest = () => {
+    gsap.from(".text-test span", {
+      scrollTrigger: ".text-test",
+      stagger: 0.1,
+      duration: 0.5,
+      y: 200,
+      ease: "power1.out",
+      scrub: true
+    });
   };
 
   const speakers = () => {
@@ -151,31 +168,21 @@ const { title } = Astro.props;
   };
 
   const testtt = () => {
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.from(".panel span", {
+    //   scrollTrigger: ".panel",
+    //   stagger: 0.1,
+    //   duration: 0.5,
+    //   y: 200,
+    //   ease: "power1.out",
+    // });
 
-    ScrollTrigger.defaults({
-      toggleActions: "restart",
-      scroller: "body",
-    });
-
-    gsap.from(".orange p", {
-      scrollTrigger: ".orange",
-      stagger: 0.1,
-      duration: 0.5,
-      y: 200,
-      ease: "power1.out",
-    });
-
-    gsap.to(".red", {
-      scrollTrigger: {
-        trigger: ".red",
-        toggleActions: "restart",
-      },
-      stagger: 0.1,
-      duration: 0.5,
-      backgroundColor: "#FFA500",
-      ease: "power1.out",
-    });
+    // gsap.to(".red", {
+    //   scrollTrigger: ".red",
+    //   duration: 0.5,
+    //   backgroundColor: "#FFA500",
+    //   ease: "power1.out",
+    //   delay: 1,
+    // });
   };
 
   (imagesLoaded(images) as any)
@@ -184,6 +191,8 @@ const { title } = Astro.props;
     .on("always", showDemo)
     .on("always", fades)
     .on("always", speakers)
+    .on("always", textSpeakers)
+    .on("always", textTest)
     .on("always", testtt);
 </script>
 
@@ -233,4 +242,12 @@ const { title } = Astro.props;
     color: white;
     z-index: 10000;
   }
+
+  /* .asd {
+    scroll-snap-type: y mandatory;
+  }
+
+  .panel {
+    scroll-snap-align: start;
+  } */
 </style>
