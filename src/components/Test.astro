@@ -1,0 +1,29 @@
+<div class="asd">
+  <section class="panel orange bg-orange-300">
+    <p>This element will spin.</p>
+  </section>
+
+  <section class="panel red bg-red-300">
+    <p>This background color will change</p>
+  </section>
+</div>
+
+<style>
+  .asd {
+    scroll-snap-type: y mandatory;
+  }
+
+  .panel {
+    scroll-snap-align: start;
+    height: 100vh;
+  }
+
+  .red {
+    background-color: #cf3535;
+    background-image: none;
+  }
+
+  .panel p {
+    font-size: 32px;
+  }
+</style>

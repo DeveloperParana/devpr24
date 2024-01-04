@@ -1,0 +1,84 @@
+---
+
+---
+
+<div class="w-full mx-auto max-w-7xl py-20">
+  <div
+    class="flex flex-col text-hero text-2xl md:text-4xl lg:text-6xl font-black text-white text-center lg:text-left"
+  >
+    <span class="md:whitespace-nowrap">A DevParaná Conf é organizada</span>
+    <span class="text-green-600 md:whitespace-nowrap"
+      >por pessoas da comunidade</span
+    >
+    <span class="md:whitespace-nowrap">para comunidade.</span>
+  </div>
+</div>
+
+<section id="horizontal-scoll">
+  <div class="horizontal-scoll-wrapper">
+    <div class="horizontal">
+      <div>
+        <div class="card bg-green-600 rounded-xl">
+          <h2>Card 1</h2>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-green-600 rounded-xl">
+          <h2>Card 2</h2>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-green-600 rounded-xl">
+          <h2>Card 3</h2>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-green-600 rounded-xl">
+          <h2>Card 4</h2>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-green-600 rounded-xl">
+          <h2>Card 5</h2>
+        </div>
+      </div>
+      <div>
+        <div class="card bg-green-600 rounded-xl">
+          <h2>Card 6</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .horizontal-scoll-wrapper {
+    overflow: hidden;
+    height: 525px;
+  }
+
+  .horizontal {
+    display: flex;
+    height: 100%;
+  }
+
+  .horizontal > div {
+    display: flex;
+    flex-shrink: 0;
+    padding: 0 5px;
+  }
+
+  .horizontal > div:first-child {
+    padding: 0 5px 0 15px;
+  }
+
+  .horizontal > div:last-child {
+    padding: 0 15px 0 5px;
+  }
+
+  .horizontal .card {
+    align-items: stretch;
+    width: 540px;
+    padding: 50px 40px;
+  }
+</style>

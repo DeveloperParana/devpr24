@@ -14,8 +14,13 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <script src="https://unpkg.com/split-type"></script>
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div
@@ -32,15 +37,18 @@ const { title } = Astro.props;
   import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
   import imagesLoaded from "imagesloaded";
   import SplitType from "split-type";
-  // import TextPlugin from "gsap/TextPlugin";
 
   document.body.style.overflow = "hidden";
 
   gsap.registerPlugin(ScrollTrigger, SplitType);
 
-  const images: HTMLImageElement[] = gsap.utils.toArray("img");
+  ScrollTrigger.defaults({
+    // toggleActions: "restart pause reverse pause",
+    toggleActions: "restart",
+    scroller: "body",
+  });
 
-  console.log("images", images);
+  const images: HTMLImageElement[] = gsap.utils.toArray("img");
 
   const loader = document.querySelector("#loading")!;
   const updateProgress = (instance: any) =>
@@ -53,24 +61,26 @@ const { title } = Astro.props;
     document?.scrollingElement?.scrollTo(0, 0);
     gsap.to(document.querySelector(".loader"), { autoAlpha: 0 });
 
-    gsap.utils.toArray("section").forEach((section: any, index: number) => {
-      const w = section.querySelector(".wrapper");
-      const [x, xEnd] =
-        index % 2
-          ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
-          : [w.scrollWidth * -1, 0];
-      gsap.fromTo(
-        w,
-        { x },
-        {
-          x: xEnd,
-          scrollTrigger: {
-            trigger: section,
-            scrub: 0.5,
+    gsap.utils
+      .toArray(".demo-gallery")
+      .forEach((section: any, index: number) => {
+        const w: HTMLElement = section.querySelector(".wrapper");
+        const [x, xEnd] =
+          index % 2
+            ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+            : [w.scrollWidth * -1, 0];
+        gsap.fromTo(
+          w,
+          { x },
+          {
+            x: xEnd,
+            scrollTrigger: {
+              trigger: section,
+              scrub: 0.5,
+            },
           },
-        },
-      );
-    });
+        );
+      });
   };
 
   const fades = () => {
@@ -99,41 +109,101 @@ const { title } = Astro.props;
     });
   };
 
-  const teste = () => {
+  const textHero = () => {
     const ourText = new SplitType(".text-hero", { types: "words" });
     const words = ourText.words;
 
     gsap.fromTo(
       words,
       {
-        y: 100,
+        y: 50,
         opacity: 0,
       },
       {
         y: 0,
         opacity: 1,
-        stagger: 0.05,
-        duration: 2,
-        ease: "power4.out",
+        stagger: 0.1,
+        duration: 0.5,
+        ease: "power1.out",
       },
     );
   };
 
+  const speakers = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let horizontalSection = document.querySelector(".horizontal")!;
+
+    console.log(horizontalSection);
+
+    gsap.to(".horizontal", {
+      x: () => horizontalSection.scrollWidth * -1,
+      xPercent: 100,
+      scrollTrigger: {
+        trigger: ".horizontal",
+        start: "center center",
+        end: "+=2000px",
+        pin: "#horizontal-scoll",
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    });
+  };
+
+  const testtt = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.defaults({
+      toggleActions: "restart",
+      scroller: "body",
+    });
+
+    gsap.from(".orange p", {
+      scrollTrigger: ".orange",
+      stagger: 0.1,
+      duration: 0.5,
+      y: 200,
+      ease: "power1.out",
+    });
+
+    gsap.to(".red", {
+      scrollTrigger: {
+        trigger: ".red",
+        toggleActions: "restart",
+      },
+      stagger: 0.1,
+      duration: 0.5,
+      backgroundColor: "#FFA500",
+      ease: "power1.out",
+    });
+  };
+
   (imagesLoaded(images) as any)
     .on("progress", updateProgress)
+    .on("always", textHero)
     .on("always", showDemo)
     .on("always", fades)
-    .on("always", teste);
+    .on("always", speakers)
+    .on("always", testtt);
 </script>
 
 <style is:global>
   html {
-    font-family: "Inter", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     background: #0a0a0a;
+    /* overflow-y: scroll; */
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    margin: 0;
+    padding: 0;
   }
   body {
     margin: 0;
     padding: 0;
+    /* overflow-y: visible; */
+    position: relative;
+    height: unset;
   }
 
   ::-webkit-scrollbar {
