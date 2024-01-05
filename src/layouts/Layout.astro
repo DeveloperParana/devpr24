@@ -239,29 +239,15 @@ const { title } = Astro.props;
   };
 
   const gradient = () => {
-    // const b2 = "linear-gradient(20deg, rgba(255, 0, 0, 1), rgba(0, 0, 255, 1))";
-    // gsap.from(".gradient", {
-    //   scrollTrigger: {
-    //     trigger: "main",
-    //     start: "top top",
-    //     end: "bottom bottom",
-    //     scrub: true,
-    //   },
-    //   ease: "none",
-    //   background: "linear-gradient(to right, blue, green)",
-    // });
-
-    const teste =
-      "radial-gradient(circle at 100% 100%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))";
-
     gsap.from(".gradient", {
       scrollTrigger: {
         trigger: "main",
         scrub: true,
-        start: "top top",
-        end: "center bottom",
+        start: "top 90%",
+        end: "bottom -100%",
       },
-      background: teste,
+      background:
+        "radial-gradient(circle at 100% 100%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))",
       ease: "none",
     });
   };

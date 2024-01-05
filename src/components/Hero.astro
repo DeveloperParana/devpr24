@@ -86,9 +86,9 @@ import arrowDownImage from "../../public/arrow-down.svg";
     </div>
 
     <div
-      class="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0 relative"
+      class="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-8 lg:gap-0 relative"
     >
-      <div class="z-50 flex flex-col gap-8 w-full">
+      <div class="z-50 flex flex-col gap-8 w-full relative lg:absolute right-0">
         <div
           class="flex flex-col text-hero text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-white text-center lg:text-left"
         >
@@ -111,11 +111,11 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div
-        class="animate-top relative lg:absolute right-0 hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
+        class="animate-top hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
       >
         <Image
           src={heroImage}
-          class="lg:max-w-xl w-full -z-10 rounded-xl"
+          class="max-w-xl w-full -z-10 rounded-xl"
           alt=""
         />
       </div>
