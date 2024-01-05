@@ -9,10 +9,10 @@ import arrowDownImage from "../../public/arrow-down.svg";
 
 <div class="hero w-full overflow-hidden">
   <div
-    class="w-full max-w-7xl mx-auto px-4 md:px-8 lg:px-12 min-h-auto md:min-h-screen h-full flex flex-col justify-between items-stretch gap-10 py-10"
+    class="w-full max-w-[95%] mx-auto px-4 md:px-8 lg:px-12 min-h-auto md:min-h-screen h-full flex flex-col justify-between items-stretch gap-10 py-10"
   >
     <div
-      class="animate-bottom w-full mx-auto grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center md:justify-between items-center"
+      class="animate-top z-50 w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-center md:justify-between items-center"
     >
       <div
         class="col-span-2 md:col-span-1 flex justify-center md:justify-start items-center gap-1 md:gap-2"
@@ -21,10 +21,30 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div
-        class="col-span-1 justify-end md:justify-center items-center gap-6 hidden md:flex"
+        class="col-span-2 justify-end md:justify-center items-center gap-6 hidden md:flex"
       >
-        <Image src={instagramImage} width={24} alt="Instagram" />
-        <Image src={twitterImage} width={24} alt="Twitter" />
+        <div class="flex gap-6">
+          <a
+            href="#"
+            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            >Página inicial</a
+          >
+          <a
+            href="#"
+            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            >Sobre</a
+          >
+          <a
+            href="#"
+            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            >Palestrantes</a
+          >
+          <a
+            href="#"
+            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            >Cronograma</a
+          >
+        </div>
       </div>
 
       <div
@@ -66,19 +86,21 @@ import arrowDownImage from "../../public/arrow-down.svg";
     </div>
 
     <div
-      class="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0"
+      class="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0 relative"
     >
-      <div class="mr-auto lg:-mr-40 z-50 flex flex-col gap-8 w-full">
+      <div class="z-50 flex flex-col gap-8 w-full">
         <div
-          class="flex flex-col text-hero text-2xl md:text-4xl lg:text-6xl font-black text-white text-center lg:text-left"
+          class="flex flex-col text-hero text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-white text-center lg:text-left"
         >
-          <span class="md:whitespace-nowrap">A DevParaná Conf é organizada</span>
+          <span class="md:whitespace-nowrap">A DevParaná Conf é organizada</span
+          >
           <span class="text-green-600 md:whitespace-nowrap"
             >por pessoas da comunidade</span
           >
           <span class="md:whitespace-nowrap">para comunidade.</span>
         </div>
-        <div class="animate-bottom flex justify-center lg:justify-start">
+
+        <div class="animate-top flex justify-center lg:justify-start">
           <a
             href="#"
             class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-white text-base lg:text-lg px-8 py-4"
@@ -89,7 +111,7 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div
-        class="animate-left hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
+        class="animate-top relative lg:absolute right-0 hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
       >
         <Image
           src={heroImage}
@@ -99,15 +121,27 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
     </div>
 
-    <div class="animate-bottom w-full grid grid-cols-1 md:grid-cols-3">
+    <div class="animate-top w-full grid grid-cols-1 md:grid-cols-3">
       <div class="text-center md:text-left w-full">
-        <div class="text-base md:text-xl font-medium text-white">
+        <div class="flex gap-3">
+          <div
+            class="border border-green-600 rounded-full text-sm md:text-base font-medium text-green-600 px-3 py-1.5"
+          >
+            <span>07 de Junho | 16:20</span>
+          </div>
+          <div
+            class="border border-green-600 rounded-full text-sm md:text-base font-medium text-green-600 px-3 py-1.5"
+          >
+            <span>Maringá | Pr</span>
+          </div>
+        </div>
+        <!-- <div class="text-base md:text-xl font-medium text-white">
           <span>07 de Junho</span>
           <span class="text-green-600">16:20</span>
-        </div>
+        </div> -->
       </div>
 
-      <div class="hidden md:flex justify-center items-center">
+      <div class="hidden md:flex justify-center items-center btn-scroll-down">
         <a
           href="#"
           class="w-10 h-10 bg-green-700 hover:bg-green-600 rounded-full flex justify-center items-center text-center"
@@ -117,9 +151,16 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div class="text-center md:text-right w-full">
-        <span class="text-base md:text-xl font-medium text-white"
+        <!-- <span class="text-base md:text-xl font-medium text-white"
           >Maringá <span class="text-green-600">PR</span></span
+        > -->
+
+        <div
+          class="col-span-1 justify-center md:justify-end items-center gap-6 hidden md:flex"
         >
+          <Image src={instagramImage} width={30} alt="Instagram" />
+          <Image src={twitterImage} width={30} alt="Twitter" />
+        </div>
       </div>
     </div>
   </div>
