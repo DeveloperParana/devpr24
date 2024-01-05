@@ -1,6 +1,6 @@
 <canvas id="commits" class="commits bg-neutral-950"></canvas>
 
-<div id="gradient " class="gradient h-screen w-screen"></div>
+<div id="gradient " class="gradient h-full w-screen"></div>
 
 <script>
   const squareSize = 20;
@@ -134,14 +134,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background: radial-gradient(
-      circle at 10% 10%,
-      rgba(10, 10, 10, 0.5),
-      rgba(10, 10, 10, 0.9),
-      rgba(10, 10, 10, 1),
-      rgba(10, 10, 10, 1),
-      rgba(10, 10, 10, 0.9),
-      rgba(10, 10, 10, 0.5)
-    );
+    background: radial-gradient(circle at 10% 10%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5));
+    /* background: linear-gradient(to right, red, yellow) */
   }
 </style>

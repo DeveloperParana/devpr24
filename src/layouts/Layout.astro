@@ -42,6 +42,8 @@ const { title } = Astro.props;
 
   gsap.registerPlugin(ScrollTrigger, SplitType);
 
+  // ScrollTrigger.normalizeScroll(true);
+
   ScrollTrigger.defaults({
     toggleActions: "play pause resume reset",
     scroller: "body",
@@ -223,16 +225,44 @@ const { title } = Astro.props;
     gsap.from(".tickets", {
       scrollTrigger: {
         trigger: ".tickets",
-        start: "center 100%",
-        end: "center 40%",
+        start: "center bottom",
+        end: "center center",
         scrub: true,
       },
       stagger: 0.1,
       duration: 0.5,
-      borderRadius: '0.75rem',
+      borderRadius: "0.75rem",
       width: "80%",
       ease: "power1.out",
       scrub: true,
+    });
+  };
+
+  const gradient = () => {
+    // const b2 = "linear-gradient(20deg, rgba(255, 0, 0, 1), rgba(0, 0, 255, 1))";
+    // gsap.from(".gradient", {
+    //   scrollTrigger: {
+    //     trigger: "main",
+    //     start: "top top",
+    //     end: "bottom bottom",
+    //     scrub: true,
+    //   },
+    //   ease: "none",
+    //   background: "linear-gradient(to right, blue, green)",
+    // });
+
+    const teste =
+      "radial-gradient(circle at 100% 100%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))";
+
+    gsap.from(".gradient", {
+      scrollTrigger: {
+        trigger: "main",
+        scrub: true,
+        start: "top top",
+        end: "center bottom",
+      },
+      background: teste,
+      ease: "none",
     });
   };
 
@@ -244,7 +274,6 @@ const { title } = Astro.props;
     //   y: 200,
     //   ease: "power1.out",
     // });
-
     // gsap.from(".red", {
     //   scrollTrigger: {
     //     trigger: ".red",
@@ -263,6 +292,7 @@ const { title } = Astro.props;
 
   (imagesLoaded(images) as any)
     .on("progress", updateProgress)
+    .on("always", gradient)
     .on("always", textHero)
     .on("always", showDemo)
     .on("always", fades)
@@ -279,7 +309,7 @@ const { title } = Astro.props;
   html {
     font-family: "Space Grotesk", sans-serif;
     background: #0a0a0a;
-    /* overflow-y: scroll; */
+    overflow-x: hidden;
     height: 100%;
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
@@ -289,6 +319,7 @@ const { title } = Astro.props;
   body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     /* overflow-y: visible; */
     position: relative;
     height: unset;
