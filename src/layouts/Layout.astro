@@ -42,8 +42,6 @@ const { title } = Astro.props;
 
   gsap.registerPlugin(ScrollTrigger, SplitType);
 
-  // ScrollTrigger.normalizeScroll(true);
-
   ScrollTrigger.defaults({
     toggleActions: "play pause resume reset",
     scroller: "body",
@@ -225,7 +223,7 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      x: '100%',
+      x: "100%",
       ease: "power1.out",
       scrub: true,
     });
@@ -235,14 +233,15 @@ const { title } = Astro.props;
     gsap.from(".tickets", {
       scrollTrigger: {
         trigger: ".tickets",
-        start: "center bottom",
-        end: "center center",
+        start: "top bottom",
+        end: "center 60%",
         scrub: true,
       },
       stagger: 0.1,
       duration: 0.5,
       borderRadius: "0.75rem",
-      width: "80%",
+      width: "70%",
+      y: 100,
       ease: "power1.out",
       scrub: true,
     });
@@ -313,30 +312,6 @@ const { title } = Astro.props;
     });
   };
 
-  const testtt = () => {
-    // gsap.from(".panel span", {
-    //   scrollTrigger: ".panel",
-    //   stagger: 0.1,
-    //   duration: 0.5,
-    //   y: 200,
-    //   ease: "power1.out",
-    // });
-    // gsap.from(".red", {
-    //   scrollTrigger: {
-    //     trigger: ".red",
-    //     start: "center 100%",
-    //     end: "center 40%",
-    //     scrub: true,
-    //   },
-    //   stagger: 0.1,
-    //   duration: 0.5,
-    //   borderRadius: '0.75rem',
-    //   width: "80%",
-    //   ease: "power1.out",
-    //   scrub: true,
-    // });
-  };
-
   (imagesLoaded(images) as any)
     .on("progress", updateProgress)
     .on("always", gradient)
@@ -352,8 +327,7 @@ const { title } = Astro.props;
     .on("always", textSchedule)
     .on("always", lineSchedule)
     .on("always", scheduleItems)
-    .on("always", textTest)
-    .on("always", testtt);
+    .on("always", textTest);
 </script>
 
 <style is:global>
