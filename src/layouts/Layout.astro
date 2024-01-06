@@ -201,23 +201,33 @@ const { title } = Astro.props;
   };
 
   const speakers = () => {
-    gsap.registerPlugin(ScrollTrigger);
-
     let horizontalSection = document.querySelector(".horizontal")!;
-
-    console.log(horizontalSection);
-
     gsap.to(".horizontal", {
       x: () => horizontalSection.scrollWidth * -1,
       xPercent: 100,
       scrollTrigger: {
         trigger: ".horizontal",
         start: "center center",
-        end: "+=2000px",
+        end: "+=2000px", // calcular tamanho dos itens somados
         pin: "#horizontal-scoll",
         scrub: true,
         invalidateOnRefresh: true,
       },
+    });
+  };
+
+  const speakersCards = () => {
+    gsap.from(".horizontal-scoll-wrapper", {
+      scrollTrigger: {
+        trigger: ".horizontal-scoll-wrapper",
+        start: "20% 90%",
+        end: "center center",
+        scrub: true,
+      },
+      stagger: 0.1,
+      x: '100%',
+      ease: "power1.out",
+      scrub: true,
     });
   };
 
@@ -247,8 +257,59 @@ const { title } = Astro.props;
         end: "bottom -100%",
       },
       background:
-        "radial-gradient(circle at 100% 100%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))",
+        "radial-gradient(circle at 0% 0%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))",
       ease: "none",
+    });
+  };
+
+  const lineSchedule = () => {
+    gsap.to(".line", {
+      scrollTrigger: {
+        trigger: "#schedule",
+        scrub: true,
+        start: "top 40%",
+        end: "90% 70%",
+        // markers: true,
+      },
+      ease: "none",
+      height: "calc(100% - 60px)",
+    });
+  };
+
+  const scheduleItems = () => {
+    const array = document.querySelectorAll(".item-schedule");
+    array.forEach((element, index) => {
+      const valueCalcStart = (index * 10) / 2;
+      const valueCalcEnd = (index * 10) / 2;
+
+      gsap.from(`#${element.id}`, {
+        scrollTrigger: {
+          trigger: "#schedule",
+          scrub: true,
+          start: `${0 + valueCalcStart}% ${50 - valueCalcStart}%`,
+          end: `${40 + valueCalcEnd}% ${80 - valueCalcEnd}%`,
+        },
+        ease: "power1.out",
+        opacity: 0,
+        y: 50,
+      });
+    });
+  };
+
+  const textSchedule = () => {
+    gsap.from(".text-schedule span", {
+      scrollTrigger: {
+        trigger: ".text-schedule",
+        start: "center 90%",
+        end: "center 40%",
+        scrub: true,
+      },
+      stagger: 0.1,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      ease: "power1.out",
+      scrub: true,
     });
   };
 
@@ -283,10 +344,14 @@ const { title } = Astro.props;
     .on("always", showDemo)
     .on("always", fades)
     .on("always", speakers)
+    .on("always", speakersCards)
     .on("always", textSpeakers)
     .on("always", textSlider)
     .on("always", tickets)
     .on("always", textTickets)
+    .on("always", textSchedule)
+    .on("always", lineSchedule)
+    .on("always", scheduleItems)
     .on("always", textTest)
     .on("always", testtt);
 </script>
@@ -306,7 +371,6 @@ const { title } = Astro.props;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    /* overflow-y: visible; */
     position: relative;
     height: unset;
   }
@@ -316,7 +380,7 @@ const { title } = Astro.props;
   }
 
   ::-webkit-scrollbar-track {
-    background: #171717;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -338,12 +402,4 @@ const { title } = Astro.props;
     color: white;
     z-index: 10000;
   }
-
-  /* .asd {
-    scroll-snap-type: y mandatory;
-  }
-
-  .panel {
-    scroll-snap-align: start;
-  } */
 </style>
