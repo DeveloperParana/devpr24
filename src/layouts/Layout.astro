@@ -83,7 +83,7 @@ const { title } = Astro.props;
   };
 
   gsap.to(".btn-scroll-down", {
-    duration: 0.7,
+    duration: 0.5,
     y: -20,
     repeat: -1,
     yoyo: true,
@@ -94,7 +94,7 @@ const { title } = Astro.props;
       scrollTrigger: ".animate-top",
       y: 100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
 
@@ -102,7 +102,7 @@ const { title } = Astro.props;
       scrollTrigger: ".animate-bottom",
       y: -100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
 
@@ -110,7 +110,7 @@ const { title } = Astro.props;
       scrollTrigger: ".animate-left",
       x: -100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
 
@@ -118,7 +118,7 @@ const { title } = Astro.props;
       scrollTrigger: ".animate-left",
       x: 100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
@@ -130,7 +130,23 @@ const { title } = Astro.props;
       duration: 0.5,
       y: 200,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
+      scrub: true,
+    });
+  };
+
+  const menu = () => {
+    gsap.from(".menu", {
+      scrollTrigger: {
+        trigger: ".main",
+        start: "10% top",
+        end: "20% center",
+        scrub: true,
+      },
+      stagger: 0.1,
+      opacity: 0,
+      y: -100,
+      ease: "none",
       scrub: true,
     });
   };
@@ -147,27 +163,27 @@ const { title } = Astro.props;
       duration: 0.5,
       y: 100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
 
-  const textSlider = () => {
-    gsap.from(".text-slider span", {
-      scrollTrigger: {
-        trigger: ".text-slider",
-        start: "center 90%",
-        end: "center 40%",
-        scrub: true,
-      },
-      stagger: 0.1,
-      duration: 0.5,
-      y: 100,
-      opacity: 0,
-      ease: "power1.out",
-      scrub: true,
-    });
-  };
+  // const textSlider = () => {
+  //   gsap.from(".text-slider span", {
+  //     scrollTrigger: {
+  //       trigger: ".text-slider",
+  //       start: "center 90%",
+  //       end: "center 40%",
+  //       scrub: true,
+  //     },
+  //     stagger: 0.1,
+  //     duration: 0.5,
+  //     y: 100,
+  //     opacity: 0,
+  //     ease: "none",
+  //     scrub: true,
+  //   });
+  // };
 
   const textTickets = () => {
     gsap.from(".text-tickets span", {
@@ -181,7 +197,7 @@ const { title } = Astro.props;
       duration: 0.5,
       y: 100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
@@ -193,7 +209,7 @@ const { title } = Astro.props;
       duration: 0.5,
       y: 200,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
@@ -224,7 +240,7 @@ const { title } = Astro.props;
       },
       stagger: 0.1,
       x: "100%",
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
@@ -241,8 +257,7 @@ const { title } = Astro.props;
       duration: 0.5,
       borderRadius: "0.75rem",
       width: "70%",
-      y: 100,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
@@ -268,7 +283,6 @@ const { title } = Astro.props;
         scrub: true,
         start: "top 40%",
         end: "90% 70%",
-        // markers: true,
       },
       ease: "none",
       height: "calc(100% - 60px)",
@@ -288,7 +302,7 @@ const { title } = Astro.props;
           start: `${0 + valueCalcStart}% ${50 - valueCalcStart}%`,
           end: `${40 + valueCalcEnd}% ${80 - valueCalcEnd}%`,
         },
-        ease: "power1.out",
+        ease: "none",
         opacity: 0,
         y: 50,
       });
@@ -307,7 +321,7 @@ const { title } = Astro.props;
       duration: 0.5,
       y: 100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
       scrub: true,
     });
   };
@@ -317,8 +331,8 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: "#about",
         scrub: true,
-        start: "top 40%",
-        end: "bottom 110%",
+        start: "40% bottom",
+        end: "bottom 100%",
       },
       opacity: 0,
       ease: "none",
@@ -392,31 +406,67 @@ const { title } = Astro.props;
     gsap.from(".text-about span", {
       scrollTrigger: {
         trigger: ".text-about",
-        start: "center 90%",
-        end: "center 40%",
+        start: "center bottom",
+        end: "center center",
         scrub: true,
       },
       stagger: 0.1,
       duration: 0.5,
       y: 100,
       opacity: 0,
-      ease: "power1.out",
+      ease: "none",
+      scrub: true,
+    });
+  };
+
+  const counterCards = () => {
+    gsap.from("#counter .item-counter", {
+      scrollTrigger: {
+        trigger: "#counter",
+        start: "center bottom",
+        end: "bottom center",
+        scrub: true,
+      },
+      stagger: 0.1,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      ease: "none",
+      scrub: true,
+    });
+  };
+
+  const heroImage = () => {
+    gsap.to("#hero-image img", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "bottom bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+      stagger: 0.1,
+      width: "100%",
+      height: "100vh",
+      ease: "none",
       scrub: true,
     });
   };
 
   (imagesLoaded(images) as any)
     .on("progress", updateProgress)
+    .on("always", showDemo)
+    .on("always", menu)
     .on("always", gradient)
     .on("always", textHero)
-    .on("always", showDemo)
+    .on("always", heroImage)
+    .on("always", counterCards)
     .on("always", textAbout)
     .on("always", aboutImages)
     .on("always", fades)
     .on("always", speakers)
     .on("always", speakersCards)
     .on("always", textSpeakers)
-    .on("always", textSlider)
+    // .on("always", textSlider)
     .on("always", tickets)
     .on("always", textTickets)
     .on("always", textSchedule)
@@ -470,5 +520,19 @@ const { title } = Astro.props;
     bottom: 0;
     color: white;
     z-index: 10000;
+  }
+
+  /* img.mask {
+    mask-image: linear-gradient(
+      -45deg,
+      rgb(10, 10, 10),
+      rgb(10, 10, 10, 0.5),
+      transparent
+    );
+  } */
+
+  img.mask,
+  #about img {
+    filter: brightness(0.6);
   }
 </style>
