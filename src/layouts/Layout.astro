@@ -83,7 +83,6 @@ const { title } = Astro.props;
   };
 
   gsap.to(".btn-scroll-down", {
-    duration: 0.5,
     y: -20,
     repeat: -1,
     yoyo: true,
@@ -96,6 +95,7 @@ const { title } = Astro.props;
       opacity: 0,
       ease: "none",
       scrub: true,
+      duration: 0.5,
     });
 
     gsap.from(".animate-bottom", {
@@ -104,6 +104,7 @@ const { title } = Astro.props;
       opacity: 0,
       ease: "none",
       scrub: true,
+      duration: 0.5,
     });
 
     gsap.from(".animate-left", {
@@ -112,6 +113,7 @@ const { title } = Astro.props;
       opacity: 0,
       ease: "none",
       scrub: true,
+      duration: 0.5,
     });
 
     gsap.from(".animate-right", {
@@ -120,6 +122,7 @@ const { title } = Astro.props;
       opacity: 0,
       ease: "none",
       scrub: true,
+      duration: 0.5,
     });
   };
 
@@ -127,7 +130,7 @@ const { title } = Astro.props;
     gsap.from(".text-hero span", {
       scrollTrigger: ".text-hero",
       stagger: 0.1,
-      duration: 0.5,
+
       y: 200,
       opacity: 0,
       ease: "none",
@@ -144,7 +147,6 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      opacity: 0,
       y: -100,
       ease: "none",
       scrub: true,
@@ -160,7 +162,7 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      duration: 0.5,
+
       y: 100,
       opacity: 0,
       ease: "none",
@@ -177,7 +179,7 @@ const { title } = Astro.props;
   //       scrub: true,
   //     },
   //     stagger: 0.1,
-  //     duration: 0.5,
+  //
   //     y: 100,
   //     opacity: 0,
   //     ease: "none",
@@ -194,7 +196,7 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      duration: 0.5,
+
       y: 100,
       opacity: 0,
       ease: "none",
@@ -206,7 +208,7 @@ const { title } = Astro.props;
     gsap.from(".text-test span", {
       scrollTrigger: ".text-test",
       stagger: 0.1,
-      duration: 0.5,
+
       y: 200,
       opacity: 0,
       ease: "none",
@@ -254,7 +256,7 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      duration: 0.5,
+
       borderRadius: "0.75rem",
       width: "70%",
       ease: "none",
@@ -318,7 +320,7 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      duration: 0.5,
+
       y: 100,
       opacity: 0,
       ease: "none",
@@ -411,7 +413,7 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      duration: 0.5,
+
       y: 100,
       opacity: 0,
       ease: "none",
@@ -424,15 +426,14 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: "#counter",
         start: "center bottom",
-        end: "bottom center",
+        end: "bottom 70%",
         scrub: true,
       },
       stagger: 0.1,
-      duration: 0.5,
+
       y: 100,
       opacity: 0,
       ease: "none",
-      scrub: true,
     });
   };
 
@@ -530,6 +531,11 @@ const { title } = Astro.props;
       transparent
     );
   } */
+
+  img {
+    pointer-events: none;
+    user-select: none;
+  }
 
   img.mask,
   #about img {
