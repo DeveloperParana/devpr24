@@ -1,0 +1,84 @@
+<script>
+  function iniciarContador(dataFinal: any) {
+    const intervalo = setInterval(function () {
+      const agora = new Date().getTime();
+      const distancia = dataFinal - agora;
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor(
+        (distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+      document.getElementById("days")!.innerHTML = dias.toString();
+      document.getElementById("hours")!.innerHTML = horas.toString();
+      document.getElementById("minutes")!.innerHTML = minutos.toString();
+      document.getElementById("seconds")!.innerHTML = segundos.toString();
+
+      if (distancia < 0) {
+        clearInterval(intervalo);
+        document.getElementById("counter")!.innerHTML = "EXPIRADO";
+      }
+    }, 1000);
+  }
+
+  const dataFinal = new Date("Jun 7, 2024 15:37:25").getTime();
+
+  iniciarContador(dataFinal);
+</script>
+
+<div class="w-full mx-auto max-w-7xl">
+  <div
+    class="grid grid-cols-4 justify-center items-center gap-2 md:gap-4"
+    id="counter"
+  >
+    <div
+      class="w-full rounded-lg min-h-32 p-6 border border-green-600/50 bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
+        id="days"
+      >
+        12
+      </div>
+      <span class="text-lg md:text-xl lg:text-2xl font-normal">Dias</span>
+    </div>
+
+    <div
+      class="w-full rounded-lg min-h-32 p-6 border border-green-600/50 bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
+        id="hours"
+      >
+        04
+      </div>
+      <span class="text-lg md:text-xl lg:text-2xl font-normal">Horas</span>
+    </div>
+
+    <div
+      class="w-full rounded-lg min-h-32 p-6 border border-green-600/50 bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
+        id="minutes"
+      >
+        43
+      </div>
+      <span class="text-lg md:text-xl lg:text-2xl font-normal">Min</span>
+    </div>
+
+    <div
+      class="w-full rounded-lg min-h-32 p-6 border border-green-600/50 bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
+        id="seconds"
+      >
+        55
+      </div>
+      <span class="text-lg md:text-xl lg:text-2xl font-normal">Seg</span>
+    </div>
+  </div>
+</div>

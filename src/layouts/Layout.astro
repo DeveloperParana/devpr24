@@ -312,11 +312,106 @@ const { title } = Astro.props;
     });
   };
 
+  const aboutImages = () => {
+    gsap.from(".about-images", {
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: true,
+        start: "top 40%",
+        end: "bottom 110%",
+      },
+      opacity: 0,
+      ease: "none",
+    });
+
+    gsap.from("#about-image-1", {
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: true,
+        start: "top 40%",
+        end: "bottom bottom",
+      },
+      x: 150,
+      y: 100,
+      rotate: 4,
+      ease: "none",
+    });
+
+    gsap.from("#about-image-2", {
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: true,
+        start: "top 40%",
+        end: "bottom bottom",
+      },
+      x: -120,
+      y: 140,
+      rotate: 10,
+      ease: "none",
+    });
+
+    gsap.from("#about-image-3", {
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: true,
+        start: "top 40%",
+        end: "bottom bottom",
+      },
+      x: 220,
+      y: -120,
+      rotate: -8,
+      ease: "none",
+    });
+    gsap.from("#about-image-4", {
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: true,
+        start: "top 40%",
+        end: "bottom bottom",
+      },
+      x: 40,
+      y: -200,
+      rotate: -20,
+      ease: "none",
+    });
+    gsap.from("#about-image-5", {
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: true,
+        start: "top 40%",
+        end: "bottom bottom",
+      },
+      x: -250,
+      y: -200,
+      rotate: -8,
+      ease: "none",
+    });
+  };
+
+  const textAbout = () => {
+    gsap.from(".text-about span", {
+      scrollTrigger: {
+        trigger: ".text-about",
+        start: "center 90%",
+        end: "center 40%",
+        scrub: true,
+      },
+      stagger: 0.1,
+      duration: 0.5,
+      y: 100,
+      opacity: 0,
+      ease: "power1.out",
+      scrub: true,
+    });
+  };
+
   (imagesLoaded(images) as any)
     .on("progress", updateProgress)
     .on("always", gradient)
     .on("always", textHero)
     .on("always", showDemo)
+    .on("always", textAbout)
+    .on("always", aboutImages)
     .on("always", fades)
     .on("always", speakers)
     .on("always", speakersCards)

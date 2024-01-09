@@ -1,24 +1,109 @@
 ---
-
+import { Image } from "astro:assets";
+import Image1 from "../../public/1.jpg";
+import Image2 from "../../public/2.jpg";
+import Image3 from "../../public/3.jpg";
+import Image4 from "../../public/4.jpg";
+import Image5 from "../../public/5.jpg";
 ---
 
-<div class="max-w-7xl w-full mx-auto py-20">
-  <div class="flex flex-col justify-center items-center bg-green-600 w-full rounded-xl shadow-lg">
-    <div class="flex flex-col gap-8 w-full max-w-7xl mx-auto p-8 md:p-20">
-      <h1 class="text-2xl md:text-4xl font-black text-neutral-900">
-       Faça parte da maior comunidade do Paraná
-      </h1>
-      <p class="text-base md:text-xl text-neutral-800">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut ipsa culpa veritatis qui ullam harum impedit voluptates velit? Accusantium sapiente illum cum, porro consequatur libero alias voluptatem voluptatum neque illo!
-      </p>
-      <div class="flex">
-        <a
-          href=""
-          class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-neutral-900 hover:bg-green-600 text-white text-base px-8 py-4 uppercase"
-        >
-          Entrar na comunidade
-        </a>
+<div id="about" class="max-w-7xl w-full mx-auto py-20 about">
+  <div
+    class="flex flex-col lg:flex-row justify-center items-center w-full gap-8"
+  >
+    <div class="w-full flex flex-col gap-4 about-images">
+      <div class="flex justify-center items-end gap-4">
+        <Image
+          src={Image2}
+          id="about-image-1"
+          class="about-image-1 rounded-xl border-2 border-green-600 h-60 w-60 object-cover object-center"
+          alt=""
+        />
+        <Image
+          src={Image1}
+          id="about-image-2"
+          class="about-image-2 rounded-xl border-2 border-green-600 h-80 w-60 object-cover object-bottom"
+          alt=""
+        />
+      </div>
+      <div class="flex justify-center items-start gap-4">
+        <Image
+          src={Image3}
+          id="about-image-3"
+          class="about-image-3 rounded-xl border-2 border-green-600 h-44 w-44 object-cover object-center"
+          alt=""
+        />
+        <Image
+          src={Image4}
+          id="about-image-4"
+          class="about-image-4 rounded-xl border-2 border-green-600 h-80 w-60 object-cover object-center"
+          alt=""
+        />
+        <Image
+          src={Image5}
+          id="about-image-5"
+          class="about-image-5 rounded-xl border-2 border-green-600 h-40 w-60 object-cover object-center"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="w-full flex flex-col gap-8 text-about">
+      <div
+        class="flex flex-col text-2xl md:text-4xl lg:text-6xl font-black text-white text-left"
+      >
+        <span class="md:whitespace-nowrap">Conheça mais sobre</span>
+        <span class="text-green-600 md:whitespace-nowrap">o DevParaná</span>
+      </div>
+
+      <span class="text-white/80 text-base font-thin leading-7">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi minus
+        sit, earum assumenda iste obcaecati blanditiis. Consequatur laudantium
+        cumque consectetur at quis? Nostrum magni obcaecati eius ipsum adipisci,
+        excepturi aperiam.
+      </span>
+
+      <div class="flex gap-4 justify-between items-start">
+
+        <span class="flex flex-col justify-center items-center text-center">
+          <div class="font-bold text-2xl text-green-600">400+</div>
+          <div class="font-bold text-base text-white">Usuários</div>
+        </span>
+
+        <span class="flex flex-col justify-center items-center text-center">
+          <div class="font-bold text-2xl text-green-600">600%</div>
+          <div class="font-bold text-base text-white">Investment</div>
+        </span>
+
+        <span class="flex flex-col justify-center items-center text-center">
+          <div class="font-bold text-2xl text-green-600">100k</div>
+          <div class="font-bold text-base text-white">Downloads</div>
+        </span>
+
+        <span class="flex flex-col justify-center items-center text-center">
+          <div class="font-bold text-2xl text-green-600">2000+</div>
+          <div class="font-bold text-base text-white">Reviews</div>
+        </span>
+
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .about-image-1 {
+    z-index: 50 !important;
+  }
+  .about-image-2 {
+    z-index: 3 !important;
+  }
+  .about-image-3 {
+    z-index: 10 !important;
+  }
+  .about-image-4 {
+    z-index: 2 !important;
+  }
+  .about-image-5 {
+    z-index: 1 !important;
+  }
+</style>

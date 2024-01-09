@@ -9,78 +9,51 @@ import arrowDownImage from "../../public/arrow-down.svg";
 
 <div class="hero w-full overflow-hidden">
   <div
-    class="w-full mx-auto px-4 md:px-8 lg:px-12 min-h-auto md:min-h-screen h-full flex flex-col justify-between items-stretch gap-10 py-10"
+    class="w-full mx-auto px-4 md:px-8 lg:px-12 min-h-auto lg:min-h-screen h-full flex flex-col justify-between items-stretch gap-10 py-10"
   >
     <div
-      class="animate-top z-50 w-full mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 justify-center md:justify-between items-center"
+      class="animate-top z-50 w-full mx-auto flex gap-4 lg:gap-8 justify-center lg:justify-between items-center"
     >
       <div
-        class="col-span-2 md:col-span-1 flex justify-center md:justify-start items-center gap-1 md:gap-2"
+        class="flex justify-center lg:justify-start items-center gap-1 lg:gap-2"
       >
-        <Image src={logoImage} class="max-w-80 md:max-w-96 w-full" alt="Logo" />
+        <Image src={logoImage} class="max-w-80 lg:max-w-96 w-full" alt="Logo" />
       </div>
 
-      <div
-        class="col-span-2 justify-end md:justify-center items-center gap-6 hidden md:flex"
-      >
-        <div class="flex gap-6">
+      <div class="justify-end items-center gap-6 hidden lg:flex">
+        <div class="flex gap-6 justify-center items-center">
           <a
             href="#"
-            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            class="text-white/80 hover:text-green-600 text-base lg:text-lg whitespace-nowrap"
             >Página inicial</a
           >
           <a
             href="#"
-            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            class="text-white/80 hover:text-green-600 text-base lg:text-lg whitespace-nowrap"
             >Sobre</a
           >
           <a
             href="#"
-            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            class="text-white/80 hover:text-green-600 text-base lg:text-lg whitespace-nowrap"
             >Palestrantes</a
           >
           <a
             href="#"
-            class="text-white/80 hover:text-green-600 text-base md:text-lg"
+            class="text-white/80 hover:text-green-600 text-base lg:text-lg whitespace-nowrap"
             >Cronograma</a
           >
-        </div>
-      </div>
-
-      <div
-        class="col-span-2 md:col-span-1 flex justify-center md:justify-end items-center gap-1 md:gap-2"
-      >
-        <div
-          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-        >
-          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
-            >12</span
+          <a
+            href="#"
+            class="text-white/80 hover:text-green-600 text-base lg:text-lg whitespace-nowrap"
           >
-          <span class="text-xs font-normal">Dias</span>
-        </div>
-        <div
-          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-        >
-          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
-            >04</span
+            <Image src={instagramImage} width={24} alt="Instagram" />
+          </a>
+          <a
+            href="#"
+            class="text-white/80 hover:text-green-600 text-base lg:text-lg whitespace-nowrap"
           >
-          <span class="text-xs font-normal">Horas</span>
-        </div>
-        <div
-          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-        >
-          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
-            >43</span
-          >
-          <span class="text-xs font-normal">Min</span>
-        </div>
-        <div
-          class="w-14 h-14 lg:w-18 lg:h-18 rounded-lg bg-green-800/10 text-white flex flex-col justify-center items-center text-center"
-        >
-          <span class="text-base md:text-lg lg:text-xl font-bold text-green-600"
-            >55</span
-          >
-          <span class="text-xs font-normal">Seg</span>
+            <Image src={twitterImage} width={24} alt="Twitter" />
+          </a>
         </div>
       </div>
     </div>
@@ -89,6 +62,19 @@ import arrowDownImage from "../../public/arrow-down.svg";
       class="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-8 lg:gap-0 relative"
     >
       <div class="z-50 flex flex-col gap-8 w-full relative lg:absolute right-0">
+        <div class="animate-top flex justify-center lg:justify-start gap-3">
+          <div
+            class="border bg-green-950/60 border-green-600 rounded-full text-sm md:text-base font-medium text-green-600 px-3 py-1.5"
+          >
+            <span>07 de Junho | 16:20</span>
+          </div>
+          <div
+            class="border bg-green-950/60 border-green-600 rounded-full text-sm md:text-base font-medium text-green-600 px-3 py-1.5"
+          >
+            <span>Maringá | Pr</span>
+          </div>
+        </div>
+
         <div
           class="flex flex-col text-hero text-2xl md:text-4xl lg:text-6xl xl:text-7xl font-black text-white text-center lg:text-left"
         >
@@ -111,7 +97,7 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
 
       <div
-        class="animate-top hero-img border-2 border-green-600 rounded-xl bg-neutral-950 mb-10"
+        class="animate-top hero-img border-2 border-green-600 rounded-xl bg-neutral-950"
       >
         <Image
           src={heroImage}
@@ -121,47 +107,13 @@ import arrowDownImage from "../../public/arrow-down.svg";
       </div>
     </div>
 
-    <div class="animate-top w-full grid grid-cols-1 md:grid-cols-3">
-      <div class="text-center md:text-left w-full">
-        <div class="flex gap-3">
-          <div
-            class="border bg-green-800/20 border-green-600/50 rounded-full text-sm md:text-base font-medium text-green-600 px-3 py-1.5"
-          >
-            <span>07 de Junho | 16:20</span>
-          </div>
-          <div
-            class="border bg-green-800/20 border-green-600/50 rounded-full text-sm md:text-base font-medium text-green-600 px-3 py-1.5"
-          >
-            <span>Maringá | Pr</span>
-          </div>
-        </div>
-        <!-- <div class="text-base md:text-xl font-medium text-white">
-          <span>07 de Junho</span>
-          <span class="text-green-600">16:20</span>
-        </div> -->
-      </div>
-
-      <div class="hidden md:flex justify-center items-center btn-scroll-down">
-        <a
-          href="#"
-          class="w-10 h-10 bg-green-700 hover:bg-green-600 rounded-full flex justify-center items-center text-center"
-        >
-          <Image src={arrowDownImage} width={20} alt="Arrow down" />
-        </a>
-      </div>
-
-      <div class="text-center md:text-right w-full">
-        <!-- <span class="text-base md:text-xl font-medium text-white"
-          >Maringá <span class="text-green-600">PR</span></span
-        > -->
-
-        <div
-          class="col-span-1 justify-center md:justify-end items-center gap-6 hidden md:flex"
-        >
-          <Image src={instagramImage} width={30} alt="Instagram" />
-          <Image src={twitterImage} width={30} alt="Twitter" />
-        </div>
-      </div>
+    <div class="animate-top w-full flex justify-center items-center">
+      <a
+        href="#"
+        class="w-10 h-10 bg-green-700 hover:bg-green-600 rounded-full flex justify-center items-center text-center btn-scroll-down"
+      >
+        <Image src={arrowDownImage} width={20} alt="Arrow down" />
+      </a>
     </div>
   </div>
 </div>
