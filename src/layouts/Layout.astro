@@ -264,19 +264,19 @@ const { title } = Astro.props;
     });
   };
 
-  const gradient = () => {
-    gsap.from(".gradient", {
-      scrollTrigger: {
-        trigger: "main",
-        scrub: true,
-        start: "top 90%",
-        end: "bottom -100%",
-      },
-      background:
-        "radial-gradient(circle at 0% 0%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))",
-      ease: "none",
-    });
-  };
+  // const gradient = () => {
+  //   gsap.from(".gradient", {
+  //     scrollTrigger: {
+  //       trigger: "main",
+  //       scrub: true,
+  //       start: "top 90%",
+  //       end: "bottom -100%",
+  //     },
+  //     background:
+  //       "radial-gradient(circle at 0% 0%, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 1), rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.5))",
+  //     ease: "none",
+  //   });
+  // };
 
   const lineSchedule = () => {
     gsap.to(".line", {
@@ -457,7 +457,7 @@ const { title } = Astro.props;
     .on("progress", updateProgress)
     .on("always", showDemo)
     .on("always", menu)
-    .on("always", gradient)
+    // .on("always", gradient)
     .on("always", textHero)
     .on("always", heroImage)
     .on("always", counterCards)
@@ -537,8 +537,7 @@ const { title } = Astro.props;
     user-select: none;
   }
 
-  img.mask,
-  #about img {
+  img.mask {
     filter: brightness(0.6);
   }
 </style>
