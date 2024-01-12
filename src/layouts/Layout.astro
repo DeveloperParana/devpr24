@@ -126,18 +126,6 @@ const { title } = Astro.props;
     });
   };
 
-  const textHero = () => {
-    gsap.from(".text-hero span", {
-      scrollTrigger: ".text-hero",
-      stagger: 0.1,
-
-      y: 200,
-      opacity: 0,
-      ease: "none",
-      scrub: true,
-    });
-  };
-
   const menu = () => {
     gsap.from(".menu", {
       scrollTrigger: {
@@ -148,35 +136,6 @@ const { title } = Astro.props;
       },
       stagger: 0.1,
       y: -100,
-      ease: "none",
-      scrub: true,
-    });
-  };
-
-  // const textSlider = () => {
-  //   gsap.from(".text-slider span", {
-  //     scrollTrigger: {
-  //       trigger: ".text-slider",
-  //       start: "center 90%",
-  //       end: "center 40%",
-  //       scrub: true,
-  //     },
-  //     stagger: 0.1,
-  //
-  //     y: 100,
-  //     opacity: 0,
-  //     ease: "none",
-  //     scrub: true,
-  //   });
-  // };
-
-  const textTest = () => {
-    gsap.from(".text-test span", {
-      scrollTrigger: ".text-test",
-      stagger: 0.1,
-
-      y: 200,
-      opacity: 0,
       ease: "none",
       scrub: true,
     });
@@ -216,12 +175,8 @@ const { title } = Astro.props;
     const cardSpeakers = horizontalSection.querySelectorAll(".card-speakers");
     let widthTotal = 0;
     cardSpeakers.forEach((card) => {
-      console.log(card.clientWidth);
       widthTotal = widthTotal + card.clientWidth;
     });
-    console.log("WidthTotal", widthTotal);
-
-    console.log(`+=${widthTotal}px`);
 
     gsap.to(".horizontal", {
       x: () => horizontalSection.scrollWidth * -1,
@@ -229,11 +184,26 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: ".horizontal",
         start: "50% center",
-        end: `+=${widthTotal}px center`, // calcular tamanho dos itens somados
+        end: `+=${widthTotal}px center`,
         pin: "#horizontal-scoll",
         scrub: true,
         invalidateOnRefresh: true,
       },
+    });
+
+    gsap.from(".text-c4p span", {
+      scrollTrigger: {
+        trigger: ".text-c4p",
+        start: "center 90%",
+        end: "center 40%",
+        scrub: true,
+      },
+      stagger: 0.1,
+
+      y: 100,
+      opacity: 0,
+      ease: "none",
+      scrub: true,
     });
   };
 
@@ -283,7 +253,7 @@ const { title } = Astro.props;
   //   });
   // };
 
-  const lineSchedule = () => {
+  const schedule = () => {
     gsap.to(".line", {
       scrollTrigger: {
         trigger: "#schedule",
@@ -294,9 +264,22 @@ const { title } = Astro.props;
       ease: "none",
       height: "calc(100% - 60px)",
     });
-  };
 
-  const scheduleItems = () => {
+    gsap.from(".text-schedule span", {
+      scrollTrigger: {
+        trigger: ".text-schedule",
+        start: "center 90%",
+        end: "center 40%",
+        scrub: true,
+      },
+      stagger: 0.1,
+
+      y: 100,
+      opacity: 0,
+      ease: "none",
+      scrub: true,
+    });
+
     const array = document.querySelectorAll(".item-schedule");
     array.forEach((element, index) => {
       const valueCalcStart = (index * 10) / 2;
@@ -316,12 +299,12 @@ const { title } = Astro.props;
     });
   };
 
-  const textSchedule = () => {
-    gsap.from(".text-schedule span", {
+  const about = () => {
+    gsap.from(".text-about span", {
       scrollTrigger: {
-        trigger: ".text-schedule",
-        start: "center 90%",
-        end: "center 40%",
+        trigger: ".text-about",
+        start: "center bottom",
+        end: "center center",
         scrub: true,
       },
       stagger: 0.1,
@@ -331,9 +314,7 @@ const { title } = Astro.props;
       ease: "none",
       scrub: true,
     });
-  };
 
-  const aboutImages = () => {
     gsap.from(".about-images", {
       scrollTrigger: {
         trigger: "#about",
@@ -409,24 +390,7 @@ const { title } = Astro.props;
     });
   };
 
-  const textAbout = () => {
-    gsap.from(".text-about span", {
-      scrollTrigger: {
-        trigger: ".text-about",
-        start: "center bottom",
-        end: "center center",
-        scrub: true,
-      },
-      stagger: 0.1,
-
-      y: 100,
-      opacity: 0,
-      ease: "none",
-      scrub: true,
-    });
-  };
-
-  const counterCards = () => {
+  const footer = () => {
     gsap.from("#counter .item-counter", {
       scrollTrigger: {
         trigger: "#counter",
@@ -442,7 +406,7 @@ const { title } = Astro.props;
     });
   };
 
-  const heroImage = () => {
+  const hero = () => {
     gsap.to("#hero-image img", {
       scrollTrigger: {
         trigger: ".hero",
@@ -456,32 +420,39 @@ const { title } = Astro.props;
       ease: "none",
       scrub: true,
     });
+
+    gsap.from(".text-hero span", {
+      scrollTrigger: ".text-hero",
+      stagger: 0.1,
+
+      y: 200,
+      opacity: 0,
+      ease: "none",
+      scrub: true,
+    });
   };
 
-  const doneLoadImages = () => {
-    console.log("doneLoadImages");
+  const loadFinished = () => {
     document.body.style.overflow = "auto";
     document?.scrollingElement?.scrollTo(0, 0);
     gsap.to(document.querySelector(".loader"), { autoAlpha: 0 });
   };
 
+  const loadAnimations = () => {
+    fades();
+    hero();
+    menu();
+    about();
+    speakers();
+    schedule();
+    tickets();
+    footer();
+  };
+
   (imagesLoaded(images) as any)
     .on("progress", updateProgress)
-    .on("done", doneLoadImages)
-    .on("always", menu)
-    .on("always", textHero)
-    .on("always", heroImage)
-    .on("always", counterCards)
-    .on("always", textAbout)
-    .on("always", aboutImages)
-    .on("always", fades)
-    .on("always", speakers)
-    // .on("always", textSlider)
-    .on("always", tickets)
-    .on("always", textSchedule)
-    .on("always", lineSchedule)
-    .on("always", scheduleItems)
-    .on("always", textTest);
+    .on("done", loadFinished)
+    .on("always", loadAnimations);
 </script>
 
 <style is:global>
