@@ -1,3 +1,13 @@
+---
+import { Image } from "astro:assets";
+import Image1 from "../../public/1.jpg";
+import Image2 from "../../public/2.jpg";
+import Image3 from "../../public/3.jpg";
+import Image4 from "../../public/4.jpg";
+import Image5 from "../../public/5.jpg";
+import Image6 from "../../public/6.jpg";
+---
+
 <div id="horizontal-scoll" class="overflow-hidden">
   <div class="w-full mx-auto max-w-7xl py-20 px-4 md:px-8 lg:px-12">
     <div
@@ -11,55 +21,148 @@
   </div>
 
   <section>
-    <div class="horizontal-scoll-wrapper">
-      <div class="horizontal h-full flex gap-4">
+    <div class="horizontal-scoll-wrapper h-full">
+      <div class="horizontal h-full flex items-stretch justify-stretch gap-4">
         <div
-          class="card-speakers card-speakers-1 h-full shrink-[0] p-8 bg-green-600/90 rounded-xl"
+          class="ml-4 card-speakers text-white w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-1/4 card-speakers-1 shrink-[0] bg-green-950/50 border border-green-900/50 rounded-xl overflow-hidden"
         >
-          <span class="text-xl font-medium">Card 1</span>
+          <Image
+            src={Image1}
+            class="card-speakers-img rounded-top w-full aspect-square object-cover object-center"
+            alt=""
+          />
+          <div class="p-8">
+            <div class="text-xl md:text-2xl lg:text-3xl font-medium mb-2 text-green-600">
+              Débora Maria
+            </div>
+            <div class="text-base font-normal text-neutral-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </div>
+          </div>
         </div>
+
         <div
-          class="card-speakers card-speakers-2 h-full shrink-[0] p-8 bg-green-600/90 rounded-xl"
+          class="card-speakers text-white w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-1/4 card-speakers-2 shrink-[0] bg-green-950/50 border border-green-900/50 rounded-xl overflow-hidden"
         >
-          <span class="text-xl font-medium">Card 2</span>
+          <Image
+            src={Image2}
+            class="card-speakers-img rounded-top w-full aspect-square object-cover object-center"
+            alt=""
+          />
+          <div class="p-8">
+            <div class="text-xl md:text-2xl lg:text-3xl font-medium mb-2 text-green-600">
+              Débora Maria
+            </div>
+            <div class="text-base font-normal text-neutral-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </div>
+          </div>
         </div>
+
         <div
-          class="card-speakers card-speakers-3 h-full shrink-[0] p-8 bg-green-600/90 rounded-xl"
+          class="card-speakers text-white w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-1/4 card-speakers-3 shrink-[0] bg-green-950/50 border border-green-900/50 rounded-xl overflow-hidden"
         >
-          <span class="text-xl font-medium">Card 3</span>
+          <Image
+            src={Image3}
+            class="card-speakers-img rounded-top w-full aspect-square object-cover object-center"
+            alt=""
+          />
+          <div class="p-8">
+            <div class="text-xl md:text-2xl lg:text-3xl font-medium mb-2 text-green-600">
+              Débora Maria
+            </div>
+            <div class="text-base font-normal text-neutral-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </div>
+          </div>
         </div>
+
         <div
-          class="card-speakers card-speakers-4 h-full shrink-[0] p-8 bg-green-600/90 rounded-xl"
+          class="card-speakers text-white w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-1/4 card-speakers-4 shrink-[0] bg-green-950/50 border border-green-900/50 rounded-xl overflow-hidden"
         >
-          <span class="text-xl font-medium">Card 4</span>
+          <Image
+            src={Image4}
+            class="card-speakers-img rounded-top w-full aspect-square object-cover object-center"
+            alt=""
+          />
+          <div class="p-8">
+            <div class="text-xl md:text-2xl lg:text-3xl font-medium mb-2 text-green-600">
+              Débora Maria
+            </div>
+            <div class="text-base font-normal text-neutral-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </div>
+          </div>
         </div>
+
         <div
-          class="card-speakers card-speakers-5 h-full shrink-[0] p-8 bg-green-600/90 rounded-xl"
+          class="card-speakers text-white w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-1/4 card-speakers-5 shrink-[0] bg-green-950/50 border border-green-900/50 rounded-xl overflow-hidden"
         >
-          <span class="text-xl font-medium">Card 5</span>
+          <Image
+            src={Image5}
+            class="card-speakers-img rounded-top w-full aspect-square object-cover object-center"
+            alt=""
+          />
+          <div class="p-8">
+            <div class="text-xl md:text-2xl lg:text-3xl font-medium mb-2 text-green-600">
+              Débora Maria
+            </div>
+            <div class="text-base font-normal text-neutral-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </div>
+          </div>
         </div>
+
         <div
-          class="card-speakers card-speakers-6 h-full shrink-[0] p-8 bg-green-600/90 rounded-xl"
+          class="card-speakers text-white w-[90%] sm:w-[70%] md:w-[50%] lg:w-[40%] xl:w-1/4 card-speakers-6 shrink-[0] bg-green-950/50 border border-green-900/50 rounded-xl overflow-hidden"
         >
-          <span class="text-xl font-medium">Card 6</span>
+          <Image
+            src={Image6}
+            class="card-speakers-img rounded-top w-full aspect-square object-cover object-center"
+            alt=""
+          />
+          <div class="p-8">
+            <div class="text-xl md:text-2xl lg:text-3xl font-medium mb-2 text-green-600">
+              Débora Maria
+            </div>
+            <div class="text-base font-normal text-neutral-400">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <div
+    class="flex flex-col gap-4 justify-center items-center text-neutral-400 w-full mx-auto max-w-lg text-center mt-20"
+  >
+    <span
+      >Lorem Ipsum is simply dummy text of the printing and typesetting industry orem Ipsum has been the industry's.</span
+    >
+    <a
+      href="#"
+      class="cursor-pointer rounded-full font-semibold leading-6 whitespace-nowrap block text-center bg-green-700 hover:bg-green-600 text-neutral-950 text-base lg:text-lg px-8 py-4"
+    >
+      Botão C4P
+    </a>
+  </div>
 </div>
 
 <style>
   .horizontal-scoll-wrapper {
     overflow: hidden;
-    height: 500px;
-  }
-
-  /* .horizontal > div {
-    display: flex;
-    flex-shrink: 0;
-  } */
-
-  .horizontal .card-speakers {
-    width: 500px;
   }
 </style>

@@ -1,3 +1,57 @@
+<div id="counter" class="">
+  <div
+    class="grid grid-cols-4 justify-center items-center gap-2 md:gap-4"
+  >
+    <div
+      class="item-counter rounded-lg aspect-square bg-green-950/50 border border-green-900/50 w-full p-2 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-base md:text-lg lg:text-xl font-bold"
+        id="days"
+      >
+        12
+      </div>
+      <span class="text-xs md:text-sm font-normal text-green-600">Dias</span>
+    </div>
+
+    <div
+      class="item-counter rounded-lg aspect-square bg-green-950/50 border border-green-900/50 w-full p-2 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-base md:text-lg lg:text-xl font-bold"
+        id="hours"
+      >
+        04
+      </div>
+      <span class="text-xs md:text-sm font-normal text-green-600">Horas</span>
+    </div>
+
+    <div
+      class="item-counter rounded-lg aspect-square bg-green-950/50 border border-green-900/50 w-full p-2 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-base md:text-lg lg:text-xl font-bold"
+        id="minutes"
+      >
+        43
+      </div>
+      <span class="text-xs md:text-sm font-normal text-green-600">Min</span>
+    </div>
+
+    <div
+      class="item-counter rounded-lg aspect-square bg-green-950/50 border border-green-900/50 w-full p-2 text-white flex flex-col justify-center items-center text-center"
+    >
+      <div
+        class="text-base md:text-lg lg:text-xl font-bold"
+        id="seconds"
+      >
+        55
+      </div>
+      <span class="text-xs md:text-sm font-normal text-green-600">Seg</span>
+    </div>
+  </div>
+</div>
+
 <script>
   function iniciarContador(dataFinal: any) {
     const intervalo = setInterval(function () {
@@ -27,57 +81,3 @@
 
   iniciarContador(dataFinal);
 </script>
-
-<div id="counter" class="w-full mx-auto">
-  <div
-    class="grid grid-cols-4 justify-center items-center gap-2 md:gap-4 px-4 md:px-8 lg:px-12"
-  >
-    <div
-      class="item-counter w-full rounded-lg aspect-square lg:min-h-32 border border-green-600/50 bg-green-600/20 text-white flex flex-col justify-center items-center text-center"
-    >
-      <div
-        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
-        id="days"
-      >
-        12
-      </div>
-      <span class="text-lg md:text-xl lg:text-2xl font-normal">Dias</span>
-    </div>
-
-    <div
-      class="item-counter w-full rounded-lg aspect-square lg:min-h-32 border border-green-600/50 bg-green-600/20 text-white flex flex-col justify-center items-center text-center"
-    >
-      <div
-        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
-        id="hours"
-      >
-        04
-      </div>
-      <span class="text-lg md:text-xl lg:text-2xl font-normal">Horas</span>
-    </div>
-
-    <div
-      class="item-counter w-full rounded-lg aspect-square lg:min-h-32 border border-green-600/50 bg-green-600/20 text-white flex flex-col justify-center items-center text-center"
-    >
-      <div
-        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
-        id="minutes"
-      >
-        43
-      </div>
-      <span class="text-lg md:text-xl lg:text-2xl font-normal">Min</span>
-    </div>
-
-    <div
-      class="item-counter w-full rounded-lg aspect-square lg:min-h-32 border border-green-600/50 bg-green-600/20 text-white flex flex-col justify-center items-center text-center"
-    >
-      <div
-        class="text-2xl md:text-4xl lg:text-6xl font-bold text-green-600"
-        id="seconds"
-      >
-        55
-      </div>
-      <span class="text-lg md:text-xl lg:text-2xl font-normal">Seg</span>
-    </div>
-  </div>
-</div>
