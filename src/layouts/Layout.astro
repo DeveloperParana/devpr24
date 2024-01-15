@@ -161,7 +161,7 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: ".horizontal-scoll-wrapper",
         start: "20% 90%",
-        end: "30% center",
+        end: "center center",
         scrub: true,
       },
       stagger: 0.1,
@@ -175,7 +175,7 @@ const { title } = Astro.props;
     const cardSpeakers = horizontalSection.querySelectorAll(".card-speakers");
     let widthTotal = 0;
     cardSpeakers.forEach((card) => {
-      widthTotal = widthTotal + card.clientWidth;
+      widthTotal = widthTotal + card.clientWidth - 300;
     });
 
     gsap.to(".horizontal", {
