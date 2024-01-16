@@ -150,10 +150,9 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-
       y: 100,
       opacity: 0,
-      ease: "none",
+      ease: "power1.in",
       scrub: true,
     });
 
@@ -165,7 +164,8 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-      x: "100%",
+      y: 20,
+      opacity: 0,
       ease: "none",
       scrub: true,
     });
@@ -183,7 +183,7 @@ const { title } = Astro.props;
       xPercent: 100,
       scrollTrigger: {
         trigger: ".horizontal",
-        start: "50% center",
+        start: "180px center",
         end: `+=${widthTotal}px center`,
         pin: "#horizontal-scoll",
         scrub: true,
@@ -199,10 +199,9 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-
       y: 100,
       opacity: 0,
-      ease: "none",
+      ease: "power1.in",
       scrub: true,
     });
   };
@@ -216,10 +215,9 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-
       y: 100,
       opacity: 0,
-      ease: "none",
+      ease: "power1.in",
       scrub: true,
     });
 
@@ -273,10 +271,9 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-
       y: 100,
       opacity: 0,
-      ease: "none",
+      ease: "power1.in",
       scrub: true,
     });
 
@@ -308,30 +305,29 @@ const { title } = Astro.props;
         scrub: true,
       },
       stagger: 0.1,
-
       y: 100,
       opacity: 0,
-      ease: "none",
+      ease: "power1.in",
       scrub: true,
     });
 
-    gsap.from(".about-images", {
-      scrollTrigger: {
-        trigger: "#about",
-        scrub: true,
-        start: "40% bottom",
-        end: "bottom 100%",
-      },
-      opacity: 0,
-      ease: "none",
-    });
+    // gsap.from(".about-images", {
+    //   scrollTrigger: {
+    //     trigger: "#about",
+    //     scrub: true,
+    //     start: "40% bottom",
+    //     end: "bottom bottom",
+    //   },
+    //   opacity: 0,
+    //   ease: "none",
+    // });
 
     gsap.from("#about-image-1", {
       scrollTrigger: {
         trigger: "#about",
         scrub: true,
-        start: "top 40%",
-        end: "bottom bottom",
+        start: "top 70%",
+        end: "center 70%",
       },
       x: 150,
       y: 100,
@@ -343,8 +339,8 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: "#about",
         scrub: true,
-        start: "top 40%",
-        end: "bottom bottom",
+        start: "top 70%",
+        end: "center 70%",
       },
       x: -120,
       y: 140,
@@ -356,8 +352,8 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: "#about",
         scrub: true,
-        start: "top 40%",
-        end: "bottom bottom",
+        start: "top 70%",
+        end: "center 70%",
       },
       x: 220,
       y: -120,
@@ -368,8 +364,8 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: "#about",
         scrub: true,
-        start: "top 40%",
-        end: "bottom bottom",
+        start: "top 70%",
+        end: "center 70%",
       },
       x: 40,
       y: -200,
@@ -380,8 +376,8 @@ const { title } = Astro.props;
       scrollTrigger: {
         trigger: "#about",
         scrub: true,
-        start: "top 40%",
-        end: "bottom bottom",
+        start: "top 70%",
+        end: "center 70%",
       },
       x: -250,
       y: -200,
@@ -427,7 +423,7 @@ const { title } = Astro.props;
 
       y: 200,
       opacity: 0,
-      ease: "none",
+      ease: "power1.in",
       scrub: true,
     });
   };
