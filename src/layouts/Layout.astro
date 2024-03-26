@@ -206,10 +206,10 @@ const { title } = Astro.props;
     });
   };
 
-  const tickets = () => {
-    gsap.from(".text-tickets span", {
+  const sponsor = () => {
+    gsap.from(".text-sponsor span", {
       scrollTrigger: {
-        trigger: ".text-tickets",
+        trigger: ".text-sponsor",
         start: "center 90%",
         end: "center 40%",
         scrub: true,
@@ -221,9 +221,9 @@ const { title } = Astro.props;
       scrub: true,
     });
 
-    gsap.from("#ticket", {
+    gsap.from("#sponsor", {
       scrollTrigger: {
-        trigger: ".tickets",
+        trigger: ".sponsor",
         start: "top bottom",
         end: "center 60%",
         scrub: true,
@@ -441,7 +441,7 @@ const { title } = Astro.props;
     about();
     speakers();
     schedule();
-    tickets();
+    sponsor();
     footer();
   };
 
