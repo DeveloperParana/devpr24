@@ -49,6 +49,13 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🧞 If you want to use docker only
+
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `docker run --rm -it -v .:/opt -w /opt -p 4321:4321 node /bin/bash` | Allow you through docker to have a working build without NPM nor NODE installed locally. Running `npm run dev` will build from container and expose result at `localhost:4321` |
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
