@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && cp src/CNAME dist/",
     "preview": "vite preview",
     "a11y": "npx axe http://localhost:8080 --rules color-contrast,html-has-lang,imgge-alt,label,link-name,list,listitem,meta-viewport,select-name,svg-img-alt,video-caption  --tags wcag2a"
   },
