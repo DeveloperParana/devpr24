@@ -1,6 +1,0 @@
-{
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "typeRoots": ["./node_modules/@types", "./src/utils/imagesloaded.d.ts"]
-  }
-}
