@@ -1,0 +1,54 @@
+p {
+  font-weight: 400;
+  color: var(--devpr-sys-color-on-surface);
+}
+
+.text-surface {
+  color: var(--devpr-sys-color-surface);
+}
+.text-error {
+  color: var(--devpr-sys-color-error);
+}
+.text-error-container {
+  color: var(--devpr-sys-color-error-container);
+}
+
+.text-center {
+  text-align: center;
+}
+.text-start {
+  text-align: start;
+}
+.text-0-8 {
+  font-size: 0.8em;
+}
+.text-1 {
+  font-size: 1em;
+}
+.text-1-4 {
+  font-size: 1.4em;
+}
+.text-1-2 {
+  font-size: 1.2em;
+}
+.text-1-6 {
+  font-size: 1.6em;
+}
+.text-2 {
+  font-size: 2em;
+}
+.text-3 {
+  font-size: 3em;
+}
+.titeText {
+  color: var(--devpr-sys-color-on-background);
+  font-size: 2em;
+  font-weight: 300;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

@@ -1,0 +1,46 @@
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 8px;
+  gap: 16px;
+}
+
+.col {
+  flex: 1;
+}
+
+.min {
+  &-100 {
+    min-width: 100px;
+  }
+  &-150 {
+    min-width: 150px;
+  }
+  &-200 {
+    min-width: 200px;
+  }
+  &-250 {
+    min-width: 250px;
+  }
+  &-300 {
+    min-width: 300px;
+  }
+  &-350 {
+    min-width: 350px;
+  }
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.row .col50 {
+  position: relative;
+  width: 48%;
+}
