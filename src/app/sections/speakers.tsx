@@ -51,6 +51,7 @@ export const Speakers = ({speakers}: SpeakersAttrs) => {
                       return (
                         <Link
                           href={link.href}
+                          target="_blank"
                           className="social-link"
                           ariaLabel={getLinkLabel(speaker, link)}
                         >

@@ -1,4 +1,4 @@
-export type SocialKind = 'github' | 'linkedIn' | 'youtube' | 'instagram'
+export type SocialKind = 'github' | 'linkedIn' | 'youtube' | 'instagram' | 'whatsapp'
 
 export type SpeakerNickname = 'deyvin' | 'ananeridev' | 'pachicodes' | 'jonatas'
 

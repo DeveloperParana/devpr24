@@ -17,4 +17,8 @@ export const socialLinks: SocialLink[] = [
     kind: 'instagram',
     href: 'https://instagram.com/devparana',
   },
+  {
+    kind: 'whatsapp',
+    href: 'https://chat.whatsapp.com/J2Enc3n1Zfu1ixhVecACyd',
+  },
 ]

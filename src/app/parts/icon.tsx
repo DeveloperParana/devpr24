@@ -14,6 +14,7 @@ type IconName =
   | 'asterisk'
   | 'contrast'
   | 'heart'
+  | 'whatsapp'
 
 interface IconAttrs extends Size {
   name: IconName

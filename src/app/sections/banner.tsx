@@ -1,4 +1,4 @@
-import {Countdown} from '../parts'
+import {Countdown, Icon, Link} from '../parts'
 
 export const Banner = () => {
   const date = new Date(2024, 6, 28, 8, 0, 0)
@@ -20,9 +20,15 @@ export const Banner = () => {
 
         <Countdown date={date} />
 
-        <a href="#supports" className="btn">
-          Apoie este evento
-        </a>
+        <div className='flex row gap-24 justify-center'>
+          <Link href="#supports" className="btn">
+            Apoie este evento
+          </Link>
+
+          <Link href="https://chat.whatsapp.com/J2Enc3n1Zfu1ixhVecACyd" target="_blank" className="btn flex gap-8">
+            <Icon name='whatsapp'/>Participe da comunidade
+          </Link>
+        </div>
       </div>
     </section>
   )
