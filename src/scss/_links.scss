@@ -1,0 +1,59 @@
+.social-links {
+  transition: all 0.2s;
+  margin: 0 auto;
+  display: flex;
+  z-index: 1;
+}
+
+.social-links a {
+  color: var(--devpr-sys-color-shadow);
+  width: 40px;
+  display: inline-flex;
+  margin: 50px 5px 0 5px;
+  transition: all 0.2s;
+  text-align: center;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.social-links a:hover {
+  border-color: var(--devpr-primary-500);
+  background: var(--devpr-surface);
+  overflow: visible;
+  opacity: 1;
+}
+
+.social-links a span {
+  position: absolute;
+  bottom: 0;
+  left: -25px;
+  right: -25px;
+  padding: 5px 7px;
+  z-index: -1;
+  border-radius: 5px;
+  color: var(--devpr-sys-color-on-surface-variant);
+  background: var(--devpr-sys-color-shadow);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* pop-up text arrow */
+.social-links a span:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--devpr-sys-color-shadow);
+  position: absolute;
+  bottom: -5px;
+  left: 40px;
+}
+
+.social-links a:hover span {
+  bottom: 50px;
+  visibility: visible;
+  opacity: 1;
+}

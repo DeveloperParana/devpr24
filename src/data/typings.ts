@@ -1,9 +1,9 @@
-export type SpeakerLinkKind = 'github' | 'linkedIn' | 'youtube'
+export type SocialKind = 'github' | 'linkedIn' | 'youtube' | 'instagram'
 
 export type SpeakerNickname = 'deyvin' | 'ananeridev' | 'pachicodes' | 'jonatas'
 
-export interface SpeakerLink {
-  kind: SpeakerLinkKind
+export interface SocialLink {
+  kind: SocialKind
   href: string
 }
 
@@ -12,7 +12,7 @@ export interface Speaker<T extends SpeakerNickname = SpeakerNickname> {
   nickname: T
   photo: string
   tags: string[]
-  links: SpeakerLink[]
+  links: SocialLink[]
   bio: string[]
 }
 

@@ -1,6 +1,6 @@
-import {sections, type Sections} from '../app.sections'
+import {config} from '../config'
 import {Logo} from '../parts'
-import {find} from '../utils'
+import {ScrollSpy, find, findAll} from '../utils'
 
 export const Header = () => {
   addEventListener('scroll', function () {
@@ -17,28 +17,12 @@ export const Header = () => {
 
   document.documentElement.classList.add('dark')
 
-  const sectionMap: Record<keyof Sections, string> = {
-    banner: 'Topo',
-    about: 'Comunidade',
-    speakers: 'Conf 2024',
-    getInvolved: 'Contribua',
-    supports: 'Apoie o evento',
-    testimonials: 'Depoimentos',
-    contact: 'Contato',
-  }
-  function getLinkItemBySectionKey(key: keyof Sections) {
-    const href = `#${key}`
-    const text = sectionMap[key]
-    return (
-      <li>
-        <a href={href} onClick={toggleMenu}>
-          {text}
-        </a>
-      </li>
-    )
-  }
-
-  const items = Object.keys(sections) as (keyof Sections)[]
+  addEventListener('DOMContentLoaded', () => {
+    const sections = findAll('body > section')
+    const navigation = find('header nav')
+    const navLinks = findAll('a', navigation)
+    new ScrollSpy(sections, navLinks).start()
+  })
 
   return (
     <header>
@@ -55,7 +39,17 @@ export const Header = () => {
         onClick={toggleMenu}
       ></div>
       <nav>
-        <ul className="navigation">{items.map(getLinkItemBySectionKey)}</ul>
+        <ul className="navigation">
+          {config.navigation.map(([id, name]) => {
+            return (
+              <li>
+                <a href={id} onClick={toggleMenu}>
+                  {name}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
       </nav>
     </header>
   )

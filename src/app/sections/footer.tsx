@@ -1,8 +1,11 @@
-import {Codaqui, DevParana} from '../parts'
+import {socialLinks} from '../../data'
+import {Codaqui, DevParana, SocialLinks} from '../parts'
 
 export const Footer = () => {
   return (
     <footer id="footer" className="copyleftText">
+      <SocialLinks links={socialLinks} />
+
       <p>2015 ~ 2024 &copy;</p>
       <p className="flex gap-16 text-red">
         <DevParana width={120} />

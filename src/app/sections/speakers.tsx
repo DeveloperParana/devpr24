@@ -1,5 +1,5 @@
 import {DescriptionDialog} from '../components'
-import type {Speaker, SpeakerLink} from '../../data/typings'
+import type {Speaker, SocialLink} from '../../data/typings'
 import {Icon, Link} from '../parts'
 
 export interface SpeakersAttrs {
@@ -20,7 +20,7 @@ export const Speakers = ({speakers}: SpeakersAttrs) => {
     document.body.append(<DescriptionDialog {...description} />)
   }
 
-  const getLinkLabel = (speaker: Speaker, link: SpeakerLink) => {
+  const getLinkLabel = (speaker: Speaker, link: SocialLink) => {
     return `${link.kind} de ${speaker.name}`
   }
 

@@ -1,6 +1,7 @@
 // @use './themes/dark';
 @use 'sass:map' as map;
 
+@import './links';
 @import './grid';
 @import './flex';
 @import './text';
@@ -261,6 +262,11 @@ header {
 
     .navigation li a {
       color: var(--devpr-sys-color-on-surface);
+      transition: color 250ms ease-in-out;
+
+      &.active {
+        color: var(--devpr-sys-color-primary);
+      }
     }
   }
 }
@@ -377,7 +383,7 @@ section {
   }
 }
 
-#about {
+.about {
   h3 {
     color: var(--devpr-sys-color-primary);
     font-size: 3rem;
@@ -802,11 +808,15 @@ span {
 #footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 3em 0;
   gap: 8px;
-  justify-content: center;
   flex: 1;
-  align-items: center;
+
+  > ul {
+    margin-bottom: 48px;
+  }
 }
 
 @media (max-width: 991px) {
