@@ -1,5 +1,5 @@
 import {socialLinks} from '../../data'
-import {Codaqui, DevParana, SocialLinks} from '../parts'
+import {Codaqui, DevParana, Link, SocialLinks} from '../parts'
 
 export const Footer = () => {
   return (
@@ -12,6 +12,7 @@ export const Footer = () => {
         <Codaqui width={100} />
       </p>
       <p>CNPJ 44.593.429/0001-05</p>
+      <p>Feito com por 🥰 <Link href='https://github.com/guiseek' target='_blank'>@guiseek</Link> </p>
     </footer>
   )
 }

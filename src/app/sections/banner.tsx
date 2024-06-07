@@ -21,7 +21,7 @@ export const Banner = () => {
         <Countdown date={date} />
 
         <div className='flex row gap-24 justify-center'>
-          <Link href="#supports" className="btn">
+          <Link href="#faca-acontecer" className="btn">
             Apoie este evento
           </Link>
 

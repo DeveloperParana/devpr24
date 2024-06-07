@@ -7,7 +7,7 @@ import {
   Supports,
   GetInvolved,
 } from './sections'
-import {Symbols} from './parts'
+import {GTM, Symbols} from './parts'
 import {config} from './config'
 import {contributes, speakers, supports} from '../data'
 
@@ -24,6 +24,7 @@ export const App = () => {
       {config.elements}
       <Footer />
       <Symbols />
+      <GTM />
     </>
   )
 }
