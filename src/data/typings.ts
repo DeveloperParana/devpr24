@@ -8,7 +8,6 @@ export type SocialKind =
 export type SpeakerNickname =
   | "deyvin"
   | "ananeridev"
-  | "pachicodes"
   | "jonatas";
 
 export interface SocialLink {

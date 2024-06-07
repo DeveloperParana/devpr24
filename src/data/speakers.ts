@@ -44,27 +44,6 @@ const ananeridev: Speaker = {
   ],
 };
 
-const pachicodes: Speaker = {
-  name: "Pachi Parra",
-  nickname: "pachicodes",
-  photo: "assets/speakers/pachi.webp",
-  tags: [
-    "Especialista em DevRel",
-    "Entusiasta de Open Source",
-    "Consultora de Eventos",
-    "Co-fundadora da Feministech",
-  ],
-  links: [
-    { kind: "github", href: "https://github.com/pachicodes" },
-    { kind: "linkedIn", href: "https://www.linkedin.com/in/pachicodes" },
-    { kind: "youtube", href: "https://youtube.com/@PachiCodes" },
-  ],
-  bio: [
-    `Pachi é especialista em DevRel e entusiasta de Open Source, atuando como Developer Relations Lead na Webcrumbs e como consultora de eventos e comunidades tech.`,
-    `Co-Fundadora da Feministech, uma comunidade online de pessoas que se identificam no feminino ou não binárias, suas paixões incluem comunidades, empoderar mulheres, anime e seus gatos.`,
-  ],
-};
-
 const jonatas: Speaker = {
   name: "Jônatas Davi",
   nickname: "jonatas",
@@ -83,8 +62,7 @@ const jonatas: Speaker = {
 export const speaker: Record<SpeakerNickname, Speaker> = {
   deyvin,
   ananeridev,
-  pachicodes,
   jonatas,
 };
 
-export const speakers = [ananeridev, deyvin, pachicodes, jonatas];
+export const speakers = [ananeridev, deyvin, jonatas];
