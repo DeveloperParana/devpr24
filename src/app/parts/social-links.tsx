@@ -11,7 +11,7 @@ export const SocialLinks = ({links}: SocialLinksAttrs) => {
     <ul className="social-links">
       {links.map((link) => {
         return (
-          <Link href={link.href} target="_blank">
+          <Link href={link.href} ariaLabel={link.kind} target="_blank">
             <Icon name={link.kind} />
             <span>{link.kind}</span>
           </Link>

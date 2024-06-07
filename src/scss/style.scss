@@ -1,15 +1,15 @@
 // @use './themes/dark';
-@use 'sass:map' as map;
+@use "sass:map" as map;
 
-@import './links';
-@import './grid';
-@import './flex';
-@import './text';
+@import "./links";
+@import "./grid";
+@import "./flex";
+@import "./text";
 
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -281,7 +281,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('/assets/images/calil-haddad.webp');
+  background: url("/assets/images/calil-haddad.webp");
   background-size: cover;
   background-position: center;
 
@@ -664,7 +664,7 @@ span {
  * <Testimonials />
  */
 .testimonials {
-  background: url('/assets/images/testimonials-2023.webp');
+  background: url("/assets/images/testimonials-2023.webp");
   background-size: contain;
 
   .content {
@@ -730,7 +730,7 @@ span {
  * <Contact />
  */
 .contact {
-  background: url('/assets/images/dentro-do-calil-haddad.webp');
+  background: url("/assets/images/dentro-do-calil-haddad.webp");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -769,7 +769,7 @@ span {
         resize: none;
       }
 
-      input[type='submit'] {
+      input[type="submit"] {
         font-size: 1em;
         color: var(--devpr-sys-color-surface);
         background-color: var(--devpr-sys-color-primary);
@@ -803,6 +803,37 @@ span {
   color: var(--devpr-sys-color-primary);
   font-weight: 600;
   text-decoration: none;
+}
+
+#video {
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    position: absolute;
+    object-fit: cover;
+    min-height: 100vh;
+  }
+
+  div {
+    position: absolute;
+    background: rgba(7, 8, 9, 0.8);
+    background: linear-gradient(
+      180deg,
+      rgba(7, 8, 9, 1) 10%,
+      rgba(7, 8, 9, 0) 75%,
+      rgba(7, 8, 9, 1) 100%
+    );
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  overflow: hidden;
 }
 
 #footer {
@@ -850,14 +881,14 @@ span {
     position: relative;
     width: 40px;
     height: 40px;
-    background: url('https://lh3.googleusercontent.com/u/0/d/1abH3EQsB3dcp9SAU0iYciKs0btvl5fWB=w1125-h657-iv1');
+    background: url("https://lh3.googleusercontent.com/u/0/d/1abH3EQsB3dcp9SAU0iYciKs0btvl5fWB=w1125-h657-iv1");
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
   .menuToggle.active {
-    background: url('https://lh3.googleusercontent.com/u/0/d/1xlluSvPa-j-cDgT_XML_5ztWkNldr1LF=w1125-h657-iv1');
+    background: url("https://lh3.googleusercontent.com/u/0/d/1xlluSvPa-j-cDgT_XML_5ztWkNldr1LF=w1125-h657-iv1");
     background-size: 25px;
     background-repeat: no-repeat;
     background-position: center;

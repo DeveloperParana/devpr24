@@ -1,40 +1,48 @@
-export type SocialKind = 'github' | 'linkedIn' | 'youtube' | 'instagram' | 'whatsapp'
+export type SocialKind =
+  | "github"
+  | "linkedIn"
+  | "youtube"
+  | "instagram"
+  | "whatsapp";
 
-export type SpeakerNickname = 'deyvin' | 'ananeridev' | 'pachicodes' | 'jonatas'
+export type SpeakerNickname =
+  | "deyvin"
+  | "ananeridev"
+  | "pachicodes"
+  | "jonatas";
 
 export interface SocialLink {
-  kind: SocialKind
-  href: string
+  kind: SocialKind;
+  href: string;
 }
 
 export interface Speaker<T extends SpeakerNickname = SpeakerNickname> {
-  name: string
-  nickname: T
-  photo: string
-  tags: string[]
-  links: SocialLink[]
-  bio: string[]
+  name: string;
+  nickname: T;
+  photo: string;
+  tags: string[];
+  links: SocialLink[];
+  bio: string[];
 }
 
 export interface Supporter {
-  title: string
-  amount: string
-  limit: number
-  description: string
-  benefits: string[]
+  title: string;
+  amount: string;
+  limit: number;
+  description: string;
+  benefits: string[];
   link: {
-    href: string
-    text: string
-  }
+    href: string;
+    text: string;
+  };
 }
 
 export interface Contribute {
-  title: string
-  description: string
-  date?: Date
+  title: string;
+  description: string;
+  date?: Date;
   action: {
-    href: string
-    text: string
-  }
+    href: string;
+    text: string;
+  };
 }
-

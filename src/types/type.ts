@@ -1,3 +1,3 @@
 export interface Type<T> extends Function {
-  new (...params: unknown[]): T
+  new (...params: unknown[]): T;
 }

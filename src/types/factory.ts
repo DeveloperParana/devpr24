@@ -1,1 +1,1 @@
-export type Factory<T> = (...params: unknown[]) => T
+export type Factory<T> = (...params: unknown[]) => T;

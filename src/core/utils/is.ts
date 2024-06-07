@@ -1,26 +1,26 @@
-import type { Factory, Type } from "../../types"
+import type { Factory, Type } from "../../types";
 
 export const is = {
   factory<T>(value: unknown): value is Factory<T> {
-    return typeof value === 'function'
+    return typeof value === "function";
   },
   type<T>(value: unknown): value is Type<T> {
-    return typeof value === 'function' && !!value.prototype
+    return typeof value === "function" && !!value.prototype;
   },
   writable<
     K extends keyof JSXElementTagNameMap,
     A extends keyof JSXElementTagNameMap[K],
   >(element: JSXElementTagNameMap[K], property: A | PropertyKey) {
-    const originalValue = element[property as A]
+    const originalValue = element[property as A];
 
     try {
-      element[property as A] = 1 as JSXElementTagNameMap[K][A]
+      element[property as A] = 1 as JSXElementTagNameMap[K][A];
     } catch {
-      return false
+      return false;
     }
 
-    element[property as A] = originalValue
+    element[property as A] = originalValue;
 
-    return true
+    return true;
   },
-}
+};

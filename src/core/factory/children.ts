@@ -3,10 +3,10 @@ export const children = <K extends keyof JSXElementTagNameMap>(
   ...children: Element[]
 ) => {
   const nodes = children.flatMap((child) =>
-    typeof child === 'string' ? new Text(child) : child,
-  )
+    typeof child === "string" ? new Text(child) : child,
+  );
 
-  element.append(...nodes)
+  element.append(...nodes);
 
-  return element
-}
+  return element;
+};

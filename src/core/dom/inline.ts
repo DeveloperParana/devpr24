@@ -1,10 +1,10 @@
-import {camelToKebab} from '../utils'
+import { camelToKebab } from "../utils";
 
-type LiteralType = [string, string | number]
+type LiteralType = [string, string | number];
 
-export const inline = (value: object, initial = '') => {
+export const inline = (value: object, initial = "") => {
   const reduceFn = <T extends LiteralType>(prev: string, [prop, value]: T) =>
-    `${prev}${camelToKebab(prop)}:${value};`
+    `${prev}${camelToKebab(prop)}:${value};`;
 
-  return Object.entries(value).reduce(reduceFn, initial)
-}
+  return Object.entries(value).reduce(reduceFn, initial);
+};

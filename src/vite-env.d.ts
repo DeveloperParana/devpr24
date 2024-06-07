@@ -343,7 +343,7 @@ declare const gtag: (param: string, value: Date | string) => void;
 
 interface Window {
   dataLayer: IArguments[];
-  gtag: typeof gtag
+  gtag: typeof gtag;
 }
 
 declare global {
@@ -363,7 +363,7 @@ type EventHandlers<T> = {
   [K in keyof CustomGlobalEventHandlers<T>]:
     | ((
         this: T,
-        ev: CustomGlobalEventHandlersEventMap<T>[OnlyEvent<K>]
+        ev: CustomGlobalEventHandlersEventMap<T>[OnlyEvent<K>],
       ) => unknown)
     | null;
 };
@@ -373,7 +373,7 @@ declare namespace JSX {
   type Element<T extends Element = Element> = HTMLElement & T;
 
   type Factory<P extends {}, T extends HTMLElement> = (
-    props: P
+    props: P,
   ) => JSX.Element<T>;
 
   interface Component<T> {
@@ -388,14 +388,14 @@ declare namespace JSX {
         K extends keyof HTMLElementTagNameMap
           ? HTMLElementTagNameMap[K]
           : K extends keyof SVGElementTagNameMap
-          ? JSXAnimatedEnumeration<
-              JSXPointList<
-                JSXAnimatedString<JSXAnimatedLength<SVGElementTagNameMap[K]>>
+            ? JSXAnimatedEnumeration<
+                JSXPointList<
+                  JSXAnimatedString<JSXAnimatedLength<SVGElementTagNameMap[K]>>
+                >
               >
-            >
-          : K extends keyof MathMLElementTagNameMap
-          ? MathMLElementTagNameMap[K]
-          : Element
+            : K extends keyof MathMLElementTagNameMap
+              ? MathMLElementTagNameMap[K]
+              : Element
       > &
         EventHandlers<JSXElementTagNameMap[K]>
     >;
