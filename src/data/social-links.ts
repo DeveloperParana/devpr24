@@ -1,24 +1,24 @@
-import type {SocialLink} from './typings'
+import type { SocialLink } from "./typings";
 
 export const socialLinks: SocialLink[] = [
   {
-    kind: 'github',
-    href: 'https://github.com/DeveloperParana',
+    kind: "youtube",
+    href: "https://youtube.com/devparana",
   },
   {
-    kind: 'youtube',
-    href: 'https://youtube.com/devparana',
+    kind: "github",
+    href: "https://github.com/DeveloperParana",
   },
   {
-    kind: 'linkedIn',
-    href: 'https://br.linkedin.com/company/devparana',
+    kind: "whatsapp",
+    href: "https://chat.whatsapp.com/J2Enc3n1Zfu1ixhVecACyd",
   },
   {
-    kind: 'instagram',
-    href: 'https://instagram.com/devparana',
+    kind: "instagram",
+    href: "https://instagram.com/devparana",
   },
   {
-    kind: 'whatsapp',
-    href: 'https://chat.whatsapp.com/J2Enc3n1Zfu1ixhVecACyd',
+    kind: "linkedIn",
+    href: "https://br.linkedin.com/company/devparana",
   },
-]
+];
