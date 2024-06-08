@@ -1,5 +1,5 @@
 import { Icon } from "../parts";
-import { create } from "../utils";
+import { create, timeout } from "../utils";
 
 export interface VideoAttrs {
   src: string;
@@ -32,10 +32,29 @@ export const Video = ({ src }: VideoAttrs) => {
     else video.pause();
   };
 
-  video.onplay = () => video.classList.toggle("paused");
-  video.onpause = () => video.classList.toggle("paused");
+  const play = <Play onClick={() => onPlay(video.paused)} />;
 
-  const overlay = create("div", <Play onClick={() => onPlay(video.paused)} />);
+  const overlay = create("div", play);
+
+  video.onplay = () => {
+    video.classList.toggle("paused");
+    timeout(() => {
+      play.classList.add("hidden");
+    }, 2000);
+  };
+
+  overlay.onmouseover = () => {
+    play.classList.remove('hidden')
+  }
+
+  overlay.onmouseleave = () => {
+    play.classList.add('hidden')
+  }
+
+  video.onpause = () => {
+    video.classList.toggle("paused");
+    play.classList.remove("hidden");
+  };
 
   queueMicrotask(() => {
     const handle = (entries: IntersectionObserverEntry[]) => {

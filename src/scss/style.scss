@@ -835,6 +835,8 @@ span {
   }
 
   video ~ div button {
+    // opacity: 0;
+
     figure.play {
       opacity: 0;
     }
@@ -843,7 +845,7 @@ span {
     }
   }
   video.paused ~ div button {
-    opacity: 1;
+    // opacity: 1;
 
     figure.play {
       opacity: 1;
@@ -881,18 +883,26 @@ span {
       z-index: 1001;
       cursor: pointer;
       background-color: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      transition: opacity 500ms ease-out;
+      opacity: 1;
+      transition: opacity 500ms ease-out, visibility 500ms ease-out;
 
       figure {
         position: absolute;
         color: var(--devpr-sys-color-primary-container);
       }
-    }
 
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
     &:hover button {
       opacity: 1;
     }
+    // &:active button,
+    // &:target button {
+    //   opacity: 0;
+    // }
   }
 }
 
