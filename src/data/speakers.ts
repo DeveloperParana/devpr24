@@ -87,4 +87,4 @@ export const speaker: Record<SpeakerNickname, Speaker> = {
   jonatas,
 };
 
-export const speakers = [ananeridev, deyvin, pachicodes, jonatas];
+export const speakers = [ananeridev, deyvin, jonatas];

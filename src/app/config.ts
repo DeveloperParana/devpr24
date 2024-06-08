@@ -7,7 +7,7 @@ type Section =
   | "Contribua"
   | "Faça acontecer"
   | "Depoimentos"
-  | "Vídeo"
+  | "Conf 2023"
   | "Contato";
 
 class Config {

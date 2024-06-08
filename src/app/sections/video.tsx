@@ -1,22 +1,40 @@
+import { Icon } from "../parts";
 import { create } from "../utils";
 
 export interface VideoAttrs {
   src: string;
 }
 
-export const Video = ({ src }: VideoAttrs) => {
-  const video = create(
-    "video",
-    {
-      tabIndex: 0,
-      preload: "metadata",
-      poster: "/assets/images/video-cover.webp",
-    },
-    create("source", {
-      src,
-      type: 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"',
-    })
+interface PlayAttrs {
+  onClick(ev: MouseEvent): void;
+}
+const Play = (attrs: PlayAttrs) => {
+  return (
+    <button type="button" onClick={attrs.onClick}>
+      <Icon name="play-circle" className="play" width={128} />
+      <Icon name="pause-circle" className="pause" width={128} />
+    </button>
   );
+};
+
+export const Video = ({ src }: VideoAttrs) => {
+  const video = create("video", {
+    src,
+    tabIndex: 0,
+    preload: "metadata",
+    className: "paused",
+    poster: "/assets/images/video-cover.webp",
+  });
+
+  const onPlay = (paused = true) => {
+    if (paused) video.play();
+    else video.pause();
+  };
+
+  video.onplay = () => video.classList.toggle("paused");
+  video.onpause = () => video.classList.toggle("paused");
+
+  const overlay = create("div", <Play onClick={() => onPlay(video.paused)} />);
 
   queueMicrotask(() => {
     const handle = (entries: IntersectionObserverEntry[]) => {
@@ -37,7 +55,7 @@ export const Video = ({ src }: VideoAttrs) => {
   return (
     <section id="video" className="video">
       {video}
-      <div></div>
+      {overlay}
     </section>
   );
 };

@@ -15,7 +15,7 @@ import { contributes, speakers, supports } from "../data";
 config.addSection("Topo", <Banner />);
 config.addSection("Comunidade", <About />);
 config.addSection("Palestras confirmadas", <Speakers speakers={speakers} />);
-config.addSection("Vídeo", <Video src="/assets/videos/conf-2023.mp4" />);
+config.addSection("Conf 2023", <Video src="/assets/videos/conf-2023.mp4" />);
 config.addSection("Contribua", <GetInvolved contributes={contributes} />);
 config.addSection("Faça acontecer", <Supports supports={supports} />);
 
