@@ -7,7 +7,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     kind: "github",
-    href: "https://github.com/DeveloperParana",
+    href: "https://github.com/DeveloperParana/devpr24",
   },
   {
     kind: "whatsapp",

@@ -18,8 +18,9 @@ export const Dialog = (attrs: DialogAttrs) => {
     top: px(4),
     maxWidth: maxWidth ?? vw(100),
     maxHeight: maxHeight ?? vh(100),
-    width: width ?? px(innerWidth - 64),
+    width: width ?? px(innerWidth - 32),
     height: height ?? px(innerHeight - 114),
+    overflow: 'visible'
   }
 
   function onClose(this: HTMLDialogElement, ev: Event) {

@@ -13,6 +13,12 @@
   scroll-behavior: smooth;
 }
 
+figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 ul {
   padding: 0;
 }
@@ -74,7 +80,8 @@ devpr-dialog-container {
       font-size: 1em;
       line-height: 1.4em;
       gap: 8px;
-      svg {
+      svg,
+      figure svg {
         color: var(--devpr-sys-color-secondary-container);
       }
     }
@@ -142,8 +149,8 @@ dialog {
 
 .top-right {
   position: absolute;
-  top: -16px;
-  right: -16px;
+  top: -12px;
+  right: -12px;
 }
 
 .ml-24 {
@@ -805,7 +812,7 @@ span {
   text-decoration: none;
 }
 
-#video {
+#conf-2023 {
   padding: 0;
   height: 100vh;
   position: relative;
@@ -820,6 +827,25 @@ span {
     min-height: 100vh;
   }
 
+  video ~ div button {
+    figure.play {
+      opacity: 0;
+    }
+    figure.pause {
+      opacity: 1;
+    }
+  }
+  video.paused ~ div button {
+    opacity: 1;
+
+    figure.play {
+      opacity: 1;
+    }
+    figure.pause {
+      opacity: 0;
+    }
+  }
+
   div {
     position: absolute;
     background: rgba(7, 8, 9, 0.8);
@@ -831,9 +857,35 @@ span {
     );
     min-height: 100vh;
     min-width: 100vw;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  overflow: hidden;
+    button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      width: 128px;
+      height: 128px;
+      z-index: 1001;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 500ms ease-out;
+
+      figure {
+        position: absolute;
+      }
+    }
+
+    &:hover button {
+      opacity: 1;
+    }
+  }
 }
 
 #footer {
