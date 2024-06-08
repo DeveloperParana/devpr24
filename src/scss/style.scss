@@ -293,8 +293,13 @@ header {
   background-position: center;
 
   .content {
+    width: 100vw;
+    margin-top: 50px;
     max-width: 900px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
     h2 {
       font-size: 5em;
@@ -881,6 +886,7 @@ span {
 
       figure {
         position: absolute;
+        color: var(--devpr-sys-color-primary-container);
       }
     }
 
@@ -949,6 +955,9 @@ span {
   }
   section {
     padding: 20px;
+  }
+  .banner .content {
+    gap: 0px;
   }
   .banner .content h2 {
     font-size: 2em;

@@ -21,6 +21,7 @@ export const Video = ({ src }: VideoAttrs) => {
   const video = create("video", {
     src,
     tabIndex: 0,
+    playsInline: true,
     preload: "metadata",
     className: "paused",
     poster: "/assets/images/video-cover.webp",
