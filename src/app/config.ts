@@ -3,11 +3,11 @@ import { slugify } from "./utils";
 type Section =
   | "Topo"
   | "Comunidade"
-  | "Palestras confirmadas"
+  | "Palestras"
   | "Contribua"
-  | "Faça acontecer"
-  | "Depoimentos"
-  | "Conf 2023"
+  | "Apoie"
+  // | "Depoimentos"
+  | "Conf"
   | "Contato";
 
 class Config {

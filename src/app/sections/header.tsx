@@ -29,7 +29,8 @@ export const Header = () => {
       <a href="#" className="logo">
         <Logo width={64} />
         <strong>
-          DevPR Conf <span>2024</span>
+          DevPR <br />
+          Conf <span>24</span>
         </strong>
       </a>
       <div
