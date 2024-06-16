@@ -34,6 +34,10 @@ function findAll<K extends keyof HTMLElementTagNameMap>(
   parent?: HTMLElement | ShadowRoot,
 ): NodeListOf<HTMLElementTagNameMap[K]>;
 function findAll<K extends keyof HTMLElementTagNameMap>(
+  selector: `${string} ${K}`,
+  parent?: HTMLElement | ShadowRoot,
+): NodeListOf<HTMLElementTagNameMap[K]>;
+function findAll<K extends keyof HTMLElementTagNameMap>(
   selector: `${K}#${string}`,
   parent?: HTMLElement | ShadowRoot,
 ): NodeListOf<HTMLElementTagNameMap[K]>;

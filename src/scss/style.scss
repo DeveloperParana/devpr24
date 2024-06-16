@@ -445,6 +445,7 @@ span {
 .supports h2,
 .get-involved h2,
 .testimonials h2,
+.faq h2,
 .contact h2 {
   font-size: 3rem;
 }
@@ -679,6 +680,54 @@ span {
             }
           }
         }
+      }
+    }
+  }
+}
+
+/**
+ * <Testimonials />
+ */
+.faq {
+  // background: url("/assets/images/testimonials-2023.webp");
+  // background-size: contain;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 64px;
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      font-size: 1.1em;
+
+      summary {
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: font-size 100ms ease-in-out;
+      }
+
+      &[open] summary {
+        color: var(--devpr-sys-color-primary);
+        font-size: 1.4em;
+      }
+
+      div {
+        margin: 8px 0 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
     }
   }

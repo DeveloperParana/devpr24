@@ -30,7 +30,6 @@ export const Speakers = ({speakers}: SpeakersAttrs) => {
         <h2 className="titleText">
           Palestrantes <span>confirmados</span>
         </h2>
-        <p></p>
       </div>
       <div className="content">
         {speakers.map((speaker) => {

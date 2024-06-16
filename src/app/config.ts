@@ -6,6 +6,7 @@ type Section =
   | "Palestras"
   | "Contribua"
   | "Apoie"
+  | "FAQ"
   // | "Depoimentos"
   | "Conf"
   | "Contato";
