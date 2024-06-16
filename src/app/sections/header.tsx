@@ -18,7 +18,7 @@ export const Header = () => {
   document.documentElement.classList.add('dark')
 
   addEventListener('DOMContentLoaded', () => {
-    const sections = findAll('body > section')
+    const sections = findAll<'section'>('body > section')
     const navigation = find('header nav')
     const navLinks = findAll('a', navigation)
     new ScrollSpy(sections, navLinks).start()

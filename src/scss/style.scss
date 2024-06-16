@@ -57,6 +57,7 @@ devpr-dialog-container {
   align-items: center;
   justify-content: flex-start;
   z-index: 1000;
+  background-color: var(--devpr-sys-color-on-surface);
 
   h3 {
     font-size: 3em;
