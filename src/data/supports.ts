@@ -13,7 +13,7 @@ export const conferenceSupporter: Supporter = {
     "1 mousepad da DevParaná",
   ],
   link: {
-    href: "https://apoia.se/devpr",
+    href: "/apoia-se/apoiador-da-conferencia.html",
     text: "Apoiar a conferência",
   },
 };
@@ -29,7 +29,7 @@ export const communitySupporter: Supporter = {
     `Participação em algumas dinâmicas durante o evento, incluindo brindes de nossos apoiadores`,
   ],
   link: {
-    href: "https://apoia.se/devpr",
+    href: "/apoia-se/apoiador-da-comunidade.html",
     text: "Apoiar a comunidade",
   },
 };
@@ -45,7 +45,7 @@ export const communityBenefactor: Supporter = {
     `Participação da ”hora feliz” com palestrantes e organização do evento (não inclui consumação)`,
   ],
   link: {
-    href: "https://apoia.se/devpr",
+    href: "/apoia-se/benfeitor-da-comunidade.html",
     text: "Quero ser benfeitor",
   },
 };

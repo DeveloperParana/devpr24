@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && cp src/CNAME dist/",
+    "build": "tsc && vite build && npm run cp:cname && npm run cp:apoia-se",
+    "cp:cname": "cp src/CNAME dist/",
+    "cp:apoia-se": "cp -R apoia-se dist/",
     "preview": "vite preview",
     "a11y": "npx axe http://localhost:8080 --rules color-contrast,html-has-lang,imgge-alt,label,link-name,list,listitem,meta-viewport,select-name,svg-img-alt,video-caption  --tags wcag2a"
   },
