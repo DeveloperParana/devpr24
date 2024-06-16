@@ -382,7 +382,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 2px 4px var(--devpr-sys-color-outline);
+  box-shadow: 0px 2px 4px var(--devpr-sys-color-outline-variant);
+  transition: box-shadow 150ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 1px 2px var(--devpr-sys-color-outline-variant);
+  }
 }
 
 .btn:hover {
@@ -459,8 +464,9 @@ span {
       width: 320px;
       margin: 20px;
       border-radius: 8px;
-      border: 15px solid var(--devpr-sys-color-on-surface);
-      background-color: var(--devpr-sys-color-on-surface);
+      padding: 14px;
+      border: 1px solid var(--devpr-sys-color-outline-variant);
+      background-color: var(--devpr-sys-color-surface-dim);
       box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
 
       .imgBx {
@@ -481,10 +487,14 @@ span {
 
       .text {
         padding: 15px 0 5px;
-        color: var(--devpr-sys-color-inverse-on-surface);
+        color: var(--devpr-sys-color-on-surface);
 
         svg {
-          color: var(--devpr-sys-color-inverse-on-surface);
+          color: var(--devpr-sys-color-on-surface);
+        }
+
+        button svg {
+          color: var(--devpr-sys-color-surface);
         }
 
         em {
