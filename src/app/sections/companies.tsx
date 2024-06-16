@@ -115,7 +115,8 @@ export const Companies = (attrs: CompaniesAttrs) => {
   return (
     <section id="companies" className="companies">
       <div className="title">
-        <h2 className="titleText">Empresas</h2>
+        <h2 className="titleText">Marcas</h2>
+        {/* <p>Se comprometeram em viabilizar </p> */}
       </div>
       <div className="content">{companies}</div>
     </section>

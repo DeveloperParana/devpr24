@@ -1,5 +1,6 @@
 export * from './about';
 export * from './banner';
+export * from './companies';
 export * from './contact';
 export * from './faq';
 export * from './footer';

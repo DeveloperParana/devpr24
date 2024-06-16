@@ -5,6 +5,7 @@ type Section =
   | "Comunidade"
   | "Palestras"
   | "Contribua"
+  | "Marcas"
   | "Apoie"
   | "FAQ"
   // | "Depoimentos"

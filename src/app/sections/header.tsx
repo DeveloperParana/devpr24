@@ -29,16 +29,10 @@ export const Header = () => {
       <a href="#" className="logo">
         <Logo width={64} />
         <strong>
-          DevPR <br />
-          Conf <span>24</span>
+          DevPR Conf <span>24</span>
         </strong>
       </a>
-      <div
-        role="button"
-        className="menuToggle"
-        ariaLabel="Alternar menu de navegação"
-        onClick={toggleMenu}
-      ></div>
+      
       <nav>
         <ul className="navigation">
           {config.navigation.map(([id, name]) => {
@@ -52,6 +46,13 @@ export const Header = () => {
           })}
         </ul>
       </nav>
+
+      <div
+        role="button"
+        className="menuToggle"
+        ariaLabel="Alternar menu de navegação"
+        onClick={toggleMenu}
+      ></div>
     </header>
   )
 }

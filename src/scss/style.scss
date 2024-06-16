@@ -236,6 +236,16 @@ header {
     }
   }
 
+  nav {
+    order: 2;
+  }
+
+  @media (max-width: 991px) {
+    nav {
+      order: 1;
+    }
+  }
+
   .navigation {
     position: relative;
     display: flex;
@@ -446,6 +456,7 @@ span {
 .supports h2,
 .get-involved h2,
 .testimonials h2,
+.companies h2,
 .faq h2,
 .contact h2 {
   font-size: 3rem;
@@ -681,6 +692,50 @@ span {
             }
           }
         }
+      }
+    }
+  }
+}
+
+/**
+ * <Companies />
+ */
+
+.companies {
+  height: 60vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100vw;
+
+  .content {
+    position: absolute;
+    background: rgba(7, 8, 9, 0.8);
+    background: linear-gradient(
+      180deg,
+      rgba(7, 8, 9, 1) 10%,
+      rgba(7, 8, 9, 0) 75%,
+      rgba(7, 8, 9, 1) 100%
+    );
+    flex: 1;
+    // min-height: 50vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 40px;
+
+    > a:not([hidden]) {
+      position: absolute;
+      display: inline-flex;
+      max-width: 80vw;
+      img {
+        width: 100%;
       }
     }
   }
@@ -1010,6 +1065,7 @@ span {
     font-size: 1.6em;
   }
   .menuToggle {
+    order: 2;
     position: relative;
     width: 40px;
     height: 40px;
@@ -1098,4 +1154,8 @@ span {
     font-size: 2.2em;
     // color: #fff;
   }
+}
+
+a[hidden] {
+  display: none;
 }
