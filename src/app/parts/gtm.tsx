@@ -17,6 +17,7 @@ export const GTM = () => {
       window.gtag = gtag;
       gtag("js", new Date());
       gtag("config", "G-VY20Y5X6E9");
+      gtag('config', 'AW-10885308101');
     };
   }
 
