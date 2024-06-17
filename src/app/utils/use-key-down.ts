@@ -1,0 +1,65 @@
+type Key =
+  | "KeyE"
+  | "KeyD"
+  | "KeyU"
+  | "Minus"
+  | "KeyH"
+  | "KeyZ"
+  | "Equal"
+  | "KeyP"
+  | "Semicolon"
+  | "BracketRight"
+  | "Slash"
+  | "BracketLeft"
+  | "KeyL"
+  | "Digit8"
+  | "KeyW"
+  | "KeyS"
+  | "Digit5"
+  | "Digit9"
+  | "KeyO"
+  | "Period"
+  | "Digit6"
+  | "KeyV"
+  | "Digit3"
+  | "Backquote"
+  | "KeyG"
+  | "KeyJ"
+  | "KeyQ"
+  | "Digit1"
+  | "KeyT"
+  | "KeyY"
+  | "Quote"
+  | "IntlBackslash"
+  | "Backslash"
+  | "KeyK"
+  | "KeyF"
+  | "KeyI"
+  | "KeyR"
+  | "KeyX"
+  | "KeyA"
+  | "Digit2"
+  | "Digit7"
+  | "KeyM"
+  | "Digit4"
+  | "Digit0"
+  | "KeyN"
+  | "KeyB"
+  | "KeyC"
+  | "Comma"
+  | "Space"
+  | "Escape"
+  | "ArrowUp"
+  | "ArrowRight"
+  | "ArrowDown"
+  | "ArrowLeft";
+
+interface KeyDownCallback {
+  (key: Key): void;
+}
+
+export function useKeyDown(callback: KeyDownCallback) {
+  const fn = ({ code }: KeyboardEvent) => callback(code as Key);
+  addEventListener("keydown", fn);
+  return { cancel: () => removeEventListener("keydown", fn) };
+}

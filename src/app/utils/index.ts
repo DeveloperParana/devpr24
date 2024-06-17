@@ -8,4 +8,4 @@ export * from './size';
 export * from './slugify';
 export * from './styled';
 export * from './timeout';
-export * from './use-arrow';
+export * from './use-key-down';

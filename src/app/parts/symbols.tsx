@@ -1,5 +1,5 @@
 export const Symbols = () => {
-  return <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  return <svg id="icons" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <symbol id="sun" viewBox="0 0 24 24">
       <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="none" stroke-width="1.99832" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M12 0.999023V2.99902" stroke="none" stroke-width="1.99832" stroke-linecap="round" stroke-linejoin="round"/>
