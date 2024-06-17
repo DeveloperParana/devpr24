@@ -3,7 +3,8 @@ export type SocialKind =
   | "linkedIn"
   | "youtube"
   | "instagram"
-  | "whatsapp";
+  | "whatsapp"
+  | "snake";
 
 export type SpeakerNickname =
   | "deyvin"
@@ -13,6 +14,7 @@ export type SpeakerNickname =
 export interface SocialLink {
   kind: SocialKind;
   href: string;
+  action?(): void
 }
 
 export interface Speaker<T extends SpeakerNickname = SpeakerNickname> {

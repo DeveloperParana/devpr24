@@ -1,3 +1,4 @@
+import { Snake } from "../app/eggs/snake";
 import type { SocialLink } from "./typings";
 
 export const socialLinks: SocialLink[] = [
@@ -8,6 +9,14 @@ export const socialLinks: SocialLink[] = [
   {
     kind: "github",
     href: "https://github.com/DeveloperParana/devpr24",
+  },
+  {
+    kind: "snake",
+    href: "#",
+    action() {
+      document.body.classList.add("snake");
+      document.body.append(<Snake grid={16} initialSize={4} />);
+    },
   },
   {
     kind: "whatsapp",
