@@ -47,6 +47,16 @@ body {
   &.fixed {
     overflow: hidden;
   }
+
+  &.snake {
+    & > #conf,
+    & > #footer,
+    & > header,
+    & > section,
+    & > footer {
+      display: none;
+    }
+  }
 }
 
 devpr-dialog-container {
@@ -1034,6 +1044,15 @@ span {
 
   > ul {
     margin-bottom: 48px;
+    list-style: none;
+    align-items: center;
+    display: flex;
+
+    li:last-child {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
   }
 }
 

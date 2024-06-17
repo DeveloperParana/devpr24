@@ -195,7 +195,8 @@ type IconName =
   | "shuffle"
   | "info-line"
   | "amazon-pay"
-  | "paypal";
+  | "paypal"
+  | "snake";
 
 interface IconAttrs extends Size {
   name: IconName;

@@ -23,6 +23,7 @@
     "jsxFragmentFactory": "fragment"
   },
   "include": [
-    "src"
+    "src",
+    "egg"
   ]
 }
