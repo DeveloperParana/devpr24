@@ -1,12 +1,6 @@
+import { esc, p, r, up, right, down, left } from "./vectors";
 import { randomInt, useKeyDown } from "../utils";
 import { Key } from "./key";
-import esc from "./vectors/esc.svg";
-import p from "./vectors/p.svg";
-import r from "./vectors/r.svg";
-import up from "./vectors/up.svg";
-import right from "./vectors/right.svg";
-import down from "./vectors/down.svg";
-import left from "./vectors/left.svg";
 
 export interface Vector {
   x: number;
@@ -94,10 +88,12 @@ export function Snake({ grid, initialSize: maxCells }: SnakeAttrs) {
 
   let lastRecord = record.take();
 
+  let media = matchMedia("(max-width: 991px)");
+
   const gameLoop = () => {
     animation = requestAnimationFrame(gameLoop);
 
-    if (++count < 4) return;
+    if (++count < (media.matches ? 8 : 4)) return;
 
     count = 0;
     context.fillStyle = "#0e1117";
