@@ -1,4 +1,5 @@
 import {
+  FAQ,
   About,
   Banner,
   Footer,
@@ -7,7 +8,6 @@ import {
   Speakers,
   Supports,
   GetInvolved,
-  FAQ,
   Companies,
 } from "./sections";
 import { GTM, Symbols } from "./parts";

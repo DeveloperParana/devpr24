@@ -55,6 +55,7 @@ body {
     & > header,
     & > section {
       display: none;
+      position: relative;
     }
 
     canvas ~ footer {
@@ -1194,4 +1195,55 @@ span {
 
 a[hidden] {
   display: none;
+}
+
+.game {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  button.key {
+    width: 3em;
+    height: 3em;
+
+    background: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+
+    margin-top: 0px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.5;
+
+    &:active {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 1em;
+
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    nav {
+      display: flex;
+    }
+  }
 }
