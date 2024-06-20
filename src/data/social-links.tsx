@@ -14,7 +14,7 @@ export const socialLinks: SocialLink[] = [
     kind: "snake",
     href: "#",
     action() {
-      document.body.classList.add("snake");
+      document.body.classList.add("eggs");
       document.body.append(<Snake grid={16} initialSize={4} />);
     },
   },

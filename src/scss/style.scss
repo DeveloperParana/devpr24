@@ -49,7 +49,7 @@ body {
     overflow: hidden;
   }
 
-  &.snake {
+  &.eggs {
     & > #conf,
     & > #footer,
     & > header,
@@ -1184,6 +1184,10 @@ span {
 
   #footer {
     flex-direction: column;
+  }
+
+  #su27-slider {
+    display: none;
   }
 }
 @media (max-width: 480px) {

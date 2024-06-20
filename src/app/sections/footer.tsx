@@ -1,4 +1,5 @@
 import {socialLinks} from '../../data'
+import { Su27Slider } from '../eggs/su27'
 import {Codaqui, DevParana, SocialLinks} from '../parts'
 
 export const Footer = () => {
@@ -12,6 +13,8 @@ export const Footer = () => {
         <Codaqui width={100} />
       </p>
       <p>CNPJ 44.593.429/0001-05</p>
+
+      <Su27Slider />
     </footer>
   )
 }

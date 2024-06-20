@@ -14,8 +14,12 @@
   },
   "devDependencies": {
     "@axe-core/cli": "^4.9.1",
-    "typescript": "^5.2.2",
+    "@types/three": "^0.165.0",
     "sass": "^1.77.4",
+    "typescript": "^5.2.2",
     "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "three": "^0.165.0"
   }
 }
