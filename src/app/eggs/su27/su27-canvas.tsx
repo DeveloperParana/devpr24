@@ -1,4 +1,4 @@
-import { Clock, PMREMGenerator, Scene } from "three";
+import { Clock, Fog, PMREMGenerator, Scene } from "three";
 import {
   createCamera,
   createControl,
@@ -10,15 +10,18 @@ import {
   createRenderer,
 } from "./utils";
 import { Su27 } from "./su27";
+import { Cloud } from "./cloud";
 
 function ratio() {
   return innerWidth / innerHeight;
 }
 
 export function Su27Canvas() {
-  const far = 1000000;
+  const far = 100000;
   const scene = new Scene();
   const clock = new Clock();
+
+  scene.fog = new Fog( 0xf9f9f9, 0, far);
 
   const camera = createCamera(ratio());
   const renderer = createRenderer();
@@ -36,6 +39,12 @@ export function Su27Canvas() {
   });
 
   let su27: Su27;
+
+  loader.loadAsync("models/cloud.glb").then((gltf) => {
+    for (let i = 0; i < 100; i++) {
+      scene.add(new Cloud(gltf.scene.clone(), i));
+    }
+  });
 
   loader.loadAsync("models/su27.glb").then((gltf) => {
     su27 = new Su27(gltf, control);
