@@ -196,7 +196,10 @@ type IconName =
   | "info-line"
   | "amazon-pay"
   | "paypal"
-  | "snake";
+  | "snake"
+  | "airplanemode-active"
+  | "airplanemode-inactive"
+  | "plus-circle";
 
 interface IconAttrs extends Size {
   name: IconName;

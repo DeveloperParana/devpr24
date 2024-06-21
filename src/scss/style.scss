@@ -797,15 +797,40 @@ span {
 
       font-size: 1.1em;
 
+      padding: 16px 24px;
+      border-radius: 12px;
+      border-style: solid;
+      border-width: 1.5px;
+      border-color: var(--devpr-sys-color-on-surface);
+
       summary {
         cursor: pointer;
         font-size: 1.2em;
         transition: font-size 100ms ease-in-out;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        h4 {
+          margin: 0;
+          flex: 1;
+        }
+
+        svg {
+          transition: transform 200ms ease-in-out;
+        }
       }
 
-      &[open] summary {
-        color: var(--devpr-sys-color-primary);
-        font-size: 1.4em;
+      &[open] {
+        border-color: var(--devpr-sys-color-primary);
+        summary {
+          color: var(--devpr-sys-color-primary);
+
+          svg {
+            transform: rotate(45deg);
+          }
+          // font-size: 1.4em;
+        }
       }
 
       div {

@@ -1,3 +1,5 @@
+import { Icon } from "../parts";
+
 export interface DetailsAttrs {
   title: string;
   content: string[];
@@ -7,7 +9,10 @@ export interface DetailsAttrs {
 export function Details({ title, content, onToggle }: DetailsAttrs) {
   return (
     <details onClick={onToggle}>
-      <summary>{title}</summary>
+      <summary>
+        <h4>{title}</h4>
+        <Icon name="plus-circle" width={28} />
+      </summary>
       <div>
         {content.map((paragraph) => (
           <p>{paragraph}</p>
