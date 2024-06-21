@@ -65,7 +65,7 @@ export class Su27 extends Group {
       this.#yawVelocity += yawAcceleration;
     }
 
-    if (this.control.keyE) {
+    if (this.control.KeyE) {
       this.#yawVelocity -= yawAcceleration;
     }
 

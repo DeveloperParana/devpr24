@@ -1,7 +1,7 @@
 export interface Control {
   KeyQ: boolean
   KeyW: boolean
-  keyE: boolean
+  KeyE: boolean
   KeyA: boolean
   KeyS: boolean
   KeyD: boolean

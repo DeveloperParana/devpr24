@@ -4,7 +4,7 @@ export function createControl(): Control {
   const control = {
     KeyQ: false,
     KeyW: false,
-    keyE: false,
+    KeyE: false,
     KeyA: false,
     KeyS: false,
     KeyD: false,
