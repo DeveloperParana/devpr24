@@ -16,7 +16,7 @@ function ratio() {
 }
 
 export function Su27Canvas() {
-  const far = 100000;
+  const far = 1000000;
   const scene = new Scene();
   const clock = new Clock();
 
