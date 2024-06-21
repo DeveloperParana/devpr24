@@ -9,7 +9,11 @@ export function createControl(): Control {
     KeyS: false,
     KeyD: false,
     Space: false,
-    ShiftLeft: false
+    ShiftLeft: false,
+    ArrowUp: false,
+    ArrowRight: false,
+    ArrowDown: false,
+    ArrowLeft: false,
   }
 
   const isKey = (code: string): code is keyof Control => {

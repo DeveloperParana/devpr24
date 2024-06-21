@@ -7,4 +7,8 @@ export interface Control {
   KeyD: boolean
   Space: boolean
   ShiftLeft: boolean
+  ArrowUp: boolean
+  ArrowRight: boolean
+  ArrowDown: boolean
+  ArrowLeft: boolean
 }

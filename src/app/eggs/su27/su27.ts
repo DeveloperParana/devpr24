@@ -69,19 +69,19 @@ export class Su27 extends Group {
       this.#yawVelocity -= yawAcceleration;
     }
 
-    if (this.control.KeyA) {
+    if (this.control.KeyA || this.control.ArrowLeft) {
       this.#rollVelocity -= this.#acceleration / 500;
     }
 
-    if (this.control.KeyD) {
+    if (this.control.KeyD || this.control.ArrowRight) {
       this.#rollVelocity += this.#acceleration / 500;
     }
 
-    if (this.control.KeyW) {
+    if (this.control.KeyW || this.control.ArrowUp) {
       this.#pitchVelocity += this.#acceleration / 500;
     }
 
-    if (this.control.KeyS) {
+    if (this.control.KeyS || this.control.ArrowDown) {
       this.#pitchVelocity -= this.#acceleration / 500;
     }
   }
