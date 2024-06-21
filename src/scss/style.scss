@@ -50,7 +50,8 @@ body {
   }
 
   &.eggs {
-    & > #conf,
+    & > .video,
+    & > #conf-2023,
     & > #footer,
     & > header,
     & > section {
@@ -962,7 +963,7 @@ span {
   text-decoration: none;
 }
 
-#conf {
+.video {
   padding: 0;
   height: 100vh;
   position: relative;

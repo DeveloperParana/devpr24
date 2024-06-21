@@ -9,7 +9,7 @@ type Section =
   | "Apoie"
   | "FAQ"
   // | "Depoimentos"
-  | "Conf"
+  | "Conf 2023"
   | "Contato";
 
 class Config {

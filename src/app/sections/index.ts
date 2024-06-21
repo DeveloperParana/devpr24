@@ -1,6 +1,7 @@
 export * from './about';
 export * from './banner';
 export * from './companies';
+export * from './conf-2024';
 export * from './contact';
 export * from './faq';
 export * from './footer';
@@ -9,4 +10,4 @@ export * from './header';
 export * from './speakers';
 export * from './supports';
 export * from './testimonials';
-export * from './video';
+export * from './conf-2023';
