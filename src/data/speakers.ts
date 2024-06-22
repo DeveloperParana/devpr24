@@ -13,6 +13,7 @@ const deyvin: Speaker = {
     { kind: "github", href: "https://github.com/deyvin" },
     { kind: "linkedIn", href: "https://www.linkedin.com/company/chorume" },
     { kind: "youtube", href: "https://youtube.com/@manodeyvin" },
+    { kind: "instagram", href: "https://www.instagram.com/manodeyvin"}
   ],
   bio: [
     `Deyvid, mais conhecido como Deyvin, possui mais de 17 anos de carreira, atua como engenheiro de software backend, ele é entusiasta da linguagem de programação ruby e de boas práticas de desenvolvimento.`,
@@ -35,6 +36,7 @@ const ananeridev: Speaker = {
     { kind: "github", href: "https://github.com/ananeridev" },
     { kind: "linkedIn", href: "https://www.linkedin.com/in/ananeridev" },
     { kind: "youtube", href: "https://youtube.com/@AnaNeriDev" },
+    { kind: "instagram", href: "https://www.instagram.com/ananeridev" },
   ],
   bio: [
     `Engenheira de Software Sênior trabalhando para os Estados Unidos numa consultoria para empresas ao redor do mundo com a Stack NestJS, Typescript, NodeJS e Serverless.`,
@@ -53,9 +55,26 @@ const jonatas: Speaker = {
     { kind: "github", href: "https://github.com/jonatas" },
     { kind: "linkedIn", href: "https://www.linkedin.com/in/jonatasdp" },
     { kind: "youtube", href: "https://youtube.com/c/J%C3%B4natasPaganini" },
+    { kind: "instagram", href: "https://www.instagram.com/jonatasdp"}
   ],
   bio: [
     `Nerd, ciclista e blogueiro. Sou um evangelista de pair programming. Usuário e entusiasta do editor Vim. Sou programador desde 2004.`,
+  ],
+};
+
+const kipper: Speaker = {
+  name: "Fernanda Kipper",
+  nickname: "kipper",
+  photo: "assets/speakers/kipper.webp",
+  tags: ["Software Enginneer", "Microsoft MVP"],
+  links: [
+    { kind: "github", href: "https://github.com/Fernanda-Kipper" },
+    { kind: "linkedIn", href: "https://www.linkedin.com/in/fernanda-kipper" },
+    { kind: "youtube", href: "https://www.youtube.com/@kipperdev" },
+    { kind: "instagram", href: "https://www.instagram.com/kipper.dev"}
+  ],
+  bio: [
+    `Engenheira de Software no Itaú e Microsoft MVP, Fernanda é entusiasta do desenvolvimento Web desde os 18 anos. Atuando como desenvolvedora Fullstack, ela compartilha seu conhecimento e paixão pela tecnologia através de vídeos e lives no YouTube e Instagram, onde já reuniu uma comunidade de mais de 100 mil desenvolvedores.`,
   ],
 };
 
@@ -63,6 +82,7 @@ export const speaker: Record<SpeakerNickname, Speaker> = {
   deyvin,
   ananeridev,
   jonatas,
+  kipper
 };
 
-export const speakers = [ananeridev, deyvin, jonatas];
+export const speakers = [ananeridev, deyvin, jonatas, kipper];

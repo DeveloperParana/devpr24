@@ -498,7 +498,7 @@ span {
   .content {
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 40px;
 
@@ -543,6 +543,9 @@ span {
           font-size: 1.4rem;
         }
 
+        h2 {
+          font-size: 2em;
+        }
         h2,
         h3 {
           font-weight: 600;

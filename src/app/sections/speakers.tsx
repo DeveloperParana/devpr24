@@ -40,9 +40,9 @@ export const Speakers = ({speakers}: SpeakersAttrs) => {
               </div>
               <div className="text">
                 <h2>{speaker.name}</h2>
-                <div className="flex row align-center">
+                {/* <div className="flex row align-center">
                   <em>@{speaker.nickname}</em>
-                </div>
+                </div> */}
 
                 <footer className="flex space-between align-center">
                   <div className="flex gap-16">
