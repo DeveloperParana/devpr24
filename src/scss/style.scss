@@ -1,6 +1,7 @@
 // @use './themes/dark';
 @use "sass:map" as map;
 
+@import "./marquee";
 @import "./links";
 @import "./grid";
 @import "./flex";
@@ -79,12 +80,17 @@ body {
 }
 
 devpr-dialog-container {
-  top: 80px;
   position: fixed;
+  top: 80px;
+  // width: 100vw;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
   width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: 1000;
   // background-color: var(--devpr-sys-color-on-surface);
 

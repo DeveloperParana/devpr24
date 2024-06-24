@@ -1,31 +1,32 @@
-import {DescriptionDialog} from '../components'
-import type {Speaker, SocialLink} from '../../data/typings'
-import {Icon, Link} from '../parts'
+import { DescriptionDialog } from "../components";
+import type { Speaker, SocialLink } from "../../data/typings";
+import { Icon, Link } from "../parts";
+import { speakers } from "../../data";
 
 export interface SpeakersAttrs {
-  speakers: Speaker[]
+  speakers: Speaker[];
 }
 
-export const Speakers = ({speakers}: SpeakersAttrs) => {
-  const openSpeaker = (speaker: Speaker) => {
+export const Speakers = () => {
+  const openSpeaker = (button: HTMLButtonElement, speaker: Speaker) => {
     const description = {
       title: speaker.name,
       content: speaker.bio,
       items: speaker.tags,
-      className: 'speaker-info',
-      onClose(dialog: HTMLDialogElement, ev: Event) {
-        console.log(dialog, ev)
+      className: "speaker-info",
+      onClose() {
+        button.focus();
       },
-    }
-    document.body.append(<DescriptionDialog {...description} />)
-  }
+    };
+    document.body.append(<DescriptionDialog {...description} />);
+  };
 
   const getLinkLabel = (speaker: Speaker, link: SocialLink) => {
-    return `${link.kind} de ${speaker.name}`
-  }
+    return `${link.kind} de ${speaker.name}`;
+  };
 
   return (
-    <section className="speakers" id="speakers">
+    <section className="speakers" id="palestras">
       <div className="title">
         <h2 className="titleText">
           Palestrantes <span>confirmados</span>
@@ -40,9 +41,6 @@ export const Speakers = ({speakers}: SpeakersAttrs) => {
               </div>
               <div className="text">
                 <h2>{speaker.name}</h2>
-                {/* <div className="flex row align-center">
-                  <em>@{speaker.nickname}</em>
-                </div> */}
 
                 <footer className="flex space-between align-center">
                   <div className="flex gap-16">
@@ -56,22 +54,24 @@ export const Speakers = ({speakers}: SpeakersAttrs) => {
                         >
                           <Icon name={link.kind} />
                         </Link>
-                      )
+                      );
                     })}
                   </div>
                   <button
                     ariaLabel={`Ver mais sobre ` + speaker.name}
                     className="btn rounded"
-                    onclick={() => openSpeaker(speaker)}
+                    onClick={function (this) {
+                      openSpeaker(this, speaker);
+                    }}
                   >
                     <Icon name="plus" width={32} />
                   </button>
                 </footer>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </section>
-  )
-}
+  );
+};

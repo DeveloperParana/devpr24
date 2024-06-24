@@ -1,6 +1,6 @@
 export const About = () => {
   return (
-    <section className="about" id="about">
+    <section className="about" id="comunidade">
       <div className="row">
         <div className="flex col gap-16 col50">
           <h2 className="titeText">

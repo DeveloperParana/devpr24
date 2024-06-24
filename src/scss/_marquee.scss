@@ -1,0 +1,250 @@
+.marquee__wrapper {
+  box-sizing: border-box;
+}
+
+.marquee img {
+  min-width: 75px;
+  min-height: 20px;
+  max-width: 200px;
+}
+.marquee {
+  display: flex;
+  overflow: visible;
+  flex-grow: 1;
+  user-select: none;
+  gap: 0px;
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0px;
+  min-width: 100%;
+  overflow: visible;
+}
+
+.shouldAnimate {
+  animation: scroll-x 90s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee--vertical {
+  --mask-direction: to bottom;
+}
+
+.marquee--vertical,
+.marquee--vertical .marquee__group {
+  flex-direction: column;
+}
+
+.marquee--vertical .marquee__group {
+  animation-name: scroll-y;
+}
+
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/* Element styles */
+.marquee a,
+.marquee a:link {
+  display: grid;
+  place-items: center;
+  border: 0.383333px solid var(--devpr-sys-color-outline-variant);
+  box-shadow: 0px 4px 7px rgba(6, 22, 33, 0.13),
+    0px 13px 22px rgba(0, 30, 43, 0.12);
+  border-radius: 16px;
+  width: 336px;
+  height: 124px;
+  fill: var(--devpr-sys-color-surface);
+  background: var(--devpr-sys-color-surface);
+  aspect-ratio: 16/9;
+  padding: 0px 25px;
+  border-radius: 6.13333px;
+  margin: 10px 10px;
+  cursor: pointer;
+  flex-grow: 1;
+  transition: transform 0.3s;
+}
+
+@media screen and (max-width: 1024px) {
+  .marquee a {
+    width: 176px;
+    height: 96px;
+  }
+  .marquee img {
+    max-width: 100%;
+  }
+}
+
+.marquee a:hover {
+  transform: scale(1.05);
+}
+
+.marquee--vertical a {
+  aspect-ratio: 1;
+  width: calc(336px / 1.5);
+  padding: 0px 25px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+/* Parent wrapper */
+.marquee__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin: auto;
+  min-width: 100vw;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  overflow: visible;
+}
+
+.wrapper--vertical {
+  flex-direction: row;
+  height: 100vh;
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.marquee-container {
+  padding: 0px;
+  overflow: hidden;
+}
+.paused .marquee__group {
+  animation-play-state: paused;
+}
+h3.css-v66nr3 {
+  font-size: 36px;
+  line-height: 48px;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  font-weight: 500;
+  color: #001e2b;
+}
+.css-1r84kvf span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Euclid Circular A";
+  font-style: normal;
+  color: #3d4f58;
+}
+.css-1r84kvf {
+  margin-top: 8px;
+}
+.css-c0f7k7 {
+  background-color: transparent;
+}
+.logoWallContainer + div,
+.logoWallContainer + div + div,
+.logoWallContainer + div + div + div {
+  display: none;
+}
+.css-1tsallt {
+  text-align: left;
+}
+.ecoSystemNudge {
+  grid-column: 1 / span 6;
+  text-align: left;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.ecoSystemNudge [data-testid="arrow-container"] {
+  width: 32px !important;
+}
+.css-161mma6,
+.css-1r84kvf {
+  grid-column: 1 / span 6;
+}
+@media screen and (min-width: 768px) {
+  .css-161mma6,
+  .css-1r84kvf,
+  .ecoSystemNudge {
+    grid-column: 1 / span 5;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .css-161mma6,
+  .css-1r84kvf {
+    grid-column: 1 / span 8;
+  }
+  .ecoSystemNudge {
+    grid-column: 12 / span 12;
+    text-align: right;
+  }
+}
+.ecoSystemNudge .css-zzrgxg {
+  width: 0% !important;
+}
+.ecoSystemNudge:hover .css-zzrgxg {
+  width: 100% !important;
+}
+.marquee-container + .css-zeihor {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .marquee img {
+    max-width: 100%;
+  }
+  .css-1r84kvf span {
+    margin-bottom: 24px;
+    display: block;
+  }
+  .ecoSystemNudge {
+    grid-row: 3;
+    justify-content: left;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .ecoSystemNudge {
+    grid-row: 1;
+    justify-content: right;
+    grid-column: 6 / span 6;
+    align-items: start;
+    padding-top: 24px;
+  }
+  h3.css-v66nr3 {
+    margin: 24px 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  h3.css-v66nr3 {
+    margin: 24px 0px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}

@@ -1,17 +1,13 @@
-import type {Contribute} from '../../data'
-import {GoogleFormDialog} from '../components'
+import { GoogleFormDialog } from "../components";
+import { contributes } from "../../data";
 
-interface GetInvolvedAttrs {
-  contributes: Contribute[]
-}
-
-export const GetInvolved = ({contributes}: GetInvolvedAttrs) => {
+export const GetInvolved = () => {
   const openGoogleFormDialog = (src: string) => {
-    document.body.append(<GoogleFormDialog src={src} />)
-  }
+    document.body.append(<GoogleFormDialog src={src} />);
+  };
 
   return (
-    <section className="get-involved" id="getInvolved">
+    <section className="get-involved" id="contribua">
       <div className="title">
         <h2 className="titleText">Contribua</h2>
       </div>
@@ -34,9 +30,9 @@ export const GetInvolved = ({contributes}: GetInvolvedAttrs) => {
                 </button>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </section>
-  )
-}
+  );
+};

@@ -25,7 +25,7 @@ export const Banner = () => {
             Apoie este evento
           </Link>
 
-          <Link href="https://chat.whatsapp.com/J2Enc3n1Zfu1ixhVecACyd" target="_blank" className="btn flex gap-8">
+          <Link href="/whatsapp" target="_blank" className="btn flex gap-8">
             <Icon name='whatsapp'/>Participe da comunidade
           </Link>
         </div>

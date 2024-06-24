@@ -1,11 +1,11 @@
-import {DialogContainer} from './dialog-container'
-import type {Description} from '../../types'
-import {find} from '../utils'
-import {Icon} from '../parts'
+import { DialogContainer } from "./dialog-container";
+import type { Description } from "../../types";
+import { find } from "../utils";
+import { Icon } from "../parts";
 
 export interface DescriptionDialogAttrs extends Description {
-  onClose?(dialog: HTMLDialogElement, ev: Event): void
-  className?: string
+  onClose?(dialog: HTMLDialogElement, ev: Event): void;
+  className?: string;
 }
 
 export const DescriptionDialog = (attrs: DescriptionDialogAttrs) => {
@@ -18,7 +18,7 @@ export const DescriptionDialog = (attrs: DescriptionDialogAttrs) => {
       <button
         slot="close"
         className="btn rounded small top-right"
-        onclick={() => find('devpr-dialog-container').close()}
+        onclick={() => find("devpr-dialog-container").close()}
       >
         <Icon name="close" width={48} />
       </button>
@@ -40,13 +40,13 @@ export const DescriptionDialog = (attrs: DescriptionDialogAttrs) => {
         </ul>
       </div>
     </DialogContainer>
-  )
-}
+  );
+};
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      DescriptionDialog: typeof DescriptionDialog
+      DescriptionDialog: typeof DescriptionDialog;
     }
   }
 }

@@ -1,28 +1,27 @@
-import {config} from '../config'
-import {Logo} from '../parts'
-import {ScrollSpy, find, findAll} from '../utils'
+import { ScrollSpy, find, findAll } from "../utils";
+import { Logo } from "../parts";
 
 export const Header = () => {
-  addEventListener('scroll', function () {
-    const header = find('header')!
-    header.classList.toggle('sticky', scrollY > 0)
-  })
+  addEventListener("scroll", function () {
+    const header = find("header")!;
+    header.classList.toggle("sticky", scrollY > 0);
+  });
 
   const toggleMenu = () => {
-    const menuToggle = find('div.menuToggle')!
-    const navigation = find('ul.navigation')!
-    menuToggle.classList.toggle('active')
-    navigation.classList.toggle('active')
-  }
+    const menuToggle = find("div.menuToggle")!;
+    const navigation = find("ul.navigation")!;
+    menuToggle.classList.toggle("active");
+    navigation.classList.toggle("active");
+  };
 
-  document.documentElement.classList.add('dark')
+  document.documentElement.classList.add("dark");
 
-  addEventListener('DOMContentLoaded', () => {
-    const sections = findAll<'section'>('body > section')
-    const navigation = find('header nav')
-    const navLinks = findAll('a', navigation)
-    new ScrollSpy(sections, navLinks).start()
-  })
+  addEventListener("DOMContentLoaded", () => {
+    const sections = findAll<"section">("body > section");
+    const navigation = find("header nav");
+    const navLinks = findAll("a", navigation);
+    new ScrollSpy(sections, navLinks).start();
+  });
 
   return (
     <header>
@@ -32,18 +31,39 @@ export const Header = () => {
           DevPR Conf <span>24</span>
         </strong>
       </a>
-      
+
       <nav>
         <ul className="navigation">
-          {config.navigation.map(([id, name]) => {
-            return (
-              <li>
-                <a href={id} onClick={toggleMenu}>
-                  {name}
-                </a>
-              </li>
-            )
-          })}
+          <li>
+            <a href="#banner" onClick={toggleMenu}>
+              Banner
+            </a>
+          </li>
+          <li>
+            <a href="#comunidade" onClick={toggleMenu}>
+              Comunidade
+            </a>
+          </li>
+          <li>
+            <a href="#palestras" onClick={toggleMenu}>
+              Palestras
+            </a>
+          </li>
+          <li>
+            <a href="#contribua" onClick={toggleMenu}>
+              Contribua
+            </a>
+          </li>
+          <li>
+            <a href="#apoie" onClick={toggleMenu}>
+              Apoie
+            </a>
+          </li>
+          <li>
+            <a href="#faq" onClick={toggleMenu}>
+              FAQ
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -54,5 +74,5 @@ export const Header = () => {
         onClick={toggleMenu}
       ></div>
     </header>
-  )
-}
+  );
+};

@@ -1,21 +1,17 @@
-import {Icon, Link} from '../parts'
+import { Icon, Link } from "../parts";
 import {
+  supports,
   communityBenefactor,
   communitySupporter,
   conferenceSupporter,
-  type Supporter,
-} from '../../data'
+} from "../../data";
 
-export interface SupportsAttrs {
-  supports: Supporter[]
-}
-
-export const Supports = ({supports}: SupportsAttrs) => {
+export const Supports = () => {
   const supportTitleMap: Record<string, string> = {
     $conferenceSupporter: conferenceSupporter.title,
     $communitySupporter: communitySupporter.title,
     $communityBenefactor: communityBenefactor.title,
-  }
+  };
 
   // prettier-ignore
   const determineBenefit = (benefit: string) => {
@@ -25,19 +21,19 @@ export const Supports = ({supports}: SupportsAttrs) => {
   }
 
   return (
-    <section className="supports" id="supports">
+    <section className="supports" id="apoie">
       <div className="title flex row justify-center">
         <h2 className="titleText">
           Faça <span>acontecer</span>
         </h2>
         <p className="text-1-4 text-center">
           A edição desse ano será gratuita e os ingressos serão disponibilizados
-          ao público a partir do dia <span>14 de Julho de 2024</span>.
-          Como estamos trazendo pessoas referências da nossa área e isso tem um
+          ao público a partir do dia <span>14 de Julho de 2024</span>. Como
+          estamos trazendo pessoas referências da nossa área e isso tem um
           custo, precisamos de um apoio mínimo da comunidade para cobrir os
-          gastos.
-          Caso você tenha condições e queira apoiar o evento, confira abaixo os
-          benefícios que estamos oferecendo a quem acredita na comunidade.
+          gastos. Caso você tenha condições e queira apoiar o evento, confira
+          abaixo os benefícios que estamos oferecendo a quem acredita na
+          comunidade.
         </p>
       </div>
       <div className="content">
@@ -51,7 +47,7 @@ export const Supports = ({supports}: SupportsAttrs) => {
                   Limite de {support.limit} disponíveis
                 </em>
                 <p>
-                  Você como <strong>{support.title}</strong> terá{' '}
+                  Você como <strong>{support.title}</strong> terá{" "}
                   {support.description}
                 </p>
 
@@ -63,7 +59,7 @@ export const Supports = ({supports}: SupportsAttrs) => {
                         <Icon name="check" width={32} />
                         {determineBenefit(benefit)}
                       </li>
-                    )
+                    );
                   })}
                 </ul>
 
@@ -72,7 +68,7 @@ export const Supports = ({supports}: SupportsAttrs) => {
                 </Link>
               </div>
             </div>
-          )
+          );
         })}
       </div>
       <div id="warning" className="flex mt-24 justify-center gap-16">
@@ -87,5 +83,5 @@ export const Supports = ({supports}: SupportsAttrs) => {
         </p>
       </div>
     </section>
-  )
-}
+  );
+};

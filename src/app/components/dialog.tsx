@@ -1,5 +1,5 @@
 import type {SizeType} from '../../types'
-import {px, vh, vw} from '../utils'
+import {vh, vw} from '../utils'
 
 export interface DialogAttrs {
   opened?: boolean
@@ -12,20 +12,16 @@ export interface DialogAttrs {
 }
 
 export const Dialog = (attrs: DialogAttrs) => {
-  const {opened = true, className, width, height, maxWidth, maxHeight} = attrs
+  const {opened = true, className, maxWidth, maxHeight} = attrs
 
   const style = {
-    top: px(4),
     maxWidth: maxWidth ?? vw(100),
     maxHeight: maxHeight ?? vh(100),
-    width: width ?? px(innerWidth - 32),
-    height: height ?? px(innerHeight - 114),
     overflow: 'visible'
   }
 
   function onClose(this: HTMLDialogElement, ev: Event) {
     if (attrs.onClose) attrs.onClose(this, ev)
-    console.log(this, ev)
   }
 
   return (
