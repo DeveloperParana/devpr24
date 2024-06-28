@@ -10,7 +10,6 @@ export const conferenceSupporter: Supporter = {
     "Badge da comunidade",
     "2 adesivos (comunidade e conferência)",
     "1 chaveiro da DevParaná",
-    "1 mousepad da DevParaná",
   ],
   link: {
     href: "/apoia-se/apoiador-da-conferencia.html",

@@ -1,3 +1,4 @@
+import { CSGoCanvas } from "../app/eggs/cs-go";
 import { Snake } from "../app/eggs/snake";
 import type { SocialLink } from "./typings";
 
@@ -21,6 +22,14 @@ export const socialLinks: SocialLink[] = [
   {
     kind: "whatsapp",
     href: "https://chat.whatsapp.com/J2Enc3n1Zfu1ixhVecACyd",
+  },
+  {
+    kind: "cs-go",
+    href: "#",
+    action() {
+      document.body.classList.add("eggs");
+      document.body.append(<CSGoCanvas />);
+    },
   },
   {
     kind: "instagram",

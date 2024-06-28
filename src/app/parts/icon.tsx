@@ -199,7 +199,8 @@ type IconName =
   | "snake"
   | "airplanemode-active"
   | "airplanemode-inactive"
-  | "plus-circle";
+  | "plus-circle"
+  | "cs-go";
 
 interface IconAttrs extends Size {
   name: IconName;

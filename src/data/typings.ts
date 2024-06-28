@@ -4,7 +4,8 @@ export type SocialKind =
   | "youtube"
   | "instagram"
   | "whatsapp"
-  | "snake";
+  | "snake"
+  | "cs-go";
 
 export type SpeakerNickname =
   | "deyvin"

@@ -28,4 +28,10 @@ export const letMePay = {
   link: 'https://www.letmepay.io'
 }
 
-export const companies = [github, db1, elotech, letMePay];
+export const mmTech = {
+  name: 'MM Tech',
+  logo: '/companies/mmtech.svg',
+  link: 'https://www.grupomercadomoveis.com.br'
+}
+
+export const companies = [github, db1, mmTech, letMePay, elotech];

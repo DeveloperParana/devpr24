@@ -995,6 +995,14 @@ span {
   color: var(--devpr-sys-color-primary);
   font-weight: 600;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 991px) {
+  a[aria-label="cs-go"] {
+    display: none;
+  }
 }
 
 .video {
