@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>C4P DevParaná</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VY20Y5X6E9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-VY20Y5X6E9");
+      gtag("config", "AW-10885308101");
+    </script>
+    <style type="text/css">
+      html, body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      svg {
+        display: inline-flex;
+        transition: transform 200ms ease-in-out;
+      }
+      svg:hover {
+        transform: scale(1.1);
+      }
+      svg,
+      use {
+        width: 376px;
+        height: 376px;
+      }
+      .grid {
+        display: grid;
+        grid-gap: 10rem;
+        margin: 0 0 10rem 0;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <a href="/c4p/typescript">
+        <svg> <use href="#typescript"></use> </svg>
+      </a>
+      <a href="/c4p/php">
+        <svg> <use href="#php"></use> </svg>
+      </a>
+      <a href="/c4p/nodejs">
+        <svg> <use href="#nodejs"></use> </svg>
+      </a>
+      <a href="/c4p/front-in-maringa">
+        <svg> <use href="#front-in-maringa"></use> </svg>
+      </a>
+    </div>
+
+    <script type="module">
+      import { loadSVG } from "./load-svg.js";
+
+      loadSVG("./logos.svg").then(svg => document.body.append(svg));
+    </script>
+  </body>
+</html>
