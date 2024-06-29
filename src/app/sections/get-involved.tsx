@@ -6,6 +6,16 @@ export const GetInvolved = () => {
     document.body.append(<GoogleFormDialog src={src} />);
   };
 
+  const today = new Date()
+
+  const getDateText = (date?: Date) => {
+    if (date && date > today) {
+      return 'Aberto até ' + date.toLocaleDateString()
+    }
+
+    return 'Encerrado'
+  }
+
   return (
     <section className="get-involved" id="contribua">
       <div className="title">
@@ -18,7 +28,7 @@ export const GetInvolved = () => {
               <div className="text">
                 <h3>{contribute.title}</h3>
                 <em className="text-error">
-                  Aberto até {contribute.date?.toLocaleDateString()}
+                  {getDateText(contribute.date)}
                 </em>
                 <p>{contribute.description}</p>
 
