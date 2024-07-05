@@ -736,6 +736,28 @@ span {
 }
 
 /**
+ * <Supporters />
+ */
+
+.supporters {
+  .marquee__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+
+  h3 {
+    font-size: 1.6em;
+    opacity: 0.6;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+/**
  * <Companies />
  */
 

@@ -10,6 +10,7 @@ import {
   Conf2024,
   GetInvolved,
   Companies,
+  Supporters,
 } from "./sections";
 import { GTM, Symbols } from "./parts";
 
@@ -25,6 +26,7 @@ export const App = () => {
       <GetInvolved />
       <Supports />
       <FAQ />
+      <Supporters />
       <Companies />
       <Footer />
       <Symbols />
