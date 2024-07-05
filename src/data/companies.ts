@@ -34,4 +34,10 @@ export const mmTech = {
   link: 'https://www.grupomercadomoveis.com.br'
 }
 
-export const companies = [github, db1, mmTech, letMePay, elotech];
+export const nstech = {
+  name: 'nstech',
+  logo: '/companies/nstech.svg',
+  link: 'https://www.nstech.com.br/'
+}
+
+export const companies = [github, db1, mmTech, letMePay, elotech, nstech];
