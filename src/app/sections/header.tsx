@@ -41,7 +41,7 @@ export const Header = () => {
           </li>
           <li>
             <a href="#banner" onClick={toggleMenu}>
-              Sobre a Conf
+              Conf
             </a>
           </li>
           <li>

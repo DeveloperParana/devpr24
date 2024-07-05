@@ -21,19 +21,19 @@ export const About = () => {
           </p>
           <div className="flex row align-center">
             <div className="col min-3">
-              <h3>5.222</h3>
+              <h3>5.3k</h3>
               <em>Membros no meetup.com</em>
             </div>
             <div className="col min-3">
-              <h3>256+</h3>
+              <h3>300</h3>
               <em>Eventos foram organizados</em>
             </div>
             <div className="col min-3">
-              <h3>1.490</h3>
+              <h3>1.5k</h3>
               <em>Inscritos no Youtube.com</em>
             </div>
             <div className="col min-3">
-              <h3>2.368</h3>
+              <h3>2.5k</h3>
               <em>Seguidores no Instagram</em>
             </div>
           </div>
@@ -44,7 +44,7 @@ export const About = () => {
             conhecimento acessível, para que você sinta o poder dele na sua vida
             pessoal e profissional.
           </p>
-          <h3>Junte-se a nós nesta caminhada!</h3>
+          <h3>Junte-se a caminhada!</h3>
         </div>
         <div className="col50">
           <div className="imgBx">
