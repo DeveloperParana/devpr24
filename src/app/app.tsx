@@ -7,21 +7,17 @@ import {
   Speakers,
   Supports,
   Conf2023,
+  Conf2024,
   GetInvolved,
   Companies,
 } from "./sections";
 import { GTM, Symbols } from "./parts";
-import { Video } from "./components";
 
 export const App = () => {
   return (
     <>
       <Header />
-      <Video
-        volume={0.1}
-        src="/assets/videos/conf-2024.mp4"
-        poster="/assets/images/conf-2024-poster.webp"
-      />
+      <Conf2024 src="/assets/videos/conf-2024.mp4" />
       <Banner />
       <About />
       <Speakers />

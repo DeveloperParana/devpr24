@@ -35,8 +35,13 @@ export const Header = () => {
       <nav>
         <ul className="navigation">
           <li>
+            <a href="#" onClick={toggleMenu}>
+              Início
+            </a>
+          </li>
+          <li>
             <a href="#banner" onClick={toggleMenu}>
-              Banner
+              Sobre a Conf
             </a>
           </li>
           <li>
@@ -46,7 +51,7 @@ export const Header = () => {
           </li>
           <li>
             <a href="#palestras" onClick={toggleMenu}>
-              Palestras
+              Palestrantes
             </a>
           </li>
           <li>
