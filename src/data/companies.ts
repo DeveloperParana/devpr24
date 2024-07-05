@@ -40,4 +40,4 @@ export const nstech = {
   link: 'https://www.nstech.com.br/'
 }
 
-export const companies = [github, db1, mmTech, letMePay, elotech, nstech];
+export const companies = [github, db1, elotech, mmTech, letMePay, nstech];
