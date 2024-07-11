@@ -8,7 +8,6 @@ import {
   Supports,
   Conf2023,
   Conf2024,
-  GetInvolved,
   Companies,
   Supporters,
 } from "./sections";
@@ -22,12 +21,11 @@ export const App = () => {
       <Banner />
       <About />
       <Speakers />
-      <Conf2023 src="/assets/videos/conf-2023.mp4" />
-      <GetInvolved />
       <Supports />
-      <FAQ />
       <Supporters />
       <Companies />
+      <Conf2023 src="/assets/videos/conf-2023.mp4" />
+      <FAQ />
       <Footer />
       <Symbols />
       <GTM />

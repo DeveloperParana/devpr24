@@ -8,9 +8,13 @@ export const GetInvolved = () => {
 
   const today = new Date()
 
-  const getDateText = (date?: Date) => {
-    if (date && date > today) {
-      return 'Aberto até ' + date.toLocaleDateString()
+  const isEnded = (date: Date) => {
+    return date && date < today
+  }
+
+  const getDateText = (date: Date) => {
+    if (!isEnded(date)) {
+      return 'Aberto até ' + date?.toLocaleDateString()
     }
 
     return 'Encerrado'
@@ -34,6 +38,7 @@ export const GetInvolved = () => {
 
                 <button
                   className="btn"
+                  disabled={isEnded(contribute.date)}
                   onClick={() => openGoogleFormDialog(contribute.action.href)}
                 >
                   {contribute.action.text}

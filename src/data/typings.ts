@@ -44,7 +44,7 @@ export interface Supporter {
 export interface Contribute {
   title: string;
   description: string;
-  date?: Date;
+  date: Date;
   action: {
     href: string;
     text: string;

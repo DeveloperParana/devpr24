@@ -55,11 +55,6 @@ export const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#contribua" onClick={toggleMenu}>
-              Contribua
-            </a>
-          </li>
-          <li>
             <a href="#apoie" onClick={toggleMenu}>
               Apoie
             </a>

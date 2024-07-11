@@ -40,4 +40,10 @@ export const nstech = {
   link: 'https://www.nstech.com.br/'
 }
 
-export const companies = [github, db1, elotech, mmTech, letMePay, nstech];
+export const irrah = {
+  name: 'irrah',
+  logo: '/companies/irrah.svg',
+  link: 'https://www.grupoirrah.com.br/'
+}
+
+export const companies = [github, db1, elotech, mmTech, letMePay, nstech, irrah];

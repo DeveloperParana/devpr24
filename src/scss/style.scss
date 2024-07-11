@@ -420,6 +420,14 @@ header {
     border-radius: 50%;
     border-style: solid;
   }
+
+  &:disabled {
+    opacity: .08;
+  }
+
+  &:hover:not(:disabled) {
+    letter-spacing: 2px;
+  }
 }
 
 .social-link {
@@ -436,9 +444,6 @@ header {
   }
 }
 
-.btn:hover {
-  letter-spacing: 2px;
-}
 
 section {
   padding: 100px;
