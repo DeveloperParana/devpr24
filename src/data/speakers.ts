@@ -65,7 +65,7 @@ const jonatas: Speaker = {
 const kipper: Speaker = {
   name: "Fernanda Kipper",
   nickname: "kipper",
-  photo: "assets/speakers/kipper.webp",
+  photo: "assets/speakers/kipper2.webp",
   tags: ["Software Enginneer", "Microsoft MVP"],
   links: [
     { kind: "github", href: "https://github.com/Fernanda-Kipper" },
@@ -94,12 +94,44 @@ const devsoutinho: Speaker = {
   ],
 };
 
+const lays: Speaker = {
+  name: "Lays Rodrigues",
+  nickname: "lays",
+  photo: "assets/speakers/lays.webp",
+  tags: ["Software Enginneer", "AWS Community Builder", "Líder do AWS User Group Rio"],
+  links: [
+    { kind: "github", href: "https://github.com/lays147" },
+    { kind: "linkedIn", href: "https://www.linkedin.com/in/laysrodrigues147/" },
+    { kind: "instagram", href: "https://www.instagram.com/lays147/" },
+  ],
+  bio: [
+    `Lays Rodrigues atua como Senior Software Engineer na Stone (Bota pra girar no modo Stone!). Especializada em utilizar AWS e Terraform para entregar o melhor valor possível ao negócio. Lays é AWS Community Builder e também é líder do AWS User Group Rio. Com mais de 7 anos de carreira em tech, ela está aprendendo a tocar um teclado diferente: um piano.`,
+  ],
+};
+
+const gustavo: Speaker = {
+  name: "Gustavo Caetano",
+  nickname: "gustavo",
+  photo: "assets/speakers/gustavo.webp",
+  tags: ["Executivo de Operações", "Host do podcast Papinho Tech"],
+  links: [
+    { kind: "linkedIn", href: "https://www.linkedin.com/in/laysrodrigues147/" },
+    { kind: "youtube", href: "https://www.youtube.com/@oguscaetano" },
+    { kind: "instagram", href: "https://www.instagram.com/oguscaetano/" },
+  ],
+  bio: [
+    `É Executivo de Operações na FIAP, mestre em Ciência da Computação com experiência de mercado em engenharia de software, gestão de projetos/pessoas e liderança técnica. Já atuou como professor e coordenador de curso técnico, graduação e pós-graduação na área de tecnologia. Possui um canal no YouTube com mais de 2 milhões de views e é Host do podcast Papinho Tech.`,
+  ],
+};
+
 export const speaker: Record<SpeakerNickname, Speaker> = {
   deyvin,
   ananeridev,
   jonatas,
   kipper,
+  lays,
   devsoutinho,
+  gustavo,
 };
 
-export const speakers = [ananeridev, deyvin, devsoutinho, jonatas, kipper];
+export const speakers = [ananeridev, deyvin, devsoutinho, kipper, jonatas, lays, gustavo];
