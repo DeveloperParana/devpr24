@@ -14,6 +14,7 @@ import {
 } from "./utils";
 import { BasketBall } from "./basket-ball";
 import { Player } from "./player";
+import { DevPR } from "./devpr";
 
 export function CSGoCanvas() {
   let animation = -1;
@@ -26,8 +27,8 @@ export function CSGoCanvas() {
 
   const renderer = createRenderer();
 
-  createWorld().then(({ octree, world }) => {
-    scene.add(world);
+  createWorld().then((models) => {
+    scene.add(models.world);
 
     const GRAVITY = 30;
     const STEPS_PER_FRAME = 5;
@@ -47,23 +48,37 @@ export function CSGoCanvas() {
 
     const control = createControl();
 
+    const devpr = new DevPR(models.devpr);
+
+    control.on((key) => {
+      console.log(key);
+
+      if (devpr.input(key)) {
+        console.log(player.camera.position);
+        console.log(player.direction);
+        console.log(player.camera.getWorldDirection(player.direction));
+        
+        scene.add(devpr.drop(player.collider.end, player.direction));
+      }
+    });
+
     const onMouseDown = () => {
       document.body.requestPointerLock();
       mouseTime = performance.now();
-    }
+    };
 
     const onMouseUp = () => {
       if (document.pointerLockElement !== null) {
         scene.add(player.throwBall(mouseTime));
       }
-    }
+    };
 
     const onMouseMove = (ev: MouseEvent) => {
       if (document.pointerLockElement === document.body) {
         camera.rotation.y -= ev.movementX / 500;
         camera.rotation.x -= ev.movementY / 500;
       }
-    }
+    };
 
     addEventListener("mousedown", onMouseDown);
 
@@ -82,7 +97,7 @@ export function CSGoCanvas() {
     }
 
     function playerCollisions() {
-      const result = octree.capsuleIntersect(player.collider);
+      const result = models.octree.capsuleIntersect(player.collider);
 
       player.onTheFloor = false;
 
@@ -195,7 +210,7 @@ export function CSGoCanvas() {
     function updateBalls(deltaTime: number) {
       player.balls.forEach((ball) => {
         ball.collider.center.addScaledVector(ball.velocity, deltaTime);
-        const result = octree.sphereIntersect(ball.collider);
+        const result = models.octree.sphereIntersect(ball.collider);
 
         if (result) {
           ball.velocity.addScaledVector(
@@ -243,9 +258,9 @@ export function CSGoCanvas() {
       if (control.Escape) {
         cancelAnimationFrame(animation);
         document.body.classList.remove("eggs");
-        removeEventListener("mousedown", onMouseDown)
-        removeEventListener("mouseup", onMouseUp)
-        removeEventListener("mousemove", onMouseMove)
+        removeEventListener("mousedown", onMouseDown);
+        removeEventListener("mouseup", onMouseUp);
+        removeEventListener("mousemove", onMouseMove);
         renderer.domElement.remove();
         game.remove();
       }

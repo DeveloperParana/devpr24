@@ -9,22 +9,26 @@ export async function createWorld() {
   draco.setDecoderPath("js/");
   loader.setDRACOLoader(draco);
 
-  return loader.loadAsync("models/de_dust3.glb").then(async (gltf) => {
-    gltf.scene.scale.setScalar(1.7)
+  return loader
+    .loadAsync("models/de_dust3.glb")
+    .then(async ({ scene: world }) => {
+      world.scale.setScalar(1.7);
 
-    octree.fromGraphNode(gltf.scene);
+      octree.fromGraphNode(world);
 
-    gltf.scene.traverse((child) => {
-      if (child instanceof Mesh) {
-        child.castShadow = true;
-        child.receiveShadow = true;
+      const { scene: devpr } = await loader.loadAsync("models/devpr.glb");
 
-        if (child.material.map) {
-          child.material.map.anisotropy = 4;
+      world.traverse((child) => {
+        if (child instanceof Mesh) {
+          child.castShadow = true;
+          child.receiveShadow = true;
+
+          if (child.material.map) {
+            child.material.map.anisotropy = 4;
+          }
         }
-      }
-    });
+      });
 
-    return { octree, world: gltf.scene };
-  });
+      return { octree, devpr, world };
+    });
 }
