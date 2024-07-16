@@ -1321,3 +1321,11 @@ a[hidden] {
     }
   }
 }
+
+@media (max-width: 991px) {
+  details summary h3 {
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+
