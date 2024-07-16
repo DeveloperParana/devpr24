@@ -51,13 +51,7 @@ export function CSGoCanvas() {
     const devpr = new DevPR(models.devpr);
 
     control.on((key) => {
-      console.log(key);
-
       if (devpr.input(key)) {
-        console.log(player.camera.position);
-        console.log(player.direction);
-        console.log(player.camera.getWorldDirection(player.direction));
-        
         scene.add(devpr.drop(player.collider.end, player.direction));
       }
     });

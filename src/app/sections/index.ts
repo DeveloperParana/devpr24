@@ -1,4 +1,5 @@
 export * from './about';
+export * from './agenda';
 export * from './banner';
 export * from './companies';
 export * from './conf-2023';

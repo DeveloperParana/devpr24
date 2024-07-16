@@ -15,11 +15,23 @@ export type SpeakerNickname =
   | "lays"
   | "devsoutinho"
   | "gustavo"
+  | "munif";
 
 export interface SocialLink {
   kind: SocialKind;
   href: string;
-  action?(): void
+  action?(): void;
+}
+
+type PresentationType = "talk" | "workshop";
+
+export interface Presentation {
+  title: string;
+  type: PresentationType;
+  start: Date;
+  end: Date;
+  place: string;
+  status: boolean;
 }
 
 export interface Speaker<T extends SpeakerNickname = SpeakerNickname> {
@@ -29,6 +41,7 @@ export interface Speaker<T extends SpeakerNickname = SpeakerNickname> {
   tags: string[];
   links: SocialLink[];
   bio: string[];
+  presentation: Presentation;
 }
 
 export interface Supporter {
@@ -51,4 +64,16 @@ export interface Contribute {
     href: string;
     text: string;
   };
+}
+
+
+
+export interface ScheduleSlot {
+  title: string;
+  status: string;
+  type: string;
+  start: Date;
+  end: Date;
+  place: string;
+  speaker: string;
 }
