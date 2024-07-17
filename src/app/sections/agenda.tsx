@@ -1,6 +1,6 @@
 import { findAll, formatDate } from "../utils";
 import { schedule, speaker } from "../../data";
-import { Icon } from "../parts";
+import { Icon, Link } from "../parts";
 
 export const Agenda = () => {
   function onToggle(this: HTMLElement) {
@@ -18,7 +18,7 @@ export const Agenda = () => {
       </div>
       <div className="content">
         {schedule.map((slot, index) => {
-          const now = Date.now()
+          const now = Date.now();
 
           const isPrev = now > slot.end.getTime();
 
@@ -70,6 +70,16 @@ export const Agenda = () => {
             </details>
           );
         })}
+      </div>
+
+      <div className="flex justify-center">
+        <Link
+          href="https://devpr24.eventbrite.com/"
+          className="btn subscribe heartbeat"
+          target="_blank"
+        >
+          Faça sua inscrição
+        </Link>
       </div>
     </section>
   );

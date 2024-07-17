@@ -421,6 +421,10 @@ header {
     border-style: solid;
   }
 
+  &.subscribe {
+    background-color: lime;
+  }
+
   &:disabled {
     opacity: 0.08;
   }
@@ -1276,14 +1280,17 @@ a[hidden] {
  * <Agenda />
  */
 .agenda {
+  .btn {
+    font-size: 1.2em;
+  }
+
   .content {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 64px;
     margin-top: 40px;
     gap: 8px;
-
-
     details {
       &.prev {
         border-color: var(--devpr-sys-color-surface-container);
@@ -1363,5 +1370,117 @@ details {
   details summary h3 {
     font-size: 1em;
     font-weight: 500;
+  }
+}
+
+.flicker {
+  animation: flicker 2.5s linear infinite both;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  32.98% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 0;
+  }
+  34.02% {
+    opacity: 1;
+  }
+  34.98% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  35.9% {
+    opacity: 0;
+  }
+  35.92% {
+    opacity: 1;
+  }
+  38.98% {
+    opacity: 1;
+  }
+  39% {
+    opacity: 0;
+  }
+  39.8% {
+    opacity: 0;
+  }
+  39.82% {
+    opacity: 1;
+  }
+  83.98% {
+    opacity: 1;
+  }
+  84% {
+    opacity: 0;
+  }
+  84.9% {
+    opacity: 0;
+  }
+  84.92% {
+    opacity: 1;
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 1.6s ease-in-out infinite both;
+}
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.94);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+.vibrate {
+  animation: vibrate 0.3s linear infinite both;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
   }
 }
