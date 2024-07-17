@@ -173,9 +173,9 @@ const gustavo: Speaker = {
   photo: "assets/speakers/gustavo.webp",
   tags: ["Executivo de Operações", "Host do podcast Papinho Tech"],
   links: [
-    { kind: "linkedIn", href: "https://www.linkedin.com/in/laysrodrigues147/" },
+    { kind: "linkedIn", href: "https://www.linkedin.com/in/oguscaetano" },
     { kind: "youtube", href: "https://www.youtube.com/@oguscaetano" },
-    { kind: "instagram", href: "https://www.instagram.com/oguscaetano/" },
+    { kind: "instagram", href: "https://www.instagram.com/oguscaetano" },
   ],
   bio: [
     `É Executivo de Operações na FIAP, mestre em Ciência da Computação com experiência de mercado em engenharia de software, gestão de projetos/pessoas e liderança técnica. Já atuou como professor e coordenador de curso técnico, graduação e pós-graduação na área de tecnologia. Possui um canal no YouTube com mais de 2 milhões de views e é Host do podcast Papinho Tech.`,
