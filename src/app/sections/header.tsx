@@ -50,6 +50,11 @@ export const Header = () => {
             </a>
           </li>
           <li>
+            <a href="#agenda" onClick={toggleMenu}>
+              Programação
+            </a>
+          </li>
+          <li>
             <a href="#palestras" onClick={toggleMenu}>
               Palestrantes
             </a>
