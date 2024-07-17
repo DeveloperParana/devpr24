@@ -1,41 +1,72 @@
 import { findAll, formatDate } from "../utils";
-import { speakers } from "../../data";
+import { schedule, speaker } from "../../data";
+import { Icon } from "../parts";
 
 export const Agenda = () => {
   function onToggle(this: HTMLElement) {
-    for (const item of findAll(".accordion details")) {
+    for (const item of findAll(".agenda details")) {
       if (item.open && item !== this) item.open = false;
     }
   }
 
-  const items = speakers
-    .filter((item) => item.presentation.start.getDate() > 27)
-    .sort((a, b) => (a.presentation.start > b.presentation.start ? 1 : -1));
+  let nextIndex = -1;
 
   return (
-    <section className="faq" id="faq">
+    <section className="agenda" id="agenda">
       <div className="title white">
         <h2 className="titleText">Programação</h2>
       </div>
       <div className="content">
-        {items.map((item) => {
+        {schedule.map((slot, index) => {
+          const now = Date.now()
+
+          const isPrev = now > slot.end.getTime();
+
+          const isCurrent =
+            now > slot.start.getTime() && now < slot.end.getTime();
+
+          let className = "";
+
+          if (isPrev) {
+            className = "prev";
+          } else if (isCurrent) {
+            nextIndex = index + 1;
+            className = "current";
+          } else if (index === nextIndex) {
+            className = "next";
+          }
+
+          if (slot.speaker) {
+            const slotSpeaker = speaker[slot.speaker];
+
+            return (
+              <details onClick={onToggle} className={className}>
+                <summary>
+                  <Icon name="clock" width={28} />
+                  <h3>
+                    {formatDate(slot.start)} - {slot.title}
+                  </h3>
+                </summary>
+                <div>
+                  <h3>{slotSpeaker.name}</h3>
+                  <div>
+                    {slotSpeaker.bio.map((line) => (
+                      <p>{line}</p>
+                    ))}
+                  </div>
+                </div>
+              </details>
+            );
+          } else {
+          }
           return (
-            <details onClick={onToggle}>
+            <details onClick={onToggle} className={className}>
               <summary>
-                {/* <Icon name="calendar" width={28} /> */}
+                <Icon name="coffee" width={28} />
                 <h3>
-                  {formatDate(item.presentation.start)} -{" "}
-                  {item.presentation.title}
+                  {formatDate(slot.start)} - {slot.title}
                 </h3>
               </summary>
-              <div>
-                <h3>{item.name}</h3>
-                <div>
-                  {item.bio.map((line) => (
-                    <p>{line}</p>
-                  ))}
-                </div>
-              </div>
             </details>
           );
         })}

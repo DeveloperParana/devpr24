@@ -66,14 +66,13 @@ export interface Contribute {
   };
 }
 
-
+type ScheduleSlotType = "break" | "talk" | "workshop";
 
 export interface ScheduleSlot {
   title: string;
-  status: string;
-  type: string;
+  type: ScheduleSlotType;
   start: Date;
   end: Date;
   place: string;
-  speaker: string;
+  speaker?: SpeakerNickname;
 }

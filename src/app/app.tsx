@@ -21,8 +21,8 @@ export const App = () => {
       <Conf2024 src="/assets/videos/conf-2024.mp4" />
       <Banner />
       <About />
-      <Speakers />
       <Agenda />
+      <Speakers />
       <Supports />
       <Supporters />
       <Companies />

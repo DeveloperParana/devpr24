@@ -1,5 +1,6 @@
 export * from './companies';
 export * from './contribute';
+export * from './schedule';
 export * from './social-links';
 export * from './speakers';
 export * from './supporters';
