@@ -46,4 +46,10 @@ export const irrah = {
   link: 'https://www.grupoirrah.com.br/'
 }
 
-export const companies = [github, db1, elotech, mmTech, letMePay, nstech, irrah];
+export const fiap = {
+  name: 'fiap',
+  logo: '/companies/fiap.svg',
+  link: 'https://www.fiap.com.br/'
+}
+
+export const companies = [github, db1, elotech, fiap, mmTech, letMePay, nstech, irrah];
