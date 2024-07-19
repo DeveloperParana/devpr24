@@ -73,8 +73,8 @@ export const schedule: ScheduleSlot[] = [
   {
     speaker: "lays",
     title: "Automate Away the Toil",
-    start: new Date("2024-07-28 15:00:00"),
-    end: new Date("2024-07-28 16:00:00"),
+    start: new Date("2024-07-28 16:00:00"),
+    end: new Date("2024-07-28 17:00:00"),
     place: "Calil Haddad",
     type: "talk",
   },
