@@ -1,7 +1,7 @@
 import { DescriptionDialog } from "../components";
 import type { Speaker, SocialLink } from "../../data/typings";
 import { Icon, Link } from "../parts";
-import { speakers } from "../../data";
+import { speakers, c4pSpeakers } from "../../data";
 
 export interface SpeakersAttrs {
   speakers: Speaker[];
@@ -33,7 +33,7 @@ export const Speakers = () => {
         </h2>
       </div>
       <div className="content">
-        {speakers.map((speaker) => {
+        {[...speakers, ...c4pSpeakers].map((speaker) => {
           return (
             <div className="box">
               <div className="imgBx">

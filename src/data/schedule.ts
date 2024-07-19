@@ -1,5 +1,71 @@
 import { ScheduleSlot } from "./typings";
 
+export const saturday: ScheduleSlot[] = [
+  {
+    title: "Credenciamento",
+    start: new Date("2024-07-27 13:00:00"),
+    end: new Date("2024-07-27 13:30:00"),
+    place: "UniCesumar",
+    type: "break",
+  },
+  {
+    speaker: "isa",
+    title: "Microfrontends X Microservicos e BFFs",
+    type: "talk",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 16:00:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+  {
+    speaker: "marco",
+    title: "Programação Funcional com Go. Possibilidade ou Forçação de barra",
+    type: "talk",
+    start: new Date("2024-07-27 14:30:00"),
+    end: new Date("2024-07-27 15:00:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+  {
+    title: "Intervalo",
+    start: new Date("2024-07-27 15:30:00"),
+    end: new Date("2024-07-27 16:00:00"),
+    place: "UniCesumar",
+    type: "break",
+  },
+  {
+    speaker: "leo",
+    title:
+      "De Monólitos a Micro Frontends: Um Roteiro para Arquiteturas Web Escaláveis",
+    type: "talk",
+    start: new Date("2024-07-27 16:00:00"),
+    end: new Date("2024-07-27 16:30:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+  {
+    speaker: "munif",
+    title: "IA em ERPs, um caso prático replicável",
+    type: "talk",
+    start: new Date("2024-07-27 17:00:00"),
+    end: new Date("2024-07-27 17:30:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+  {
+    title: "Criando serviços em Golang",
+    speaker: ["fer", "marcondes"],
+    type: "workshop",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 15:00:00"),
+    place: "Sala Invertida - UniCesumar",
+  },
+  {
+    title: "Transforme sua WebPage em uma WebApp com PWA",
+    speaker: 'burnes',
+    type: "workshop",
+    start: new Date("2024-07-27 16:00:00"),
+    end: new Date("2024-07-27 17:30:00"),
+    place: "Sala Invertida - UniCesumar",
+  }
+];
+
 export const schedule: ScheduleSlot[] = [
   {
     title: "Credenciamento",

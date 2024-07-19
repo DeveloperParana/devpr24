@@ -191,7 +191,7 @@ const gustavo: Speaker = {
 };
 
 const munif: Speaker = {
-  name: "Munif Genara",
+  name: "Munif Gebara",
   nickname: "munif",
   photo: "assets/speakers/munif.webp",
   tags: [""],
@@ -206,9 +206,177 @@ const munif: Speaker = {
     title: "IA em ERPs, um caso prático replicável",
     status: true,
     type: "talk",
-    start: new Date("2024-07-27 00:00:00"),
-    end: new Date("2024-07-27 00:00:00"),
+    start: new Date("2024-07-27 17:00:00"),
+    end: new Date("2024-07-27 17:30:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+};
+
+const leo: Speaker = {
+  nickname: "leo",
+  name: "Leonardo Elias",
+  photo: "assets/speakers/leo.webp",
+  tags: [],
+  links: [
+    { kind: "github", href: "https://github.com/leonardoelias" },
+    { kind: "twitter", href: "https://twitter.com/leoeelias" },
+    {
+      kind: "linkedIn",
+      href: "https://www.linkedin.com/in/leonardo-elias-6376b824",
+    },
+  ],
+  bio: [
+    `Leonardo Elias, Chapter Lead de Front-End na Avenue, uma plataforma de investimentos globais. Tenho mais de 12 anos de experiência em desenvolvimento web, com foco em front-end. Formado em Análise de Sistemas pela UNIPAR.`,
+  ],
+  presentation: {
+    title:
+      "De Monólitos a Micro Frontends: Um Roteiro para Arquiteturas Web Escaláveis",
+    status: true,
+    type: "talk",
+    start: new Date("2024-07-27 16:00:00"),
+    end: new Date("2024-07-27 16:30:00"),
     place: "UniCesumar - Maringá",
+  },
+};
+
+const isa: Speaker = {
+  nickname: "isa",
+  name: "Isabella Cruz de Oliveira",
+  photo: "assets/speakers/isa.webp",
+  tags: [],
+  links: [
+    { kind: "instagram", href: "https://instagram.com/isaxx_ah" },
+    {
+      kind: "linkedIn",
+      href: "https://www.linkedin.com/in/isabella-cruz-de-oliveira-b761b7233",
+    },
+  ],
+  bio: [
+    `Iniciei minha carreira em 2022 na tecnologia, com 18 anos. Minha paixão sempre foi a programação. Atualmente estou atuando como a analista de engenharia no Itaú Unibanco.`,
+    `Ao longo de minha carreira pude atuar com diversas tecnologias e diferentes arquiteturas, tais como: Angular, React, Typescript, .NET, Microfrontends, BFFs, Microserviços, Git e AWS.`,
+    `Sou uma pessoa curiosa e bem comunicativa.`,
+  ],
+  presentation: {
+    title: "Microfrontends X Microservicos e BFFs",
+    status: true,
+    type: "talk",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 16:00:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+};
+
+const marco: Speaker = {
+  nickname: "marco",
+  name: "Marco Ollivier",
+  photo: "assets/speakers/marco.webp",
+  tags: [],
+  links: [
+    { kind: "github", href: "http://github.com/marcopollivier" },
+    { kind: "instagram", href: "https://instagram.com/marcopollivier" },
+    {
+      kind: "linkedIn",
+      href: "http://linkedin.com/in/marcopollivier",
+    },
+  ],
+  bio: [
+    `Engenheiro de Softwares com mais de 15 anos de experiência. Hoje Head de Engenharia na aMORA, também já trabalhou em empresas como Nubank, OLX e Flash. Também é instrutor na Ada Tech.`,
+    `Ama comunidades de desenvolvimento e cria conteúdos nas horas vagas. Espalha a palavra de Golang sempre que pode.`,
+  ],
+  presentation: {
+    title: "Programação Funcional com Go. Possibilidade ou Forçação de barra",
+    status: true,
+    type: "talk",
+    start: new Date("2024-07-27 14:30:00"),
+    end: new Date("2024-07-27 15:00:00"),
+    place: "Inspira Space - UniCesumar",
+  },
+};
+
+const kelly: Speaker = {
+  nickname: "kelly",
+  name: "Kelly Garcia",
+  photo: "assets/speakers/kelly.webp",
+  tags: [],
+  links: [
+    { kind: "instagram", href: "https://instagram.com/rmgKelly" },
+    {
+      kind: "linkedIn",
+      href: "https://www.linkedin.com/in/rmgkelly",
+    },
+  ],
+  bio: [
+    `Eu sou Kelly Moreira Garcia, uma pessoa que gosta de conversar e ouvir outras histórias. Apaixonada por pessoas, números e como as duas coisas se relacionam. Além disso, amo natureza e culturas diferentes.`,
+    `Atualmente atuo como Agilista Sênior na Ambev Tech, sou formada em Engenharia de Produção/ UEM, além de certificações mais específicas de Kanban, análise sistemática, Discovery e afins.`,
+  ],
+  presentation: {
+    title:
+      "Desmistificando a agilidade: Como conectar a estratégia até a entrega",
+    status: true,
+    type: "workshop",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 15:00:00"),
+    place: "Sala Invertida - UniCesumar",
+  },
+};
+
+const fer: Speaker = {
+  nickname: "fer",
+  name: "Fernando Fabrício",
+  photo: "assets/speakers/fer.webp",
+  tags: [],
+  links: [],
+  bio: [``],
+  presentation: {
+    title: "Criando serviços em Golang",
+    status: true,
+    type: "workshop",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 15:00:00"),
+    place: "Sala Invertida - UniCesumar",
+  },
+};
+
+const marcondes: Speaker = {
+  nickname: "marcondes",
+  name: "Marcondes Viana",
+  photo: "assets/speakers/marcondes.webp",
+  tags: [],
+  links: [],
+  bio: [``],
+  presentation: {
+    title: "Criando serviços em Golang",
+    status: true,
+    type: "workshop",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 15:00:00"),
+    place: "Sala Invertida - UniCesumar",
+  },
+};
+
+const burnes: Speaker = {
+  nickname: "burnes",
+  name: "Prof. Anderson Burnes",
+  photo: "assets/speakers/burnes.webp",
+  tags: [],
+  links: [
+    { kind: 'instagram', href: 'https://instagram.com/profburnes' },
+    { kind: 'github', href: 'https://github.com/profburnes' },
+    { kind: 'linkedIn', href: 'https://linkedin.com/in/profburnes' },
+  ],
+  bio: [
+    `Doutorando em Informática pela UFPR, Mestre em Informática pela UTFPR e Tencólogo em Processamento de Dados pelo Cesumar.`,
+    `É dev web fulstack PHP desde 2002, trabalhando também com Javascripr e tendo conhecimento em React e Flutter.`,
+    `É docente de Ensino Superior desde 2002 e atualmente é docente e coordena o curso de TADS do Grupo Integrado, onde é também coordenador da BeTech Integrado.`,
+    `Ainda é coordenador de trilha do The Dev Conf (TDC) e palestrante de diversos eventos, como Campus Party, TDC, PHP Conference, The Developer's Life Weekend e Confloss.`,
+  ],
+  presentation: {
+    title: "Transforme sua WebPage em uma WebApp com PWA",
+    status: true,
+    type: "workshop",
+    start: new Date("2024-07-27 16:00:00"),
+    end: new Date("2024-07-27 17:30:00"),
+    place: "Sala Invertida - UniCesumar",
   },
 };
 
@@ -221,6 +389,13 @@ export const speaker: Record<SpeakerNickname, Speaker> = {
   devsoutinho,
   gustavo,
   munif,
+  leo,
+  isa,
+  marco,
+  kelly,
+  fer,
+  marcondes,
+  burnes,
 };
 
 export const speakers = [
@@ -231,4 +406,7 @@ export const speakers = [
   jonatas,
   lays,
   gustavo,
+  burnes
 ];
+
+export const c4pSpeakers = [munif, leo, isa, marco, kelly, fer, marcondes];

@@ -2,6 +2,7 @@ export type SocialKind =
   | "github"
   | "linkedIn"
   | "youtube"
+  | "twitter"
   | "instagram"
   | "whatsapp"
   | "snake"
@@ -15,7 +16,14 @@ export type SpeakerNickname =
   | "lays"
   | "devsoutinho"
   | "gustavo"
-  | "munif";
+  | "munif"
+  | "leo"
+  | "isa"
+  | "marco"
+  | "kelly"
+  | "fer"
+  | "marcondes"
+  | "burnes";
 
 export interface SocialLink {
   kind: SocialKind;
@@ -74,5 +82,5 @@ export interface ScheduleSlot {
   start: Date;
   end: Date;
   place: string;
-  speaker?: SpeakerNickname;
+  speaker?: SpeakerNickname | SpeakerNickname[];
 }
