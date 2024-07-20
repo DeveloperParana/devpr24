@@ -1,4 +1,16 @@
 export const supporters = [
+  { "name": "Bruno Peternella" },
+  { "name": "José Bruno Campanholi dos Santos" },
+  { "name": "Gustavo Rafael Lira" },
+  { "name": "Bruno Souza Picinini" },
+  { "name": "Wilson Garcia França" },
+  { "name": "Francislaine Ortega Monteiro" },
+  { "name": "Leonardo Perin de Berso" },
+  { "name": "Raul Henrique Domingues" },
+  { "name": "Josimar Moreno Fernandes" },
+  { "name": "Luiz Romano" },
+  { "name": "Werik Leandro Lima de Melo" },
+  { "name": "Felipe dos Santos Fatique" },
   { "name": "André Silva Cabral" },
   { "name": "Flavio Augusto Bernaski da Silva" },
   { "name": "Rafael Guzzo" },
@@ -42,4 +54,4 @@ export const supporters = [
   { "name": "Wesley Kaihara" },
   { "name": "Kelly Regina Moreira Garcia" },
   { "name": "Renan Ceratto - OnSafety" }
-];
+]
