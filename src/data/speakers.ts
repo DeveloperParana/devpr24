@@ -200,7 +200,9 @@ const munif: Speaker = {
     { kind: "instagram", href: "https://www.instagram.com/munifgebara" },
   ],
   bio: [
-    `Sua Minibio: Pesquisador, professor e Desenvolvedor a 40 anos. Atualmente doutorando em machine learning e tech leader.`,
+    `Pesquisador e Desenvolvedor a 40 anos, Professor, Pai da Duda e do Vicente. Atualmente Tech Leader e Doutorando em Machine Learning.`,
+    `Tive a felicidade de palestrar na 1ª conferência da comunidade DevParaná e 9 anos depois cá estou eu novamente.`,
+    `Espero contribuir compartilhando algumas coisas que aprendi sobre IA nos últimos verões.`
   ],
   presentation: {
     title: "IA em ERPs, um caso prático replicável",
