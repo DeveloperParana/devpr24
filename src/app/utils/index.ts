@@ -6,6 +6,7 @@ export * from './interval';
 export * from './queue';
 export * from './random-int';
 export * from './scroll-spy';
+export * from './shuffle';
 export * from './size';
 export * from './slugify';
 export * from './styled';

@@ -1,4 +1,5 @@
 import { supporters } from "../../data";
+import { shuffle } from "../utils";
 
 export const Supporters = () => {
   return (
@@ -6,10 +7,8 @@ export const Supporters = () => {
       <div className="marquee__wrapper">
         <div className="marquee">
           <div className="marquee__group shouldAnimate">
-            {supporters.map((supporter) => {
-              return (
-                <h3>{supporter.name}</h3>
-              );
+            {shuffle(supporters).map((supporter) => {
+              return <h3>{supporter.name}</h3>;
             })}
           </div>
         </div>

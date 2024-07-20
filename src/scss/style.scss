@@ -772,6 +772,7 @@ span {
   display: flex;
   flex-direction: column;
   gap: 0px;
+  padding: 0;
   margin: auto;
   min-width: 100vw;
   margin-top: 20px;
@@ -790,7 +791,8 @@ span {
 
   .marquee-container {
     min-width: 100vw;
-    overflow: visible;
+    max-width: 100vw;
+    overflow: hidden;
   }
 
   .marquee__group {

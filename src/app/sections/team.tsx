@@ -1,5 +1,6 @@
 import { team } from "../../data";
 import { Link } from "../parts";
+import { shuffle } from "../utils";
 
 export const Team = () => {
   return (
@@ -11,7 +12,7 @@ export const Team = () => {
         <div className="marquee__wrapper">
           <div className="marquee">
             <div className="marquee__group" data-animate="20s">
-              {team.map((trueAngel) => {
+              {shuffle(team).map((trueAngel) => {
                 return (
                   <Link href={trueAngel.html_url} target="_blank">
                     <figure>
