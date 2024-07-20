@@ -325,8 +325,14 @@ const fer: Speaker = {
   name: "Fernando Fabrício",
   photo: "assets/speakers/fer.webp",
   tags: [],
-  links: [],
-  bio: [``],
+  links: [
+    { kind: 'linkedIn', href: 'https://www.linkedin.com/in/ferfabricio' },
+    { kind: 'github', href: 'https://github.com/ferfabricio' },
+  ],
+  bio: [
+    `Com 20 anos de experiência em backend e liderança técnica, atuo em projetos de empresas como Coinbase, Overseas Network e sou CTO da Let Me Pay.`,
+    `Especialista em PHP, Golang, DevOps e CI/CD, sou mentor na ADPList e um dos fundadores do DevParaná.`
+  ],
   presentation: {
     title: "Criando serviços em Golang",
     status: true,
@@ -342,8 +348,14 @@ const marcondes: Speaker = {
   name: "Marcondes Viana",
   photo: "assets/speakers/marcondes.webp",
   tags: [],
-  links: [],
-  bio: [``],
+  links: [
+    { kind: 'linkedIn', href: 'https://www.linkedin.com/in/vianamjr' },
+    { kind: 'github', href: 'https://github.com/vianamjr' },
+  ],
+  bio: [
+    `Com vasta experiência em desenvolvimento de software e liderança técnica, é especializado em Golang, APIs e micro-serviços.`,
+    `Atualmente, atua como engenheiro de software na Opera, com histórico de trabalho em empresas globais e startups, focado em soluções inovadoras e escaláveis.`
+  ],
   presentation: {
     title: "Criando serviços em Golang",
     status: true,

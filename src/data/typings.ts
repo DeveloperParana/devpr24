@@ -31,7 +31,7 @@ export interface SocialLink {
   action?(): void;
 }
 
-type PresentationType = "talk" | "workshop";
+export type PresentationType = "talk" | "workshop";
 
 export interface Presentation {
   title: string;
@@ -74,7 +74,7 @@ export interface Contribute {
   };
 }
 
-type ScheduleSlotType = "break" | "talk" | "workshop";
+export type ScheduleSlotType = "break" | "talk" | "workshop";
 
 export interface ScheduleSlot {
   title: string;
