@@ -7,6 +7,10 @@ function find<K extends keyof HTMLElementTagNameMap>(
   parent?: HTMLElement | ShadowRoot,
 ): HTMLElementTagNameMap[K];
 function find<K extends keyof HTMLElementTagNameMap>(
+  selector: `${string} ${K}`,
+  parent?: HTMLElement | ShadowRoot,
+): HTMLElementTagNameMap[K]
+function find<K extends keyof HTMLElementTagNameMap>(
   selector: `${K}#${string}`,
   parent?: HTMLElement | ShadowRoot,
 ): HTMLElementTagNameMap[K];

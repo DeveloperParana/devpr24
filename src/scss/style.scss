@@ -501,6 +501,7 @@ span {
 .testimonials h2,
 .companies h2,
 .faq h2,
+.team h2,
 .agenda h2,
 .contact h2 {
   font-size: 3rem;
@@ -766,6 +767,62 @@ span {
     }
   }
 }
+
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin: auto;
+  min-width: 100vw;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  overflow: visible;
+
+  .marquee a,
+  .marquee a:link {
+    width: 256px;
+    height: 286px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    place-items: unset;
+  }
+
+  .marquee-container {
+    min-width: 100vw;
+    overflow: visible;
+  }
+
+  .marquee__group {
+    display: flex;
+    gap: 64px;
+  }
+
+  figure {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 6px;
+
+    img {
+      width: 100%;
+      max-width: 256px;
+      border-radius: 4px;
+    }
+
+    figcaption {
+      max-width: 256px;
+      padding: 8px 16px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.4em;
+      color: var(--devpr-sys-color-on-surface);
+    }
+  }
+}
+
 /**
  * <Companies />
  */

@@ -25,6 +25,9 @@
   overflow: visible;
 }
 
+[data-animate] {
+  animation: scroll-x attr(animate) linear infinite;
+}
 .shouldAnimate {
   animation: scroll-x 60s linear infinite;
 }
