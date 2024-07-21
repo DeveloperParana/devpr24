@@ -44,4 +44,14 @@ export const team = [
     avatar_url: "https://avatars.githubusercontent.com/u/66440299?v=4",
     html_url: "https://github.com/causticsudo",
   },
+  {
+    name: "João Bloch",
+    avatar_url: "https://avatars.githubusercontent.com/u/54217966?v=4",
+    html_url: "https://github.com/jgbz",
+  },
+  {
+    name: "Ana luisa kubitz",
+    avatar_url: "https://avatars.githubusercontent.com/u/173742566?v=4",
+    html_url: "https://github.com/anakubitz",
+  },
 ];
