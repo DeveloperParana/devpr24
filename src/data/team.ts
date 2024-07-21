@@ -20,7 +20,7 @@ export const team = [
     html_url: "https://github.com/elinatorresn",
   },
   {
-    name: "João",
+    name: "Juliano Theo",
     avatar_url: "https://avatars.githubusercontent.com/u/172335139?v=4",
     html_url: "https://github.com/jtheodsn",
   },
