@@ -21,6 +21,7 @@ export type SpeakerNickname =
   | "isa"
   | "marco"
   | "kelly"
+  | "wellington"
   | "fer"
   | "marcondes"
   | "burnes";

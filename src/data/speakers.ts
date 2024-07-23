@@ -318,7 +318,7 @@ const kelly: Speaker = {
     type: "workshop",
     start: new Date("2024-07-27 13:30:00"),
     end: new Date("2024-07-27 15:00:00"),
-    place: "Sala Invertida - UniCesumar",
+    place: "Sala de aula - UniCesumar",
   },
 };
 
@@ -393,6 +393,31 @@ const burnes: Speaker = {
     place: "Sala Invertida - UniCesumar",
   },
 };
+const wellington: Speaker = {
+  nickname: "wellington",
+  name: "Wellington Dutra",
+  photo: "assets/speakers/wellington.webp",
+  tags: [],
+  links: [
+    // { kind: "instagram", href: "" },
+    // {
+    //   kind: "linkedIn",
+    //   href: "",
+    // },
+  ],
+  bio: [
+    `---`,
+  ],
+  presentation: {
+    title:
+      "As 5 habilidades de sucesso para Liderar no mundo da tecnologia",
+    status: true,
+    type: "workshop",
+    start: new Date("2024-07-27 16:00:00"),
+    end: new Date("2024-07-27 17:00:00"),
+    place: "Sala de aula - UniCesumar",
+  },
+};
 
 export const speaker: Record<SpeakerNickname, Speaker> = {
   deyvin,
@@ -410,6 +435,7 @@ export const speaker: Record<SpeakerNickname, Speaker> = {
   fer,
   marcondes,
   burnes,
+  wellington, 
 };
 
 export const speakers = [
@@ -423,4 +449,4 @@ export const speakers = [
   burnes
 ];
 
-export const c4pSpeakers = [munif, leo, isa, marco, kelly, fer, marcondes];
+export const c4pSpeakers = [munif, leo, isa, marco, kelly, fer, marcondes, wellington];

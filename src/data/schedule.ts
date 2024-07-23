@@ -17,6 +17,14 @@ export const saturday: ScheduleSlot[] = [
     place: "Inspira Space - UniCesumar",
   },
   {
+    speaker: "kelly",
+    title: "Desmitificando a agilidade: como conectar a estratégia até a entrega",
+    type: "workshop",
+    start: new Date("2024-07-27 13:30:00"),
+    end: new Date("2024-07-27 16:00:00"),
+    place: "Sala de aula - Unicesumar",
+  },
+  {
     speaker: "marco",
     title: "Programação Funcional com Go. Possibilidade ou Forçação de barra",
     type: "talk",
@@ -39,6 +47,14 @@ export const saturday: ScheduleSlot[] = [
     start: new Date("2024-07-27 16:00:00"),
     end: new Date("2024-07-27 16:30:00"),
     place: "Inspira Space - UniCesumar",
+  },
+  {
+    speaker: "wellington",
+    title: "As 5 habilidades de sucesso para Liderar no mundo da tecnologia",
+    type: "workshop",
+    start: new Date("2024-07-27 16:00:00"),
+    end: new Date("2024-07-27 18:00:00"),
+    place: "Sala de aula - Unicesumar",
   },
   {
     speaker: "munif",
