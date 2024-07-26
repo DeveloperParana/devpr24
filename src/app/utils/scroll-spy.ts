@@ -12,7 +12,7 @@ export class ScrollSpy {
   }
 
   start() {
-    const options = { rootMargin: "0px", threshold: 0.6 };
+    const options = { rootMargin: "0px", threshold: 0.2 };
     const observer = new IntersectionObserver(this.#handle, options);
 
     this.#sections.forEach((section) => observer.observe(section));
