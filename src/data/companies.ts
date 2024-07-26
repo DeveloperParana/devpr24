@@ -52,4 +52,23 @@ export const fiap = {
   link: 'https://www.fiap.com.br/'
 }
 
-export const companies = [github, db1, elotech, fiap, mmTech, letMePay, nstech, irrah];
+export const tecnospeed = {
+  name: 'tecnospeed',
+  logo: '/companies/tecnospeed.svg',
+  link: 'https://tecnospeed.com.br/'
+}
+
+export const ambevtech = {
+  name: 'ambevtech',
+  logo: '/companies/ambevtech.svg',
+  link: 'https://www.ambevtech.com.br/'
+}
+
+export const customerX = {
+  name: 'customerX',
+  logo: '/companies/customerX.svg',
+  link: 'https://customerx.cx/'
+}
+
+
+export const companies = [github, db1, elotech, fiap, mmTech, letMePay, nstech, irrah, tecnospeed, ambevtech, customerX];
