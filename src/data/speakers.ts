@@ -399,14 +399,14 @@ const wellington: Speaker = {
   photo: "assets/speakers/wellington.webp",
   tags: [],
   links: [
-    // { kind: "instagram", href: "" },
-    // {
-    //   kind: "linkedIn",
-    //   href: "",
-    // },
+    { kind: "instagram", href: "https://www.instagram.com/wellingtondu_/" },
+    {
+      kind: "linkedIn",
+      href: "https://www.linkedin.com/in/wellington-dutra-aa891b74/",
+    },
   ],
   bio: [
-    `---`,
+    `Palestrante e mentor para líderes e suas equipes, promovendo o crescimento pessoal, profissional e empresarial, atualmente Gerente de Consultoria, Gerente de Projetos e Gerente de Operações, casado pai de 7 filhos.`,
   ],
   presentation: {
     title:
