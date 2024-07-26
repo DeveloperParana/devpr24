@@ -12,7 +12,9 @@ export const attributes = <
     if (value !== undefined) {
       if (is.writable(element, attr)) {
         if (typeof value === "function") {
-          if (attr.startsWith("on")) {
+          if (attr === 'ref') {
+            value(element)
+          } if (attr.startsWith("on")) {
             element[attr.toLowerCase() as keyof E] = value;
           } else {
             element[attr as keyof E] = value;

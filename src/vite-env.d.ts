@@ -1,13 +1,13 @@
 /// <reference types="vite/client" />
 
-declare module '*.vert' {
-  const src: string
-  export default src
+declare module "*.vert" {
+  const src: string;
+  export default src;
 }
 
-declare module '*.frag' {
-  const src: string
-  export default src
+declare module "*.frag" {
+  const src: string;
+  export default src;
 }
 
 interface CustomGlobalEventHandlersEventMap<T> {
@@ -268,6 +268,10 @@ interface CustomGlobalEventHandlers<T> {
   onWaiting: ((this: T, ev: ReplaceTarget<Event, T>) => unknown) | null;
 }
 
+type ElementRef<T> = {
+  current(): T;
+};
+
 type ReplaceTarget<T, U> = T & {
   target: U;
 };
@@ -373,7 +377,7 @@ type EventHandlers<T> = {
   [K in keyof CustomGlobalEventHandlers<T>]:
     | ((
         this: T,
-        ev: CustomGlobalEventHandlersEventMap<T>[OnlyEvent<K>],
+        ev: CustomGlobalEventHandlersEventMap<T>[OnlyEvent<K>]
       ) => unknown)
     | null;
 };
@@ -383,31 +387,36 @@ declare namespace JSX {
   type Element<T extends Element = Element> = HTMLElement & T;
 
   type Factory<P extends {}, T extends HTMLElement> = (
-    props: P,
+    props: P
   ) => JSX.Element<T>;
 
   interface Component<T> {
     (props: T, children?: Node[]): Node;
   }
 
+  type DerivedRef<T> = {
+    ref: ElementRef<T>;
+  };
+
   interface IntrinsicElements extends IntrinsicElementsMap {}
 
   type IntrinsicElementsMap = {
     [K in keyof JSXElementTagNameMap]: Partial<
-      JSXNode<
-        K extends keyof HTMLElementTagNameMap
-          ? HTMLElementTagNameMap[K]
-          : K extends keyof SVGElementTagNameMap
+      | (JSXNode<
+          K extends keyof HTMLElementTagNameMap
+            ? HTMLElementTagNameMap[K]
+            : K extends keyof SVGElementTagNameMap
             ? JSXAnimatedEnumeration<
                 JSXPointList<
                   JSXAnimatedString<JSXAnimatedLength<SVGElementTagNameMap[K]>>
                 >
               >
             : K extends keyof MathMLElementTagNameMap
-              ? MathMLElementTagNameMap[K]
-              : Element
-      > &
-        EventHandlers<JSXElementTagNameMap[K]>
+            ? MathMLElementTagNameMap[K]
+            : Element
+        > &
+          EventHandlers<JSXElementTagNameMap[K]>)
+      | DerivedRef<JSXElementTagNameMap[K]>
     >;
   };
 

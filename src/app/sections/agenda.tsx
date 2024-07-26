@@ -188,13 +188,26 @@ export const Agenda = () => {
       </div>
 
       <div className="flex justify-center">
-        <Link
-          href="https://devpr24.eventbrite.com/"
-          className="btn subscribe heartbeat"
-          target="_blank"
-        >
-          Faça sua inscrição
-        </Link>
+        <div className="flex col align-center half">
+          <Link
+            href="https://devpr24.eventbrite.com/"
+            className="btn subscribe heartbeat"
+            target="_blank"
+          >
+            Faça sua inscrição
+          </Link>
+          <div id="warning" className="flex mt-24 justify-center gap-16">
+            <div className="flex-1 error-container">
+              <Icon name="asterisk" width={24} />
+            </div>
+            <p>
+              Eventualmente os benefícios podem sofrer mudanças devido a demanda
+              ou fornecedores, porém o valor do kit não será reduzido e todos os
+              apoiadores serão avisados por e-mail ou em nossa comunidade no
+              WhatsApp.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -5,9 +5,9 @@
   gap: 16px;
 }
 
-.col {
-  flex: 1;
-}
+// .col {
+//   flex: 1;
+// }
 
 .min {
   &-100 {
@@ -43,6 +43,10 @@
 .row .col50 {
   position: relative;
   width: 48%;
+}
+
+.half {
+  width: 50%;
 }
 
 .mt-1 {
