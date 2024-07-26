@@ -187,14 +187,27 @@ export const Agenda = () => {
         </div>
       </div>
 
-      <div className="flex justify-center">
-        <Link
-          href="https://devpr24.eventbrite.com/"
-          className="btn subscribe heartbeat"
-          target="_blank"
-        >
-          Faça sua inscrição
-        </Link>
+      <div className="subscribe flex row justify-center gap-64">
+        <div className="flex row align-center justify-end third">
+          <Link
+            href="https://devpr24.eventbrite.com/"
+            className="btn subscribe heartbeat"
+            target="_blank"
+          >
+            Faça sua inscrição
+          </Link>
+        </div>
+        <div id="warning" className="flex mt-24 justify-center gap-16 third">
+          <div className="flex-1 error-container">
+            <Icon name="asterisk" width={24} />
+          </div>
+          <p>
+            Devido a diferença na quantidade de lugares disponíveis entre os
+            ambientes de sábado (UniCesumar) e domingo (Calil Haddad), a
+            participação no sábado está garantida apenas a quem se inscreveu
+            pela plataforma eventbrite para o sábado.
+          </p>
+        </div>
       </div>
     </section>
   );

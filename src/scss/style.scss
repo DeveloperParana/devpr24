@@ -457,6 +457,10 @@ section {
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   h3 {
     color: var(--devpr-sys-color-primary);
     font-size: 3rem;
@@ -1379,6 +1383,17 @@ a[hidden] {
       }
     }
   }
+
+  @media (max-width: 991px) {
+    .subscribe {
+      flex-direction: column;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  
 }
 
 details {

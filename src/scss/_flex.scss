@@ -11,6 +11,9 @@
   &.justify-center {
     justify-content: center;
   }
+  &.justify-end {
+    justify-content: flex-end;
+  }
   &.space-between {
     justify-content: space-between;
   }
@@ -34,6 +37,10 @@
     column-gap: 32px;
   }
 
+  &.gap-64 {
+    column-gap: 64px;
+  }
+  
   &.col {
     flex-direction: column;
 
@@ -41,6 +48,9 @@
       flex-flow: column wrap;
     }
 
+    &.justify-center {
+      align-items: center;
+    }
     &.align-center {
       justify-content: center;
     }
