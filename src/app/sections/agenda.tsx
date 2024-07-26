@@ -187,26 +187,28 @@ export const Agenda = () => {
         </div>
       </div>
 
-      <div className="flex justify-center">
-        <div className="flex col align-center half">
-          <Link
-            href="https://devpr24.eventbrite.com/"
-            className="btn subscribe heartbeat"
-            target="_blank"
-          >
-            Faça sua inscrição
-          </Link>
-          <div id="warning" className="flex mt-24 justify-center gap-16">
-            <div className="flex-1 error-container">
-              <Icon name="asterisk" width={24} />
-            </div>
-            <p>
-              Eventualmente os benefícios podem sofrer mudanças devido a demanda
-              ou fornecedores, porém o valor do kit não será reduzido e todos os
-              apoiadores serão avisados por e-mail ou em nossa comunidade no
-              WhatsApp.
-            </p>
+      <div className="flex row justify-center gap-64">
+        <div className="flex row justify-end third">
+          <div className="flex col justify-center">
+            <Link
+              href="https://devpr24.eventbrite.com/"
+              className="btn subscribe heartbeat"
+              target="_blank"
+            >
+              Faça sua inscrição
+            </Link>
           </div>
+        </div>
+        <div id="warning" className="flex mt-24 justify-center gap-16 third">
+          <div className="flex-1 error-container">
+            <Icon name="asterisk" width={24} />
+          </div>
+          <p>
+            Devido a diferença na quantidade de lugares disponíveis entre os
+            ambientes de sábado (UniCesumar) e domingo (Calil Haddad), a
+            participação no sábado está garantida apenas a quem se inscreveu
+            pela plataforma eventbrite para o sábado.
+          </p>
         </div>
       </div>
     </section>

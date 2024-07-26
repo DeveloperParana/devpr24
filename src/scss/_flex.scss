@@ -18,6 +18,10 @@
     align-items: center;
   }
 
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
   &.gap-8 {
     column-gap: 8px;
   }
@@ -34,6 +38,14 @@
     column-gap: 32px;
   }
 
+  &.gap-48 {
+    column-gap: 48px;
+  }
+
+  &.gap-64 {
+    column-gap: 64px;
+  }
+
   &.col {
     flex-direction: column;
 
@@ -44,6 +56,7 @@
     &.align-center {
       align-items: center;
     }
+
     &.space-between {
       align-content: space-between;
     }
