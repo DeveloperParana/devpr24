@@ -1379,6 +1379,17 @@ a[hidden] {
       }
     }
   }
+
+  @media (max-width: 991px) {
+    .subscribe {
+      flex-direction: column;
+
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  
 }
 
 details {

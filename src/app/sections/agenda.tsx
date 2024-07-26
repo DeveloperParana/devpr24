@@ -187,7 +187,7 @@ export const Agenda = () => {
         </div>
       </div>
 
-      <div className="flex row justify-center gap-64">
+      <div className="subscribe flex row justify-center gap-64">
         <div className="flex row align-center justify-end third">
           <Link
             href="https://devpr24.eventbrite.com/"
