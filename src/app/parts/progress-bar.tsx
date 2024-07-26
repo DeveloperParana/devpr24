@@ -37,7 +37,7 @@ export const ProgressBar = ({ colors }: ProgressBarAttts) => {
   });
 
   return (
-    <div id="progress-bar">
+    <section id="progress-bar">
       <svg xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="gradient">
@@ -68,6 +68,6 @@ export const ProgressBar = ({ colors }: ProgressBarAttts) => {
       <h3>
         {total} de {goal}
       </h3>
-    </div>
+    </section>
   );
 };
