@@ -70,5 +70,11 @@ export const customerX = {
   link: 'https://customerx.cx/'
 }
 
+export const prefeitura = {
+  name: 'prefeitura',
+  logo: '/companies/prefeitura.svg',
+  link: 'https://www.maringa.pr.gov.br/'
+}
 
-export const companies = [github, db1, elotech, fiap, mmTech, letMePay, nstech, irrah, tecnospeed, ambevtech, customerX];
+
+export const companies = [github, prefeitura, db1, elotech, fiap, mmTech, letMePay, nstech, irrah, tecnospeed, ambevtech, customerX];
