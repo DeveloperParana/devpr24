@@ -54,4 +54,9 @@ export const team = [
     avatar_url: "https://avatars.githubusercontent.com/u/173742566?v=4",
     html_url: "https://github.com/anakubitz",
   },
+  {
+    name: "Prof. Anderson Burnes",
+    avatar_url: "https://avatars.githubusercontent.com/u/2244975?v=4",
+    html_url: "https://github.com/profburnes",
+  },
 ];
