@@ -1,11 +1,15 @@
+import { useRef, createValue } from "../../core";
+import { ApoiaSeResult } from "../../types";
 import { formatCurrency } from "../utils";
+
+const fetchAPI = async (): Promise<ApoiaSeResult> => {
+  return (await fetch(`progress.json`)).json();
+};
 
 export interface ProgressBarAttts {
   colors: string[];
-  value: number;
-  max: number;
 }
-export const ProgressBar = ({ colors, max, value }: ProgressBarAttts) => {
+export const ProgressBar = ({ colors }: ProgressBarAttts) => {
   const linearGradientStops = colors
     .map((color, index) => ({ color, index }))
     .reverse()
@@ -14,7 +18,23 @@ export const ProgressBar = ({ colors, max, value }: ProgressBarAttts) => {
       return { color, offset };
     });
 
-  const percent = +((value / max) * 100).toFixed();
+  const rectRef = useRef<SVGRectElement>();
+
+  const total = createValue<string>("R$ 0,00");
+  const goal = createValue<string>("R$ 0,00");
+  const percent = createValue<number>(0);
+
+  fetchAPI().then(({ campaigns }) => {
+    const [campaign] = campaigns;
+
+    goal.set(formatCurrency(campaign.goals[0].value));
+    total.set(formatCurrency(campaign.supports.total.value));
+
+    const n = (campaign.supports.total.value / campaign.goals[0].value) * 100;
+    percent.set(Math.round(n));
+
+    rectRef.current().setAttribute("width", percent.get() + "%");
+  });
 
   return (
     <div id="progress-bar">
@@ -27,7 +47,13 @@ export const ProgressBar = ({ colors, max, value }: ProgressBarAttts) => {
           </linearGradient>
 
           <clipPath id="clip">
-            <rect id="clipRect" width={`${percent}%`} height="100%" rx={24} />
+            <rect
+              ref={rectRef}
+              id="clipRect"
+              width="0%"
+              height="100%"
+              rx={24}
+            />
           </clipPath>
         </defs>
         <rect rx={24} width="100%" height="100%" fill="#45474b" />
@@ -39,7 +65,9 @@ export const ProgressBar = ({ colors, max, value }: ProgressBarAttts) => {
         />
       </svg>
       <h2>{percent}%</h2>
-      <h3>{formatCurrency(value)} de {formatCurrency(max)}</h3>
+      <h3>
+        {total} de {goal}
+      </h3>
     </div>
   );
 };

@@ -28,16 +28,12 @@ export const App = () => {
       <Header />
       <Conf2024 src="/assets/videos/conf-2024.mp4" />
       <Banner />
-      
+
       <About />
       <Agenda />
       <Speakers />
       <Supports />
-      <ProgressBar
-        max={24000}
-        value={13700}
-        colors={["#2ecb4c", "#f9bc00", "#ba1a1a"]}
-      />
+      <ProgressBar colors={["#2ecb4c", "#f9bc00", "#ba1a1a"]} />
       <Supporters />
       <Companies />
       <Team />
