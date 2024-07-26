@@ -1,0 +1,521 @@
+{
+  "_id": "64a32332158d7249187eca49",
+  "goals": [],
+  "rewards": [],
+  "social": [],
+  "type": 1,
+  "username": "64a32332158d7249187eca49",
+  "name": "Enderson Menezes Candido",
+  "address": [
+    {
+      "state": "PR",
+      "city": "Maringá"
+    }
+  ],
+  "campaigns": [
+    {
+      "_id": "663037a4a5f179e7292448f8",
+      "about": {
+        "video": "https://www.youtube.com/watch?v=lB6yR2TBkX0",
+        "desc": "<p><b id=\"docs-internal-guid-150f18f6-7fff-ff25-ca32-ba9c816cfc68\"></b></p><p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\"></span></p><h2>​A Comunidade e o Evento</h2><p></p><p dir=\"ltr\" style=\"text-align: justify;\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\"></span></p><p>Nosso movimento impulsiona o compartilhamento de conhecimento entre pessoas desenvolvedoras do Paraná.</p><div><br/>Com mais de 8 anos de história, temos um histórico com mais de 250 eventos organizados e 7 conferências anuais, sempre apoiando e fortalecendo as comunidades e grupos existentes.</div><div><br/>Nossa influência não se limita a fronteiras, alcançando inúmeras cidades e até mesmo países como Paraguai e Chile. Em 2021, estabelecemos uma parceria com a Codaqui, uma comunidade voltada para o público jovem. Em 2023, concluímos nossos primeiros grandes eventos em conjunto.</div><div><br/>Agora, em 2024, estamos entusiasmados em anunciar que a DevParaná e a Codaqui estão oficialmente unidas sob a mesma associação. Esta união fortalece os interesses da comunidade e nossa missão é o conhecimento acessível, para que você sinta o poder dele na sua vida pessoal e profissional.</div><div><br/><b>Junte-se a nós nesta caminhada!</b><p><br/></p><p><br/></p><h2>​Financeiro</h2><p>O nosso faturamento poderá ser acompanhado por uma planilha que iremos disponibilizar nesta página, por hora o nosso orçamento se divide:</p><p><br/></p><p><img src=\"https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7Ccould-not-find-campaign/user-campaign-about-desc%7CDevPRConference2024-20240429_22524119.png\"/><br/></p><p><br/></p><p><i>Para esse orçamento foi utilizado 8 pessoas saindo de lugares diversos do Brasil (SP, RJ, RS, BA). Utilizamos orçamentos da PrintTI para confecção dos brindes. Lembrando também que pagamos 8% para a plataforma disponibilizar os pagamentos via Cartão e entre outras funções.</i><br/></p><p><br/></p><h2>​Perguntas Frequentes</h2><p><b>- O evento é gratuito, então eu preciso pagar para ir?</b></p><p>Não! Você não precisa pagar para adentrar ao evento, porém sem atingir a nossa meta mínima, o evento será cancelado. Mudamos nossa estratégia para transparecer a todos o custo de organizar um evento dessa magnitude com palestrantes reconhecidos nacional e internacionalmente.</p><p><br/></p><p><b>- Quando serão disponibilizadas as entradas para o público geral?</b></p><p>Você pode retirar sua entrada sem a necessidade de realizar uma doação no seguinte endereço: https://devpr24.eventbrite.com</p><p><br/></p><p><b>- Ao ser um apoiador eu estou comprando um ingresso?</b></p><p>Não! Você está sendo um patrocinador e recebendo uma cortesia com o benefício de escolha de local, o evento é gratuito, porém necessita de uma meta mínima de apoiadores para acontecer.</p><p><br/></p><h2 style=\"font-size: 1.5em;text-align: center;\">​Gostaria de deixar sua opinião?</h2><p>Nesta edição queremos transparecer muito mais o nosso ideal de ser feito <b>Da Comunidade Para a Comunidade, e de maneira totalmente sem fins lucrativos,</b> quer nos deixar uma ideia, sugestão ou reclamação? <a href=\"https://forms.gle/7m4hak5rWp15yuTt6\" target=\"\">Acesse aqui.</a></p><p></p><p></p></div>",
+        "what": "Evento",
+        "photo": "https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7C663037a4a5f179e7292448f8/user-campaign-about-photo%7CFrame18-20240429_23095880.png",
+        "cover": "https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7C663037a4a5f179e7292448f8/user-campaign-about-cover%7CBanner-20240429_23100009.png",
+        "slogan": "A DevParaná Conf é organizada por pessoas da comunidade para comunidade."
+      },
+      "categories": [
+        "Eventos"
+      ],
+      "createdDate": "2024-04-30T00:13:24.281Z",
+      "chargeMode": "upFront",
+      "campaignWithSocialImpact": true,
+      "contentCount": 4,
+      "fundingModel": "keepWhatYouRaise",
+      "fundingFrequency": "oneTime",
+      "hideLocation": false,
+      "goals": [
+        {
+          "_id": "6630480d59bc4367ff753533",
+          "title": "DevPR Conf 2024",
+          "desc": "<ul><li>&#65279;Realização da Conferência no <b>Teatro Calil Haddad</b>, sendo que o evento é gratuito e com apoio da <a href=\"http://www.maringa.pr.gov.br/site/index.php?sessao=5c3b590040sc5c&amp;id=88\" target=\"\">AMTECH</a>, porém necessitamos de doações para custear passagens, hospedagens das atrações que são totalmente voluntárias na participação do evento.</li><li>Realização do evento com 8 palestras com referências tecnológicas reconhecidas nacional e internacionalmente.</li><li>Confecção dos brindes para apoiadores.</li></ul><p>Todo o <b>custo</b> do evento vai ser divulgado publicamente e atualizado de maneira recorrente. Qualquer <b>lucro </b>é revertido em eventos durante o ano para a comunidade e caixa mínimo para começar o próximo evento do ano.</p>",
+          "value": 24000
+        },
+        {
+          "_id": "6630480d59bc43f2cb753534",
+          "title": "DevPR Conf 2024+",
+          "desc": "<ul style=\"font-size: 16px;\"><li style=\"float: none;\">&#65279;Realização da Conferência no <b><b>Teatro Calil Haddad</b></b>, sendo que o evento é gratuito e com apoio da <a href=\"http://www.maringa.pr.gov.br/site/index.php?sessao=5c3b590040sc5c&amp;id=88\" target=\"\">AMTECH</a>, porém necessitamos de doações para custear passagens, hospedagens das atrações que são totalmente voluntárias na participação do evento.</li><li style=\"float: none;\">Realização do evento com 8 palestras com referências tecnológicas reconhecidas nacional e internacionalmente.</li><li style=\"float: none;\">Confecção dos brindes para apoiadores.</li><li style=\"float: none;\"><b>Coffee Break gratuito a TODOS os participantes.</b></li></ul><p style=\"font-size: 16px;\">Todo o <b><b>custo</b></b> do evento vai ser divulgado publicamente e atualizado de maneira recorrente. Qualquer <b><b>lucro </b></b>é revertido em eventos durante o ano para a comunidade e caixa mínimo para começar o próximo evento do ano.</p>",
+          "value": 32000
+        }
+      ],
+      "launchDate": "2024-04-30T02:11:04.849Z",
+      "name": "DevPR Conf 2024",
+      "publishedDate": "2024-04-30T02:11:04.849Z",
+      "dueDate": "2024-08-01T02:59:59.999Z",
+      "rewards": [
+        {
+          "sold": [
+            {
+              "supportId": "666b028fea1a822e62442376",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666f5a80b704310e7e6de6b6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667a1660427f06fe5b4aeaeb",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667a1634b84a00ef645c833a",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6680d6a32e08735f33dbcfe1",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6685ebf40908f6439c6d7771",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6685f25b37eb73c20371f95c",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668c92c75486c0a6c337d7d8",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668eb95ee291ac898bf790e1",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668ed295dce543d1ee6c21bc",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669132a70181ba45eb90ce55",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6692a6ef7b649621cbb8640d",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669455d3fa3e0ab63449ea81",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6695947bb95149fff90f4100",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6695add14ce31f4ff19ddf19",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669ec77fec7458a891774bd9",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669ef821570e37ea5150775b",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669f18036fed587810540988",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669f8f07be1ca8c064ff2a05",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669f9d76cb5ad3a0ec95f5bc",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669fd82cbe1ca8c064ff2b5f",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669fd81d6fed587810540ba1",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669fd969be1ca8c064ff2b70",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a0e7e7cd87739324c21dd9",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a107926fed58781054101a",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a108451f755eee1019a29b",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a10d3dcd87739324c21e90",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a25f0ecd87739324c222cc",
+              "status": "reserved"
+            }
+          ],
+          "_id": "6630394eadc7374c2a823802",
+          "title": "Apoiador da Conferência",
+          "desc": "<p>&#65279;Como já divulgamos o evento esse ano é gratuito! Porém sem um apoio mínimo também ele não acontece! Você sendo um &#34;Apoiador da Comunidade&#34; terá o beneficios de escolha de locais no Teatro, antes da disponibilização para o público em geral.</p><p><br/></p><ul><li><b>Beneficios Digitais (Certificado Digital, Badge...)</b></li><li><b>2 Adesivos (1 DevPR e 1 Edição Limitada do Evento)</b></li><li><b>1 Chaveiro</b></li><li><b>1 Kit de Boas Vindas <i>(Esse brinde está substituindo o Mousepad, estaremos divulgando sua composição nos próximos dias).</i></b></li></ul><p>Os beneficios podem sofrer alterações devido a demanda / fornecedores, porém o valor agregado do kit não será reduzido e todos os apoiadores serão avisados pela plataforma. (E-mail/WhatsApp)</p>",
+          "value": 100,
+          "physicalDelivery": true,
+          "limitedNumber": 27,
+          "recommended": false
+        },
+        {
+          "sold": [
+            {
+              "supportId": "6660e68794ae42e4a3cc3bc8",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6668ebe1ea1a822e62441c48",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66699fd5b09644cb2e4b65b5",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666b3c020fe923bebd16be2f",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666b3beabb758fe012ef3433",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666b3f4fbb758fe012ef344a",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667a0d55427f06fe5b4aea87",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667b3fd4b84a00ef645c87d6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667b481f8dfa7b1cd1297d10",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667eb9f62e08735f33dbc8c7",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667ebdb0e18cb6451818cfd5",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6683e3a2b00c9d0707aa11a8",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6684bdba0908f6439c6d7179",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "663becdf8e9991ca7bc5e0b6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6687497091574d6c9f90f406",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66880cb8fca4e3effb7dbcc2",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6688a74fe0708d5cd0e0f701",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668be3d3d8fc9324702aa163",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668beb9cedc522311c0ad8ec",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668c7fb25486c0a6c337d744",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668c8ad9a77c3f825ad42ec9",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668d8a14dce543d1ee6c1bc8",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668ebba9dce543d1ee6c2106",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668ebbcde291ac898bf79100",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6690cdba9568aa7f444c8933",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66933870b95149fff90f399d",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6694413b7b649621cbb869e6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6694437d4ce31f4ff19dd997",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66950e275821328ead22624b",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66951a324ce31f4ff19ddc0e",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66969be650e24457966140f5",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669c3817579e7efa35538848",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "669fb6dccb5ad3a0ec95f633",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667cb5f645d512a55fbed252",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a059fa6fed587810540e55",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a0e2066fed587810540f57",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a262021f755eee1019a6f6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a26a48a4091bed74fead4a",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a26bd9a4091bed74fead4f",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a27447cd87739324c22326",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66a2dd34c99c448c4f9e694d",
+              "status": "confirmed"
+            }
+          ],
+          "_id": "66304a8a04d822643593e866",
+          "title": "Apoiador da Comunidade",
+          "desc": "<p></p><p>&#65279;</p><p>Como já divulgamos o evento esse ano é gratuito! Porém sem um apoio mínimo também ele não acontece! Você sendo um &#34;Apoiador da Comunidade&#34; terá o beneficios de escolha de locais no Teatro, antes da disponibilização para o público em geral. Os </p><ul style=\"font-size: 16px;\"><li style=\"float: none;\">Todos os benefícios anteriores.</li><li style=\"float: none;\"><b>1 Caneca</b></li><li style=\"float: none;\"><b>Durante o evento serão realizadas algumas dinâmicas que incluem brindes com os Apoiadores com esse apoio você garante 1 participação. (Sorteio, Atividades...)</b></li></ul><p>Os beneficios podem sofrer alterações devido a demanda / fornecedores, porém o valor agregado do kit não será reduzido e todos os apoiadores serão avisados pela plataforma. (E-mail/WhatsApp)<br/></p><p></p>",
+          "value": 150,
+          "physicalDelivery": true,
+          "limitedNumber": 41,
+          "recommended": false
+        },
+        {
+          "sold": [
+            {
+              "supportId": "663a071d32700b200bc0e38e",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66612288be77a04c33d3ecc1",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666238c64f5730170ef6a8fb",
+              "status": "reserved"
+            },
+            {
+              "supportId": "66623a08ee1fb14b949c525b",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "66630d745299e63ecb30b12a",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666c39436d96798987f1eb1d",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666cd127bb758fe012ef39e7",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666e42917b10d030446dab69",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "666f989918a69b67d659b464",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "667207364eba39f65fe615df",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6680a2209a930438bb64b85e",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6685db52d05cc5bf960732f6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "6686c60efca4e3effb7db5ca",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668d9a18abc030cd0e99e9a4",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668eba38e291ac898bf790eb",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668ebf6429461d3b0287bda6",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668edc3cabc030cd0e99ef94",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668f0c0fabc030cd0e99f086",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668f0cefdce543d1ee6c22f0",
+              "status": "confirmed"
+            },
+            {
+              "supportId": "668fe1d8e291ac898bf7958d",
+              "status": "confirmed"
+            }
+          ],
+          "_id": "66304a8a04d82282e793e867",
+          "title": "Benfeitor da Comunidade",
+          "desc": "<p>&#65279;Como já divulgamos o evento esse ano é gratuito! Porém sem um apoio mínimo também ele não acontece! Você sendo um &#34;Apoiador da Comunidade&#34; terá o beneficios de escolha de locais no Teatro, antes da disponibilização para o público em geral.</p><p></p><ul style=\"font-size: 16px;\"><li>Todos os benefícios anteriores.</li><li><b>Almoço gratuito incluso em local a definir. </b></li><li><b>Convite para Happy Hour Privado com Organização e Palestrantes, consumação não inclusa.</b></li></ul><p>Os beneficios podem sofrer alterações devido a demanda / fornecedores, porém o valor agregado do kit não será reduzido e todos os apoiadores serão avisados pela plataforma. (E-mail/WhatsApp)<br/></p>",
+          "value": 250,
+          "physicalDelivery": true,
+          "limitedNumber": 19,
+          "recommended": false
+        },
+        {
+          "sold": [],
+          "_id": "66a4111eef81f240d0603b63",
+          "title": "Doação",
+          "desc": "<p>Ao contribuir com nossa organização, você está investindo em projetos e programas que têm um impacto real e mensurável na vida das pessoas. Nossos benefícios esgotaram mas você ainda pode nos ajudar.</p>",
+          "value": 1,
+          "recommended": true
+        }
+      ],
+      "users": [
+        {
+          "_id": "64a32332158d7249187eca49",
+          "access": "owner"
+        }
+      ],
+      "status": "published",
+      "social": [
+        {
+          "_id": "66304330adc7372f4182625d",
+          "type": "link",
+          "url": "https://www.devpr.org"
+        },
+        {
+          "_id": "66304330adc737ffd782625e",
+          "type": "instagram",
+          "url": "https://www.instagram.com/devparana"
+        },
+        {
+          "_id": "66304330adc7376b6f82625f",
+          "type": "youtube",
+          "url": "https://www.youtube.com/@DevParana"
+        },
+        {
+          "_id": "66304330adc73743f6826260",
+          "type": "link",
+          "url": "https://x.com/devparana"
+        },
+        {
+          "_id": "66304330adc73767b3826261",
+          "type": "link",
+          "url": "https://github.com/developerparana"
+        }
+      ],
+      "supports": {
+        "total": {
+          "value": 13700,
+          "count": 85
+        },
+        "count": 0
+      },
+      "otherSupports": {},
+      "slug": "devpr",
+      "settings": {
+        "admin": {
+          "flags": []
+        }
+      },
+      "welcomeMessage": null,
+      "welcomeVideo": null,
+      "explicit": false,
+      "paywallAccessControl": false,
+      "retroactiveAccessControl": false,
+      "trackers": {},
+      "linkedCampaigns": [
+        {
+          "_id": "66872d5fabea13019cb7814b",
+          "campaignId": "64a32399752cc054fe36f6fa",
+          "campaignStatus": "published",
+          "campaignSlug": "codaqui",
+          "turboCheckoutMessage": "<p></p><p><b id=\"docs-internal-guid-d100936e-7fff-8f25-fce9-63c41fef2e29\"></b></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">A DevParaná e a Codaqui, agora unidas sob a mesma associação, representam duas faces de uma mesma moeda: a disseminação do conhecimento e a educação tecnológica. Ambas as iniciativas têm um papel crucial no desenvolvimento da nossa comunidade e, por isso, o apoio a ambos os projetos é de extrema importância.</span></p><p><br/></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">A DevParaná, com mais de 5 anos de história, tem sido uma força motriz na cidade de Maringá e região, expandindo o conhecimento técnico para inúmeras cidades e até mesmo alcançando países como Paraguai e Chile. Através de meetups, coding dojos e, principalmente, nossa conferência anual, geramos recursos que são reinvestidos em mini eventos ao longo do ano. Esses eventos são oportunidades valiosas para os desenvolvedores compartilharem conhecimento e aprenderem uns com os outros.</span></p><p><br/></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">Por outro lado, a Codaqui mantém projetos educativos recorrentes voltados para o público infantojuvenil. Esses projetos desempenham um papel fundamental na formação da próxima geração de desenvolvedores, fornecendo a eles as ferramentas e o conhecimento necessários para prosperar no mundo da tecnologia.</span></p><p><br/></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">Ao apoiar a DevParaná e a Codaqui, você está investindo no futuro da nossa comunidade. Está ajudando a criar um ambiente onde o conhecimento é compartilhado livremente e onde a próxima geração de desenvolvedores está sendo preparada para enfrentar os desafios do amanhã. Junte-se a nós nesta jornada emocionante e ajude-nos a fazer a diferença!</span></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\"></span></p>",
+          "name": "Codaqui.dev",
+          "photo": "https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7C64a32399752cc054fe36f6fa/user-campaign-about-photo%7CUntitled-20230725_15480405.png"
+        }
+      ],
+      "currentTime": "2024-07-26T22:42:43.649Z"
+    }
+  ]
+}
