@@ -1,6 +1,7 @@
 export * from './counter';
 export * from './create';
 export * from './find';
+export * from './format-currency';
 export * from './format-date';
 export * from './interval';
 export * from './queue';

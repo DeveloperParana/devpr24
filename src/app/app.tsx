@@ -13,26 +13,31 @@ import {
   Agenda,
   Team,
 } from "./sections";
-import { GTM, Symbols } from "./parts";
+import { GTM, ProgressBar, Symbols } from "./parts";
 import { findAll, queue } from "./utils";
 
 export const App = () => {
-
   queue(() => {
-    for (const el of findAll('[data-animate]')) {
-      el.style.animation = `scroll-x ${el.dataset.animate} linear infinite`
+    for (const el of findAll("[data-animate]")) {
+      el.style.animation = `scroll-x ${el.dataset.animate} linear infinite`;
     }
-  })
+  });
 
   return (
     <>
       <Header />
       <Conf2024 src="/assets/videos/conf-2024.mp4" />
       <Banner />
+      
       <About />
       <Agenda />
       <Speakers />
       <Supports />
+      <ProgressBar
+        max={24000}
+        value={13700}
+        colors={["#2ecb4c", "#f9bc00", "#ba1a1a"]}
+      />
       <Supporters />
       <Companies />
       <Team />

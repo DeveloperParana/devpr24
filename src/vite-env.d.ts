@@ -1,13 +1,13 @@
 /// <reference types="vite/client" />
 
-declare module '*.vert' {
-  const src: string
-  export default src
+declare module "*.vert" {
+  const src: string;
+  export default src;
 }
 
-declare module '*.frag' {
-  const src: string
-  export default src
+declare module "*.frag" {
+  const src: string;
+  export default src;
 }
 
 interface CustomGlobalEventHandlersEventMap<T> {
@@ -281,7 +281,15 @@ interface JSXFactory<T> {
 }
 
 type JSXAnimatedLength<S> = {
-  [A in keyof S]: S[A] extends SVGAnimatedLength ? number | `${number}` : S[A];
+  [A in keyof S]: S[A] extends SVGAnimatedLength
+    ? number | `${number}` | `${number}%`
+    : S[A];
+};
+
+type JSXAnimatedLengthList<S> = {
+  [A in keyof S]: S[A] extends SVGAnimatedLengthList
+    ? number | `${number}` | `${number}%`
+    : S[A];
 };
 
 type JSXPointList<S> = {
@@ -373,9 +381,13 @@ type EventHandlers<T> = {
   [K in keyof CustomGlobalEventHandlers<T>]:
     | ((
         this: T,
-        ev: CustomGlobalEventHandlersEventMap<T>[OnlyEvent<K>],
+        ev: CustomGlobalEventHandlersEventMap<T>[OnlyEvent<K>]
       ) => unknown)
     | null;
+};
+
+type ElementRef<T> = {
+  current(): T;
 };
 
 declare namespace JSX {
@@ -383,8 +395,12 @@ declare namespace JSX {
   type Element<T extends Element = Element> = HTMLElement & T;
 
   type Factory<P extends {}, T extends HTMLElement> = (
-    props: P,
+    props: P
   ) => JSX.Element<T>;
+
+  type DerivedRef<T> = {
+    ref: ElementRef<T>;
+  };
 
   interface Component<T> {
     (props: T, children?: Node[]): Node;
@@ -394,20 +410,25 @@ declare namespace JSX {
 
   type IntrinsicElementsMap = {
     [K in keyof JSXElementTagNameMap]: Partial<
-      JSXNode<
-        K extends keyof HTMLElementTagNameMap
-          ? HTMLElementTagNameMap[K]
-          : K extends keyof SVGElementTagNameMap
+      | (JSXNode<
+          K extends keyof HTMLElementTagNameMap
+            ? HTMLElementTagNameMap[K] | DerivedRef<HTMLElementTagNameMap[K]>
+            : K extends keyof SVGElementTagNameMap
             ? JSXAnimatedEnumeration<
                 JSXPointList<
-                  JSXAnimatedString<JSXAnimatedLength<SVGElementTagNameMap[K]>>
+                  JSXAnimatedString<
+                    JSXAnimatedLengthList<
+                      JSXAnimatedLength<SVGElementTagNameMap[K]>
+                    >
+                  >
                 >
               >
             : K extends keyof MathMLElementTagNameMap
-              ? MathMLElementTagNameMap[K]
-              : Element
-      > &
-        EventHandlers<JSXElementTagNameMap[K]>
+            ? MathMLElementTagNameMap[K]
+            : Element
+        > &
+          EventHandlers<JSXElementTagNameMap[K]>)
+      | DerivedRef<JSXElementTagNameMap[K]>
     >;
   };
 

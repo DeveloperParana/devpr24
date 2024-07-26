@@ -6,6 +6,7 @@ export * from './icon';
 export * from './link';
 export * from './logo';
 export * from './marquee';
+export * from './progress-bar';
 export * from './social-links';
 export * from './symbols';
 export * from './theme-toggle';
