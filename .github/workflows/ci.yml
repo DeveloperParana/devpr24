@@ -2,7 +2,7 @@ name: Publish
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: "0 */6 * * *"
   push:
     branches:
       - main
@@ -30,20 +30,25 @@ jobs:
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
-          cache: 'pnpm'
+          cache: "pnpm"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
         shell: bash
 
-      - name: Run script
-        run: node tools/request-progress.mjs
+      - name: Build project
+        run: pnpm build
         shell: bash
 
-      - name: Publish packages
-        run: |
-          pnpm build
+      - name: Request API apoia.se
+        run: pnpx tsx tools/request-progress.ts
         shell: bash
+
+      - name: Request API github
+        run: pnpx tsx tools/request-team.ts
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

@@ -1,5 +1,6 @@
 export * from './counter';
 export * from './create';
+export * from './event-emitter';
 export * from './find';
 export * from './format-currency';
 export * from './format-date';

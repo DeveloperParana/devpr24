@@ -280,6 +280,10 @@ interface JSXFactory<T> {
   (...params: any[]): JSXNode<T>;
 }
 
+type JSXAnimatedTransformList<S> = {
+  [A in keyof S]: S[A] extends SVGAnimatedTransformList ? string : S[A];
+};
+
 type JSXAnimatedLength<S> = {
   [A in keyof S]: S[A] extends SVGAnimatedLength
     ? number | `${number}` | `${number}%`
@@ -418,7 +422,9 @@ declare namespace JSX {
                 JSXPointList<
                   JSXAnimatedString<
                     JSXAnimatedLengthList<
-                      JSXAnimatedLength<SVGElementTagNameMap[K]>
+                      JSXAnimatedTransformList<
+                        JSXAnimatedLength<SVGElementTagNameMap[K]>
+                      >
                     >
                   >
                 >

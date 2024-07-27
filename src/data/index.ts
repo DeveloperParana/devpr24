@@ -5,5 +5,4 @@ export * from './social-links';
 export * from './speakers';
 export * from './supporters';
 export * from './supports';
-export * from './team';
 export * from './typings';

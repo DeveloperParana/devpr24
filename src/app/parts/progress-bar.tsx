@@ -1,6 +1,6 @@
 import { useRef, createValue } from "../../core";
 import { ApoiaSeResult } from "../../types";
-import { formatCurrency } from "../utils";
+import { formatCurrency, navEvent } from "../utils";
 
 const fetchAPI = async (): Promise<ApoiaSeResult> => {
   return (await fetch(`progress.json`)).json();
@@ -24,44 +24,53 @@ export const ProgressBar = ({ colors }: ProgressBarAttts) => {
   const goal = createValue<string>("R$ 0,00");
   const percent = createValue<number>(0);
 
-  fetchAPI().then(({ campaigns }) => {
-    const [campaign] = campaigns;
+  let progressIsLoaded = false;
 
-    goal.set(formatCurrency(campaign.goals[0].value));
-    total.set(formatCurrency(campaign.supports.total.value));
+  navEvent.on("current", (current) => {
+    if (current === "#apoie" && !progressIsLoaded) {
+      fetchAPI().then(({ campaigns }) => {
+        progressIsLoaded = true;
 
-    const n = (campaign.supports.total.value / campaign.goals[0].value) * 100;
-    percent.set(Math.round(n));
+        const [campaign] = campaigns;
 
-    rectRef.current().setAttribute("width", percent.get() + "%");
+        goal.set(formatCurrency(campaign.goals[0].value));
+        total.set(formatCurrency(campaign.supports.total.value));
+
+        const n =
+          (campaign.supports.total.value / campaign.goals[0].value) * 100;
+        percent.set(Math.round(n));
+
+        rectRef.current().setAttribute("width", percent.get() + "%");
+      });
+    }
   });
 
   return (
     <section id="progress-bar">
-      <svg xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 100 6" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="gradient">
+          <linearGradient id="gradient" gradientTransform="rotate(3)">
             {linearGradientStops.map(({ offset, color }) => (
               <stop offset={`${offset}%`} stop-color={color} />
             ))}
           </linearGradient>
-
-          <clipPath id="clip">
-            <rect
-              ref={rectRef}
-              id="clipRect"
-              width="0%"
-              height="100%"
-              rx={24}
-            />
-          </clipPath>
         </defs>
-        <rect rx={24} width="100%" height="100%" fill="#45474b" />
+        {/* <circle cx="5" cy="5" r="4" fill="url('#gradient')" /> */}
         <rect
-          width="100%"
-          height="100%"
-          clip-path="url(#clip)"
-          fill="url(#gradient)"
+          x="0"
+          width="100"
+          height="6"
+          rx="3"
+          fill="#010101"
+          fill-opacity=".6"
+        />
+        <rect
+          ref={rectRef}
+          x="0"
+          rx="3"
+          width="0"
+          height="6"
+          fill="url('#gradient')"
         />
       </svg>
       <h2>{percent}%</h2>

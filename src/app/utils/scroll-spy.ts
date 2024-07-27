@@ -1,3 +1,11 @@
+import { EventEmitter } from "./event-emitter";
+
+interface NavEventMap {
+  current: string;
+}
+
+export const navEvent = new EventEmitter<NavEventMap>();
+
 export class ScrollSpy {
   #sections: HTMLElement[];
   #navLinks: HTMLAnchorElement[];
@@ -5,7 +13,7 @@ export class ScrollSpy {
 
   constructor(
     sections: NodeListOf<HTMLElement>,
-    navLinks: NodeListOf<HTMLAnchorElement>,
+    navLinks: NodeListOf<HTMLAnchorElement>
   ) {
     this.#sections = Array.from(sections);
     this.#navLinks = Array.from(navLinks);
@@ -33,8 +41,13 @@ export class ScrollSpy {
       return link.href.replace(`${origin}/`, "") === `#${id}`;
     });
 
-    if (active) this.#activated = active;
-    else this.#activated = undefined;
+    if (active) {
+      this.#activated = active;
+      const nav = active.href.replace(`${origin}/`, "")
+      navEvent.emit("current", nav);
+    } else {
+      this.#activated = undefined;
+    }
 
     this.#activate();
   }
