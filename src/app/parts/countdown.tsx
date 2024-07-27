@@ -30,7 +30,7 @@ export const Countdown = ({date}: CountdownAttrs) => {
       <small>Faltam </small>
       <div>
         <var>{days}</var>
-        <small>dias,</small>
+        <small>dia,</small>
       </div>
       <div>
         <var>{hours}</var>
