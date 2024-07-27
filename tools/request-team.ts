@@ -14,6 +14,7 @@ const users = [
   "anakubitz",
   "profburnes",
   "o-laureano",
+  "estevanbs"
 ];
 
 const fetchAPI = async (username: string) => {
