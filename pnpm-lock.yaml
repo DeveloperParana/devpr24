@@ -4,30 +4,32 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  three:
-    specifier: ^0.165.0
-    version: 0.165.0
+importers:
 
-devDependencies:
-  '@axe-core/cli':
-    specifier: ^4.9.1
-    version: 4.9.1
-  '@types/node':
-    specifier: ^20.14.12
-    version: 20.14.12
-  '@types/three':
-    specifier: ^0.165.0
-    version: 0.165.0
-  sass:
-    specifier: ^1.77.4
-    version: 1.77.4
-  typescript:
-    specifier: ^5.2.2
-    version: 5.4.5
-  vite:
-    specifier: ^5.2.0
-    version: 5.2.12(@types/node@20.14.12)(sass@1.77.4)
+  .:
+    dependencies:
+      three:
+        specifier: ^0.165.0
+        version: 0.165.0
+    devDependencies:
+      '@axe-core/cli':
+        specifier: ^4.9.1
+        version: 4.9.1
+      '@types/node':
+        specifier: ^20.14.12
+        version: 20.14.12
+      '@types/three':
+        specifier: ^0.165.0
+        version: 0.165.0
+      sass:
+        specifier: ^1.77.4
+        version: 1.77.4
+      typescript:
+        specifier: ^5.2.2
+        version: 5.4.5
+      vite:
+        specifier: ^5.2.0
+        version: 5.2.12(@types/node@20.14.12)(sass@1.77.4)
 
 packages:
 

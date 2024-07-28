@@ -24,5 +24,8 @@
   },
   "dependencies": {
     "three": "^0.165.0"
-  }
+  },
+  "workspaces": [
+    "apps/agenda"
+  ]
 }

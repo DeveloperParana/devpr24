@@ -59,7 +59,6 @@ export const Agenda = () => {
                 const slotSpeaker = Array.isArray(slot.speaker)
                   ? slot.speaker.map((s) => speaker[s])
                   : [speaker[slot.speaker]];
-                // const slotSpeaker = speaker[slot.speaker];
 
                 return (
                   <details onClick={onToggle} className={className}>

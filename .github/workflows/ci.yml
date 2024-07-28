@@ -40,6 +40,10 @@ jobs:
         run: pnpm build
         shell: bash
 
+      - name: Build agenda
+        run: npm run build -w agenda
+        shell: bash
+
       - name: Request API apoia.se
         run: pnpx tsx tools/request-progress.ts
         shell: bash
