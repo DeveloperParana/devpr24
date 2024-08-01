@@ -161,10 +161,6 @@
             {
               "supportId": "66a10d3dcd87739324c21e90",
               "status": "confirmed"
-            },
-            {
-              "supportId": "66a25f0ecd87739324c222cc",
-              "status": "reserved"
             }
           ],
           "_id": "6630394eadc7374c2a823802",
@@ -515,7 +511,7 @@
           "photo": "https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7C64a32399752cc054fe36f6fa/user-campaign-about-photo%7CUntitled-20230725_15480405.png"
         }
       ],
-      "currentTime": "2024-08-01T06:03:03.264Z"
+      "currentTime": "2024-08-01T12:03:28.338Z"
     }
   ]
 }
