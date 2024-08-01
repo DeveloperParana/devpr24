@@ -456,7 +456,7 @@
           "access": "owner"
         }
       ],
-      "status": "published",
+      "status": "closed",
       "social": [
         {
           "_id": "66304330adc7372f4182625d",
@@ -508,14 +508,14 @@
         {
           "_id": "66872d5fabea13019cb7814b",
           "campaignId": "64a32399752cc054fe36f6fa",
-          "campaignStatus": "published",
+          "campaignStatus": "closed",
           "campaignSlug": "codaqui",
           "turboCheckoutMessage": "<p></p><p><b id=\"docs-internal-guid-d100936e-7fff-8f25-fce9-63c41fef2e29\"></b></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">A DevParaná e a Codaqui, agora unidas sob a mesma associação, representam duas faces de uma mesma moeda: a disseminação do conhecimento e a educação tecnológica. Ambas as iniciativas têm um papel crucial no desenvolvimento da nossa comunidade e, por isso, o apoio a ambos os projetos é de extrema importância.</span></p><p><br/></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">A DevParaná, com mais de 5 anos de história, tem sido uma força motriz na cidade de Maringá e região, expandindo o conhecimento técnico para inúmeras cidades e até mesmo alcançando países como Paraguai e Chile. Através de meetups, coding dojos e, principalmente, nossa conferência anual, geramos recursos que são reinvestidos em mini eventos ao longo do ano. Esses eventos são oportunidades valiosas para os desenvolvedores compartilharem conhecimento e aprenderem uns com os outros.</span></p><p><br/></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">Por outro lado, a Codaqui mantém projetos educativos recorrentes voltados para o público infantojuvenil. Esses projetos desempenham um papel fundamental na formação da próxima geração de desenvolvedores, fornecendo a eles as ferramentas e o conhecimento necessários para prosperar no mundo da tecnologia.</span></p><p><br/></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\">Ao apoiar a DevParaná e a Codaqui, você está investindo no futuro da nossa comunidade. Está ajudando a criar um ambiente onde o conhecimento é compartilhado livremente e onde a próxima geração de desenvolvedores está sendo preparada para enfrentar os desafios do amanhã. Junte-se a nós nesta jornada emocionante e ajude-nos a fazer a diferença!</span></p><p dir=\"ltr\"><span style=\"font-size: 11pt;color: #000000;background-color: transparent;vertical-align: baseline;\"></span></p>",
           "name": "Codaqui.dev",
           "photo": "https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7C64a32399752cc054fe36f6fa/user-campaign-about-photo%7CUntitled-20230725_15480405.png"
         }
       ],
-      "currentTime": "2024-08-01T00:08:53.721Z"
+      "currentTime": "2024-08-01T06:03:03.264Z"
     }
   ]
 }
