@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Call for papers Rust</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VY20Y5X6E9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-VY20Y5X6E9");
+      gtag("config", "AW-10885308101");
+    </script>
+  </head>
+  <body>
+    <figure>
+      <svg viewBox="0 0 376 376"> <use href="#rust"></use> </svg>
+
+      <figcaption>Call for papers Rust...</figcaption>
+    </figure>
+
+    <script type="module">
+      import { loadSVG } from "../load-svg.js";
+
+      loadSVG("../logos.svg").then((svg) => {
+        document.body.append(svg);
+
+        setTimeout(() => {
+          location.href = "https://forms.gle/uNVd3MC8TMWCzhEz5";
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
