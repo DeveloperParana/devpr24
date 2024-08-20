@@ -167,7 +167,7 @@
     "followers": 0,
     "following": 0,
     "created_at": "2024-06-10T23:40:27Z",
-    "updated_at": "2024-06-11T14:12:24Z"
+    "updated_at": "2024-08-19T23:53:12Z"
   },
   {
     "login": "GHamerschimidt",
@@ -460,7 +460,7 @@
     "received_events_url": "https://api.github.com/users/estevanbs/received_events",
     "type": "User",
     "site_admin": false,
-    "name": "Estevan Bartmann Silveira",
+    "name": "Estevan",
     "company": "@tecnospeed",
     "blog": "",
     "location": "Brasil",
@@ -473,6 +473,6 @@
     "followers": 8,
     "following": 18,
     "created_at": "2019-07-29T00:54:09Z",
-    "updated_at": "2024-08-18T20:18:17Z"
+    "updated_at": "2024-08-19T22:18:11Z"
   }
 ]
