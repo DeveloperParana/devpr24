@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm run cp:cname && npm run cp:apoia-se && npm run cp:whatsapp && npm run cp:c4p && npm run cp:logo",
+    "build": "tsc && vite build && npm run cp:cname && npm run cp:apoia-se && npm run cp:whatsapp && npm run cp:c4p && npm run cp:logo && npm run cp:vagas",
     "cp:cname": "cp src/CNAME dist/",
     "cp:apoia-se": "cp -R apoia-se dist/",
     "cp:whatsapp": "cp -R whatsapp dist/",
+    "cp:vagas": "cp -R vagas dist/",
     "cp:logo": "npx vite build logo --outDir=../dist/logo/",
     "cp:c4p": "cp -R c4p dist/",
     "preview": "vite preview",
