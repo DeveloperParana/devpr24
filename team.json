@@ -97,12 +97,12 @@
     "hireable": true,
     "bio": "Software Engineer, from a small city in Brazil to the World.",
     "twitter_username": "iluendido",
-    "public_repos": 54,
+    "public_repos": 55,
     "public_gists": 14,
     "followers": 440,
     "following": 171,
     "created_at": "2015-02-15T21:14:52Z",
-    "updated_at": "2025-01-06T21:13:06Z"
+    "updated_at": "2025-01-08T18:04:14Z"
   },
   {
     "login": "elinatorresn",
@@ -230,19 +230,19 @@
     "user_view_type": "public",
     "site_admin": false,
     "name": "Ana Carolyne",
-    "company": "Stone Co",
+    "company": "@stone-payments ",
     "blog": "",
     "location": "Maringá",
     "email": null,
     "hireable": null,
     "bio": "SRE at @stone-payments. Back-End Developer. Volunteer at @codaqui. Organizer of @DeveloperParana, AWS UG Leader in Maringá",
     "twitter_username": null,
-    "public_repos": 68,
+    "public_repos": 69,
     "public_gists": 1,
     "followers": 91,
     "following": 107,
     "created_at": "2022-08-16T17:28:49Z",
-    "updated_at": "2025-01-08T01:46:33Z"
+    "updated_at": "2025-01-08T17:28:21Z"
   },
   {
     "login": "GeovaneNorbert",
