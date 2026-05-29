@@ -53,6 +53,7 @@
       "dueDate": "2024-08-01T02:59:59.999Z",
       "rewards": [
         {
+          "hidden": false,
           "sold": [
             {
               "supportId": "666b028fea1a822e62442376",
@@ -172,6 +173,7 @@
           "recommended": false
         },
         {
+          "hidden": false,
           "sold": [
             {
               "supportId": "6660e68794ae42e4a3cc3bc8",
@@ -347,6 +349,7 @@
           "recommended": false
         },
         {
+          "hidden": false,
           "sold": [
             {
               "supportId": "663a071d32700b200bc0e38e",
@@ -438,6 +441,7 @@
           "recommended": false
         },
         {
+          "hidden": false,
           "sold": [],
           "_id": "66a4111eef81f240d0603b63",
           "title": "Doação",
@@ -511,7 +515,7 @@
           "photo": "https://s3.amazonaws.com/assets.apoia.se/campaigns/64a32332158d7249187eca49%7C64a32399752cc054fe36f6fa/user-campaign-about-photo%7CUntitled-20230725_15480405.png"
         }
       ],
-      "currentTime": "2026-05-28T20:08:17.230Z"
+      "currentTime": "2026-05-29T02:32:05.935Z"
     }
   ]
 }
